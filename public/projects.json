@@ -1,0 +1,1996 @@
+[
+  {
+    "id": 138,
+    "date": "2024-09-12T11:56:24",
+    "date_gmt": "2024-09-12T11:56:24",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=138"
+    },
+    "modified": "2024-09-24T15:08:24",
+    "modified_gmt": "2024-09-24T15:08:24",
+    "slug": "proekt-dd-10-167m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-dd-10-167m%c2%b2/",
+    "title": {
+      "rendered": "Проект ДД-10 167м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-138",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ДД-10 167м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "2",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "5",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "167 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "4",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 2 087 500 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 6 680 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 9 018 000 руб."
+        }
+      ],
+      "txt": "Справа от входа спроектирована дневная зона. Из гостиной есть переход в столовую (каждая из комнат имеет выход на террасу) и далее в кухню, в которой предусмотрена кладовая. Из гаража через подсобное помещение есть выход в дом.\r\n\r\nЧетыре спальни (две имеют общий балкон) устроены на втором этаже.\r\n\r\nПросторный холл и большая общая ванная с выделенным местом для сантехнического оборудования дают возможность удобно организовать быт большой семьи.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/30836623.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/54545194.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/30726421.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/85970815.png"
+        }
+      ],
+      "price": "от 2 087 500 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/138"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=138"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 90,
+    "date": "2024-09-12T11:55:27",
+    "date_gmt": "2024-09-12T11:55:27",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=90"
+    },
+    "modified": "2024-09-24T15:09:51",
+    "modified_gmt": "2024-09-24T15:09:51",
+    "slug": "proekt-dd-6-1399m%c2%b2-2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-dd-6-1399m%c2%b2-2/",
+    "title": {
+      "rendered": "Проект ДД-6 139,9м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-90",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ДД-6 139,9м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "2",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "5",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "139,9 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "4",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 1 748 750 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 5 596 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 7 554 600 руб."
+        }
+      ],
+      "txt": "Столовая и гостиная совмещены. Здесь предусмотрено панорамное остекление, за счет чего пространство кажется еще больше и хорошо освещен каждый уголок интерьера. Через большие стеклянные двери из гостиной предусмотрен выход на просторную боковую террасу, где хозяйке удобно накрывать на стол и организовывать прием гостей в теплое время года. Бонусом для семей с пожилыми людьми или детьми станет предусмотренная на первом этаже дополнительная комната и расположенная рядом с ней ванная комната. Из гаража имеется переход в прихожую, что избавляет домочадцев от необходимости переходить к машине через улицу. Второй этаж – комфортабельная приватная зона с тремя спальнями, ванной комнатой и террасой над гаражом.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/29132705.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/66716848.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/90398736.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/10109930.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/75856124.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/87913205.webp"
+        }
+      ],
+      "price": "от 1 748 750 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/90"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=90"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 88,
+    "date": "2024-09-12T11:53:50",
+    "date_gmt": "2024-09-12T11:53:50",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=88"
+    },
+    "modified": "2024-09-24T15:08:38",
+    "modified_gmt": "2024-09-24T15:08:38",
+    "slug": "proekt-dd-8-1641m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-dd-8-1641m%c2%b2/",
+    "title": {
+      "rendered": "Проект ДД-8 164,1м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-88",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ДД-8 164,1м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "2",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "7",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "164,1 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "4",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 2 051 250 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 6 564 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 8 861 400 руб."
+        }
+      ],
+      "txt": "На первом уровне главное внимание уделено дневной зоне, в которой гостиная и кухня частично разделены сложной формой общего пространства, что наделяет эту зону особенным шармом. Из гаража через отдельную гардеробную спроектирован выход в дом. Также на первом уровне есть ванная и дополнительная комната. Четыре спальни, расположенные на втором этаже, образуют ночную зону. Самая просторная из комнат располагает выходом на балкон, где можно с комфортом отдыхать тёплыми летними вечерами.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/12687206.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/76776646.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/15640381.webp"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/18960607.png"
+        }
+      ],
+      "price": "от 2 051 250 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/88"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=88"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 87,
+    "date": "2024-09-12T11:53:03",
+    "date_gmt": "2024-09-12T11:53:03",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=87"
+    },
+    "modified": "2024-09-24T15:08:50",
+    "modified_gmt": "2024-09-24T15:08:50",
+    "slug": "proekt-od-7-1577m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-od-7-1577m%c2%b2/",
+    "title": {
+      "rendered": "Проект ОД-7 157,7м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-87",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ОД-7 157,7м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "2",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "5",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "157,7 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "3",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 1 971 250 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 6 308 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 8 515 800 руб."
+        }
+      ],
+      "txt": "Дневная зона - это просторная, светлая гостиная с угловым камином и панорамным остеклением, которое обеспечивает отличный уровень естественного освещения. Раздвижные стеклянные двери ведет на просторную открытую террасу. Столовая была функционально интегрирована в гостиную. Из удобной закрытой кухни есть проход через кладовую в прихожую, что облегчает перенос покупок. Приватная часть дома состоит из трех уютных спален, которые можно отделить от дневной зоны, например, с помощью раздвижных дверей. Спальня хозяев имеет собственную ванную комнату. Из гаража есть возможность пройти в прихожую.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/88283562.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/28933738.webp"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/94186348.png"
+        }
+      ],
+      "price": "от 1 971 250 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/87"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=87"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 86,
+    "date": "2024-09-12T11:52:56",
+    "date_gmt": "2024-09-12T11:52:56",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=86"
+    },
+    "modified": "2024-09-24T15:09:01",
+    "modified_gmt": "2024-09-24T15:09:01",
+    "slug": "proekt-od-5-1121m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-od-5-1121m%c2%b2/",
+    "title": {
+      "rendered": "Проект ОД-5 112,1м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-86",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ОД-5 112,1м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "3",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "5",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "112,1м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "3",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 1 402 500 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 4 488 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 6 058 800 руб."
+        }
+      ],
+      "txt": "Пространство дома чётко разделено на 2 зоны. Дневная зона – это со вкусом обустроенная гостиная, совмещенная с кухней и обеденной зоной. Ночная часть – 3 комфортных спальни.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/70494426.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/51856002.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/62323460.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/85956213.png"
+        }
+      ],
+      "price": "от 1 402 500 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/86"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=86"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 85,
+    "date": "2024-09-12T11:52:08",
+    "date_gmt": "2024-09-12T11:52:08",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=85"
+    },
+    "modified": "2024-09-24T15:09:19",
+    "modified_gmt": "2024-09-24T15:09:19",
+    "slug": "proekt-dd-2-102m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-dd-2-102m%c2%b2/",
+    "title": {
+      "rendered": "Проект ДД-2 102м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-85",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ДД-2 102м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "2",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "5",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "102 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "3",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 1 275 000 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 4 080 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 5 508 000 руб."
+        }
+      ],
+      "txt": "Дом–куб выглядит очень выигрышно на открытых участках благодаря целому ряду интересных архитектурных решений: входная зона, угловое остекление, стильная колористика, которая буквально меняет дом с каждой стороны делают экстерьер броским и привлекательным. В то же время простая форма и удачная планировка внутренних помещений позволили сделать проект энергосберегающим.\r\n\r\nВ дневной зоне, спланированной на первом этаже, кухня и гостиная частично разделены, однако сохраняется общее впечатление большого и светлого пространства, которое поддерживается панорамным остеклением. На втором уровне спланирована классическая ночная зона с тремя спальнями и необходимыми помещениями.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/62306397.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/99779743.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/42324344.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/49721736.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/99053756.png"
+        }
+      ],
+      "price": "от 1 275 000 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/85"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=85"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 84,
+    "date": "2024-09-12T11:50:38",
+    "date_gmt": "2024-09-12T11:50:38",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=84"
+    },
+    "modified": "2024-09-24T15:09:29",
+    "modified_gmt": "2024-09-24T15:09:29",
+    "slug": "proekt-od-2-852m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-od-2-852m%c2%b2/",
+    "title": {
+      "rendered": "Проект ОД-2 85,2м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-84",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ОД-2 85,2м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "1",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "4",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "85,2 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "2",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 1 065 000 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 3 408 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 4 600 800 руб."
+        }
+      ],
+      "txt": "Проект экономичен в реализации, чему также способствуют компактные параметры, а также простая архитектура. Кухню можно отгородить от столовой и гостиной, если так пожелает хозяйка. Рядом с кухней разместилось техническое помещение, которое можно использовать и как кладовую. Неповторимая атмосфера в дневной зоне царит благодаря камину, расположенному в гостиной. Общая ванная комната, спроектированная в приватной части дома, вмещает ванну и душ.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/56034810.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/42397182.webp"
+        }
+      ],
+      "price": "от 1 065 000 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/84"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=84"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 83,
+    "date": "2024-09-12T11:49:55",
+    "date_gmt": "2024-09-12T11:49:55",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=83"
+    },
+    "modified": "2024-09-24T15:09:37",
+    "modified_gmt": "2024-09-24T15:09:37",
+    "slug": "proekt-od-4-1001m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-od-4-1001m%c2%b2/",
+    "title": {
+      "rendered": "Проект ОД-4 100,1м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-83",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ОД-4 100,1м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "1",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "4",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "100,1 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "2",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 1 251 250 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 4 004 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 5 405 400 руб."
+        }
+      ],
+      "txt": "Комфорт проживания домочадцам обеспечивает грамотное и четкое разделение интерьера на приватную и общую зону. Дневная зона представлена объединенными в единое пространство кухней, столовой и гостиной. Такая планировка способствует хорошему освещению и визуальному расширению пространства. Запланированный в гостиной камин создает в дневной зоне особую атмосферу домашности и уюта. К тому же он служит дополнительным источником тепла в холодное время года. В ночной части дома расположены общая ванная комната и две уютных спальни для сна и отдыха. Из спальни, спроектированной со стороны сада, имеется выход на террасу.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/21811436.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/11969961.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/74335910.png"
+        }
+      ],
+      "price": "от 1 251 250 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/83"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=83"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 82,
+    "date": "2024-09-12T11:49:41",
+    "date_gmt": "2024-09-12T11:49:41",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=82"
+    },
+    "modified": "2024-09-24T15:10:00",
+    "modified_gmt": "2024-09-24T15:10:00",
+    "slug": "proekt-od-1-847m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-od-1-847m%c2%b2/",
+    "title": {
+      "rendered": "Проект ОД-1 84,7м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-82",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ОД-1 84,7м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "2",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "4",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "84,7 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "2",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 1 058 750 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 3 388 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 4 573 800 руб."
+        }
+      ],
+      "txt": "Небольшая площадь дома и простая двухскатная кровля делают этот дом бюджетным для строительства и эксплуатации. Создав единое пространство за счет удаления перегородки между кухней и гостиной, можно увеличить площадь дневной зоны. Небольшая кладовая на кухне очень порадует хозяйку дома. Хорошо продуманное большое остекление зрительно увеличивает гостиную, делая её уютной и комфортной. Наличие большого хозяйственного помещения позволит разместить там не только всё необходимое оборудование и останется еще место различных хоз принадлежностей.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/70964640.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/14724503.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/26969068.png"
+        }
+      ],
+      "price": "от 1 058 750 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/82"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=82"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 81,
+    "date": "2024-09-12T11:48:13",
+    "date_gmt": "2024-09-12T11:48:13",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=81"
+    },
+    "modified": "2024-09-24T15:10:12",
+    "modified_gmt": "2024-09-24T15:10:12",
+    "slug": "proekt-dd-4-1315m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-dd-4-1315m%c2%b2/",
+    "title": {
+      "rendered": "Проект ДД-4 131,5м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-81",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ДД-4 131,5м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "3",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "5",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "131,5 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "3",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 1 643 750 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 5 260 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 7 101 000 руб."
+        }
+      ],
+      "txt": "Из дневной зоны открытой планировки и дополнительной комнаты на первом этаже есть выход на красивую просторную террасу, опоясывающую дом с двух сторон.На втором этаже спроектировано три уютных и просторных спальни. В спальне хозяев имеется индивидуальная ванная комната, переход в которую предусмотрен через отдельное помещение гардеробной.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/71786676.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/33849922.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/12726386.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/47751261.png"
+        }
+      ],
+      "price": "от 1 643 750 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/81"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=81"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 80,
+    "date": "2024-09-12T11:47:28",
+    "date_gmt": "2024-09-12T11:47:28",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=80"
+    },
+    "modified": "2024-09-24T15:10:25",
+    "modified_gmt": "2024-09-24T15:10:25",
+    "slug": "proekt-dd-5-1322m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-dd-5-1322m%c2%b2/",
+    "title": {
+      "rendered": "Проект ДД-5 132,2м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-80",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ДД-5 132,2м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "2",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "7",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "132,2 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "4",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 1 652 500 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 5 288 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 7 138 800 руб."
+        }
+      ],
+      "txt": "Справа от входной двери размещено техническое помещение, в котором можно также хранить габаритные редко используемые вещи. Для членов семьи, предпочитающих работать в домашних условиях, огромным преимуществом будет наличие просторного, комфортного кабинета, который к тому же спроектирован вдали от общей дневной зоны. Чтобы гости не посещали приватную зону проектом предусмотрено наличие санузла рядом с гостиной.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/21775626.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/74725289.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/24363282.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/76210096.png"
+        }
+      ],
+      "price": "от 1 652 500 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/80"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=80"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 79,
+    "date": "2024-09-12T11:46:39",
+    "date_gmt": "2024-09-12T11:46:39",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=79"
+    },
+    "modified": "2024-09-24T15:10:40",
+    "modified_gmt": "2024-09-24T15:10:40",
+    "slug": "proekt-dd-3-1089m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-dd-3-1089m%c2%b2/",
+    "title": {
+      "rendered": "Проект ДД-3 108,9м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-79",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ДД-3 108,9м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "3",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "6",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "108,9 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "3",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 1 361 250 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 4 356 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 5 880 600 руб."
+        }
+      ],
+      "txt": "Функциональная и практичная планировка сможет удовлетворить самых требовательных клиентов. Полузакрытую кухню можно при желании полностью отделить от гостиной. Наличие комнаты на первом этаже – это всегда приятный бонус, который оценивается всегда уже в течении первого года жизни в новом доме. Просторное хоз помещение позволит хозяину разместить все необходимое оборудование. Наличие двух ванных на мансарде обеспечат комфорт ежедневного использования.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/36932183.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/49142319.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/57415946.webp"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/67442380.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/92017006.png"
+        }
+      ],
+      "price": "от 1 361 250 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/79"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=79"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 71,
+    "date": "2024-09-12T11:44:31",
+    "date_gmt": "2024-09-12T11:44:31",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=71"
+    },
+    "modified": "2024-09-24T15:10:47",
+    "modified_gmt": "2024-09-24T15:10:47",
+    "slug": "proekt-od-8-1613m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-od-8-1613m%c2%b2/",
+    "title": {
+      "rendered": "Проект ОД-8 161,3м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-71",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ОД-8 161,3м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "2",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "5",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "161,3 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "3",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 2 016 250 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 6 452 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 8 710 200 руб."
+        }
+      ],
+      "txt": "Просторная гостиная совмещена с открытой просторной кухней. Панорамное остекление дневной зоны обеспечивает хорошее освещение в течение всего дня и вызывает ощущение единения с окружающей природой. Хозяевам понравится планировочное решение главной спальни, которое предусматривает наличие двух отдельных гардеробов с переходом в ванную комнату.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/80979300.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/10931338.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/35758736.png"
+        }
+      ],
+      "price": "от 2 016 250 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/71"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=71"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 70,
+    "date": "2024-09-12T11:43:27",
+    "date_gmt": "2024-09-12T11:43:27",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=70"
+    },
+    "modified": "2024-09-24T15:11:01",
+    "modified_gmt": "2024-09-24T15:11:01",
+    "slug": "proekt-dd-1-95m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-dd-1-95m%c2%b2/",
+    "title": {
+      "rendered": "Проект ДД-1 95м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-70",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ДД-1 95м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "3",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "6",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "95 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "3",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 1 187 500 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 3 800 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 5 130 000 руб."
+        }
+      ],
+      "txt": "На первом этаже помимо помещений дневной зоны предусмотрена дополнительная комната, в которой удобно обустроить рабочий кабинет, комнату для гостей или расположить в ней пожилых представителей семьи. Из уютной просторной дневной зоны имеется выход на красивую террасу со стороны сада. Здесь удобно принимать гостей и организовывать семейный досуг в теплое время года. На верхнем этаже расположены три спальни и общая ванная комната.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/53682988.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/88955360.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/17251737.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/69044365.png"
+        }
+      ],
+      "price": "от 1 187 500 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/70"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=70"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 66,
+    "date": "2024-09-12T11:42:22",
+    "date_gmt": "2024-09-12T11:42:22",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=66"
+    },
+    "modified": "2024-09-24T15:11:09",
+    "modified_gmt": "2024-09-24T15:11:09",
+    "slug": "proekt-od-6-1375m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-od-6-1375m%c2%b2/",
+    "title": {
+      "rendered": "Проект ОД-6 137,5м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-66",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ОД-6 137,5м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "2",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "6",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "137,5 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "4",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 1 718 750 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 5 500 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 7 425 000 руб."
+        }
+      ],
+      "txt": "Отсутствие остекления на одном из боковых фасадов предоставляет возможность пристроить гараж. Простота формы строения и конструкции кровли способствует снижению стоимости реализации проекта. Сочетание традиционных форм и современного дизайна в одном проекте делают его привлекательным для разных поколений. Неоспоримым преимуществом является разграничение дневной общей части дома от приватной зоны, отведенной для отдыха и сна. Такая планировка позволяет защитить от посторонних любопытных взглядов частную жизнь домочадцев. Дневная зона характеризуется открытой планировкой, за счет чего выглядит очень просторной и светлой. В доме 4 спальни и из каждой предусмотрен выход во двор.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/15422617.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/34465506.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/38795940.png"
+        }
+      ],
+      "price": "от 1 718 750 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/66"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=66"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 62,
+    "date": "2024-09-12T11:41:06",
+    "date_gmt": "2024-09-12T11:41:06",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=62"
+    },
+    "modified": "2024-09-24T15:11:19",
+    "modified_gmt": "2024-09-24T15:11:19",
+    "slug": "proekt-dd-7-1457m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-dd-7-1457m%c2%b2/",
+    "title": {
+      "rendered": "Проект ДД-7 145,7м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-62",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ДД-7 145,7м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "3",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "6",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "145,7 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "4",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 1 821 250 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 5 828 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 7 867 000 руб."
+        }
+      ],
+      "txt": "Важной частью проекта является большая, просторная дневная зона с камином. Благодаря открытой планировке помещения кажутся еще больше. Удобная кладовая рядом с кухней вместит все продуктовые запасы хозяек. На первом этаже также есть комната, которая будет удобна в качестве гостевой спальни или рабочего кабинета. Для гостей предусмотрен санузел на первом этаже. Зона сна и отдыха спроектирована на мансарде. Здесь есть три просторных комфортных спальни и общая ванная комната. В спальне хозяев ванная комната индивидуальная.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/22340880.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/63412614.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/93664666.png"
+        }
+      ],
+      "price": "от 1 821 250 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/62"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=62"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 52,
+    "date": "2024-09-12T09:49:34",
+    "date_gmt": "2024-09-12T09:49:34",
+    "guid": {
+      "rendered": "http://2klstk.ru/?post_type=projects&#038;p=52"
+    },
+    "modified": "2024-09-24T15:08:06",
+    "modified_gmt": "2024-09-24T15:08:06",
+    "slug": "proekt-od-3-865m%c2%b2",
+    "status": "publish",
+    "type": "projects",
+    "link": "https://2klstk.ru/projects/proekt-od-3-865m%c2%b2/",
+    "title": {
+      "rendered": "Проект ОД-3 86,5м²"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": true
+    },
+    "class_list": [
+      "post-52",
+      "projects",
+      "type-projects",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "title": "Проект ОД-3 86,5м²",
+      "character": [
+        {
+          "name": "Санузлы",
+          "value": "2",
+          "icon": "ph:resize-thin"
+        },
+        {
+          "name": "Комнаты",
+          "value": "4",
+          "icon": "fluent:conference-room-20-regular"
+        },
+        {
+          "name": "Площадь",
+          "value": "86,5 м²",
+          "icon": "tabler:meter-square"
+        },
+        {
+          "name": "Спальни",
+          "value": "2",
+          "icon": "material-symbols-light:bedroom-child-outline-rounded"
+        }
+      ],
+      "complects": [
+        {
+          "item": "Комплектация \"Домокомплект\" - от 1 081 250 руб."
+        },
+        {
+          "item": "Комплектация \"Теплый контур\" - от 3 460 000 руб."
+        },
+        {
+          "item": "Комплектация \"White box\" - от 4 671 000 руб."
+        }
+      ],
+      "txt": "На небольшой площади удачно расположились все необходимые для комфортного проживания зоны.Зона для сна и отдыха представлена двумя уютными спальнями, в одной из которых имеется отдельная ванная комната.Около прихожей предусмотрено вместительное техническое помещение, в котором можно также хранить домашнюю технику, садовый инвентарь, габаритные редко используемые предметы.Для совместного семейного времяпрепровождения идеальным вариантом будет светлая просторная дневная зона открытой планировки с панорамным остеклением.",
+      "gallery": [
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/32279293.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/19400758.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/53336860.png"
+        },
+        {
+          "img": "https://2klstk.ru/wp-content/uploads/2024/09/57932960.png"
+        }
+      ],
+      "price": "от 1 081 250 ₽"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects/52"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/types/projects"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://2klstk.ru/wp-json/wp/v2/media?parent=52"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]
