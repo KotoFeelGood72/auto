@@ -59,15 +59,15 @@ const onOptionSelected = (stepIndex, option) => {
 };
 
 // Метод для отправки формы
-const submitQuiz = () => {
-  const quizData = {
-    name: formData.name,
-    phone: formData.phone,
-  };
-  console.log("Данные формы: ", quizData);
-  alert("Данные отправлены!");
-  // Логика отправки данных на сервер
-};
+// const submitQuiz = () => {
+//   const quizData = {
+//     name: formData.name,
+//     phone: formData.phone,
+//   };
+//   console.log("Данные формы: ", quizData);
+//   alert("Данные отправлены!");
+//   // Логика отправки данных на сервер
+// };
 
 const nextStep = () => {
   if (currentStep.value < steps.value.length) {
