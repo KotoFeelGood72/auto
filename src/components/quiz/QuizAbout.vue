@@ -3,7 +3,7 @@
     <div class="calc__about_img_w">
       <img
         class="calc__about_img"
-        src="@/assets/images/calc/face.jpg"
+        src="/img/calc/face.jpg"
         alt="some image"
         loading="lazy"
       />
