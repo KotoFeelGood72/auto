@@ -9,10 +9,10 @@ export const useQuizStore = defineStore("quiz", {
       {
         title: "Есть ли у вас готовый проект?",
         options: [
-          { title: "Есть" },
-          { title: "Нет" },
-          { title: "Выберу из готовых вариантов" },
-          { title: "Хочу заказать индивидуальный проект" },
+          { title: "Есть", image: '' },
+          { title: "Нет", image: '' },
+          { title: "Выберу из готовых вариантов", image: '' },
+          { title: "Хочу заказать индивидуальный проект", image: '' },
         ],
       },
       {
@@ -31,19 +31,19 @@ export const useQuizStore = defineStore("quiz", {
       {
         title: "Сколько этажей вы желаете:",
         options: [
-          { title: "1" },
-          { title: "2" },
-          { title: "1 + Мансарда" },
-          { title: "2 + Мансарда" },
+          { title: "1", image: '' },
+          { title: "2", image: '' },
+          { title: "1 + Мансарда", image: '' },
+          { title: "2 + Мансарда", image: '' },
         ],
       },
       {
         title: "Какую площадь дома вы планируете?",
         options: [
-          { title: "до 100 м²" },
-          { title: "от 100 м² до 200 м²" },
-          { title: "от 200 м² до 300 м²" },
-          { title: "свыше 300 м²" },
+          { title: "до 100 м²", image: '' },
+          { title: "от 100 м² до 200 м²", image: '' },
+          { title: "от 200 м² до 300 м²", image: '' },
+          { title: "свыше 300 м²", image: '' },
         ],
       },
       {
@@ -106,7 +106,7 @@ export const useQuizStore = defineStore("quiz", {
       },
       {
         title: "Есть ли участок под строительство?",
-        options: [{ title: "Есть" }, { title: "Нет" }],
+        options: [{ title: "Есть", image: '' }, { title: "Нет", image: '' }],
       },
       {
         title: "Что бы вы хотели в дополнение к своему дому?",
@@ -140,28 +140,28 @@ export const useQuizStore = defineStore("quiz", {
       {
         title: "Какой бюджет:",
         options: [
-          { title: "до 6 млн " },
-          { title: "от 6 млн до 9 млн" },
-          { title: "от 9 млн до 12 млн" },
-          { title: "от 12 млн до 15 млн" },
-          { title: "свыше 15 млн" },
+          { title: "до 6 млн ", image: '' },
+          { title: "от 6 млн до 9 млн", image: '' },
+          { title: "от 9 млн до 12 млн", image: '' },
+          { title: "от 12 млн до 15 млн", image: '' },
+          { title: "свыше 15 млн", image: '' },
         ],
       },
       {
         title: "Когда планируете строительство?",
         options: [
-          { title: "в течение 2-3 мес" },
-          { title: "в течение полугода" },
-          { title: "в течение года" },
-          { title: "еще не определился " },
+          { title: "в течение 2-3 мес", image: '' },
+          { title: "в течение полугода", image: '' },
+          { title: "в течение года", image: '' },
+          { title: "еще не определился ", image: '' },
         ],
       },
       {
         title: "При заказе дома от 100 м²",
         options: [
-          { title: "Биосептик" },
-          { title: "Дизайн проект дома" },
-          { title: "2% Скидка" },
+          { title: "Биосептик", image: '' },
+          { title: "Дизайн проект дома", image: '' },
+          { title: "2% Скидка", image: '' },
         ],
       },
       {

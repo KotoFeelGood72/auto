@@ -22,9 +22,7 @@
                   @change="onOptionSelected(stepIndex, option)"
                 />
                 <div class="calc__slide_item_img_w" v-if="option && option.image">
-                  <img
-                    src="https://i.pinimg.com/originals/06/8a/bd/068abd6590c42f6cc13a9e0cd8d65c01.jpg"
-                  />
+                  <img :src="option.image" />
                 </div>
                 <div class="calc__slide_item_title">{{ option.title }}</div>
               </div>
