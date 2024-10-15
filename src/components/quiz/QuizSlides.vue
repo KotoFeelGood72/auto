@@ -1,13 +1,13 @@
 <template>
   <div
-    v-if="steps && steps.length"
+    v-if="steps && steps?.length"
     v-for="(step, stepIndex) in steps"
     :key="stepIndex"
   >
     <transition name="slide-fade" mode="out-in">
       <div v-if="currentStep === stepIndex + 1" class="calc__slide">
         <div class="calc__slide_title">{{ step.title }}</div>
-        <div v-if="stepIndex === steps.length - 1">
+        <div v-if="stepIndex === steps?.length - 1">
           <QuizForm :formData="formData" @submit="submitQuiz" />
         </div>
         <ul
