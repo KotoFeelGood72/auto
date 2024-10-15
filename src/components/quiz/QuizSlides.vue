@@ -8,7 +8,7 @@
       <div v-if="currentStep === stepIndex + 1" class="calc__slide">
         <div class="calc__slide_title">{{ step.title }}</div>
         <div v-if="stepIndex === steps?.length - 1">
-          <QuizForm :formData="formData" @submit="submitQuiz" />
+          <QuizFormStep :formData="formData" @submit="submitQuiz" />
         </div>
         <ul
           v-else
@@ -62,7 +62,7 @@
 </template>
 
 <script setup>
-import QuizForm from "./QuizForm.vue";
+import QuizFormStep from "./QuizFormStep.vue";
 import { useQuizStore, useQuizStoreRefs } from "@/stores/useQuizStore";
 
 const { steps, formData, selectedOptions, currentStep } = useQuizStoreRefs();
