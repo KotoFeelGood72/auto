@@ -23,7 +23,7 @@
             <label>
               <div
                 :class="[
-                  { 'default-item': !option.image },
+                  { 'default-item': !option?.image },
                   'calc__slide_item_img',
                 ]"
               >
