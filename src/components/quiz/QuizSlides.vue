@@ -13,7 +13,7 @@
         <ul
           v-else
           class="calc__slide_list"
-          :class="'grid-' + step.options.length"
+          :class="'grid-' + step?.options?.length"
         >
           <li
             v-for="(option, index) in step.options || []"
