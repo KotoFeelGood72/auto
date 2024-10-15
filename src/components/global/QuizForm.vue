@@ -29,7 +29,7 @@
 
 <script setup lang="ts">
 import QuizAbout from "@/components/quiz/QuizAbout.vue";
-// import QuizSlides from "@/components/quiz/QuizSlides.vue";
+import QuizSlides from "../quiz/QuizSlides.vue";
 import { computed } from "vue";
 import { useQuizStoreRefs } from "@/stores/useQuizStore";
 const { currentStep, steps } = useQuizStoreRefs();
