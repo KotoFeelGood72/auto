@@ -50,15 +50,9 @@
       </div>
     </transition>
   </div>
-  <div class="calc__slide_btn_w">
-    <button
-      v-if="currentStep < steps.length"
-      @click="nextStep"
-      class="calc__slide_btn_forward btn_base"
-    >
-      Далее
-    </button>
-  </div>
+  <!-- <div class="calc__slide_btn_w" v-if="currentStep < steps.length">
+    <div @click="nextStep" class="calc__slide_btn_forward btn_base">Далее</div>
+  </div> -->
 </template>
 
 <script setup>
