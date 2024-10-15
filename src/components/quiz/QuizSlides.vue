@@ -1,32 +1,19 @@
 <template>
-  <div
-    v-if="steps && steps?.length"
-    v-for="(step, stepIndex) in steps"
-    :key="stepIndex"
-  >
+  <div v-for="(step, stepIndex) in steps" :key="stepIndex">
     <transition name="slide-fade" mode="out-in">
       <div v-if="currentStep === stepIndex + 1" class="calc__slide">
         <div class="calc__slide_title">{{ step.title }}</div>
         <div v-if="stepIndex === steps?.length - 1">
           <QuizFormStep :formData="formData" @submit="submitQuiz" />
         </div>
-        <ul
-          v-else
-          class="calc__slide_list"
-          :class="'grid-' + step?.options?.length"
-        >
+        <ul v-else class="calc__slide_list" :class="'grid-' + step?.options?.length">
           <li
             v-for="(option, index) in step.options || []"
             :key="index"
             class="calc__slide_item"
           >
             <label>
-              <div
-                :class="[
-                  { 'default-item': !option?.image },
-                  'calc__slide_item_img',
-                ]"
-              >
+              <div :class="[{ 'default-item': !option?.image }, 'calc__slide_item_img']">
                 <input
                   type="radio"
                   :name="'step-' + stepIndex"
@@ -34,10 +21,7 @@
                   v-model="selectedOptions[stepIndex]"
                   @change="onOptionSelected(stepIndex, option)"
                 />
-                <div
-                  class="calc__slide_item_img_w"
-                  v-if="option && option.image"
-                >
+                <div class="calc__slide_item_img_w" v-if="option && option.image">
                   <img
                     src="https://i.pinimg.com/originals/06/8a/bd/068abd6590c42f6cc13a9e0cd8d65c01.jpg"
                   />
