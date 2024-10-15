@@ -61,14 +61,14 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import QuizForm from "./QuizForm.vue";
 import { useQuizStore, useQuizStoreRefs } from "@/stores/useQuizStore";
 
 const { steps, formData, selectedOptions, currentStep } = useQuizStoreRefs();
 const { addQuizData, updateCurrentStep } = useQuizStore();
 
-const onOptionSelected = (stepIndex: number, option: any) => {
+const onOptionSelected = (stepIndex, option) => {
   if (!steps.value[stepIndex]?.options) {
     console.error(`Options для шага ${stepIndex} не найдены.`);
     return;

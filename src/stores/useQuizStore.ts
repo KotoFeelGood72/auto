@@ -1,8 +1,13 @@
 import { defineStore, storeToRefs } from "pinia";
 
+interface formData {
+  name: string;
+  phone: string;
+}
+
 export const useQuizStore = defineStore("quiz", {
   state: () => ({
-    formData: {} as any,
+    formData: {} as formData,
     quiz: [] as any[],
     currentStep: 1, // Текущий шаг
     selectedOptions: [] as any[], // Выбранные опции для каждого шага
