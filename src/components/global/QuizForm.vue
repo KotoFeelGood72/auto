@@ -30,7 +30,7 @@
 <script setup lang="ts">
 import QuizAbout from "../quiz/QuizAbout.vue";
 import QuizSlides from "../quiz/QuizSlides.vue";
-import { ref, computed } from "vue";
+import { computed } from "vue";
 import { useQuizStoreRefs } from "@/stores/useQuizStore";
 const { currentStep, steps } = useQuizStoreRefs();
 const totalSteps = computed(() => steps.value.length);
@@ -40,23 +40,6 @@ const progressWidth = computed(
 );
 
 const progressWidthRounded = computed(() => progressWidth.value.toFixed(0));
-
-const formData = ref({
-  name: "",
-  phone: "",
-  email: "",
-});
-
-// Отправка формы
-// const submitQuiz = () => {
-//   const quizData = {
-//     name: formData.value.name,
-//     phone: formData.value.phone,
-//     email: formData.value.email,
-//   };
-//   console.log("Данные квиза: ", quizData);
-//   alert("Данные отправлены!");
-// };
 </script>
 
 <style scoped lang="scss">
