@@ -16,14 +16,16 @@
           :class="'grid-' + step.options.length"
         >
           <li
-            v-for="(option, index) in step.options"
+            v-for="(option, index) in step.options || []"
             :key="index"
             class="calc__slide_item"
           >
             <label>
               <div
-                class="calc__slide_item_img"
-                :class="{ 'default-item': !option.image }"
+                :class="[
+                  { 'default-item': !option.image },
+                  'calc__slide_item_img',
+                ]"
               >
                 <input
                   type="radio"
@@ -58,7 +60,6 @@
 
 <script setup lang="ts">
 import QuizForm from "./QuizForm.vue";
-import { computed } from "vue";
 import { useQuizStore, useQuizStoreRefs } from "@/stores/useQuizStore";
 
 const { steps, formData, selectedOptions, currentStep } = useQuizStoreRefs();

@@ -184,7 +184,7 @@ export const useQuizStore = defineStore("quiz", {
     addQuizData(newData: any) {
       // Проверка, есть ли уже такой объект в массиве
       const exists = this.quiz.some(
-        (data) =>
+        (data: any) =>
           data.step === newData.step &&
           data.selectedOption.title === newData.selectedOption.title
       );
