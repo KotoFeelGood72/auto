@@ -816,7 +816,7 @@ import { useModalStore } from "@/stores/useModalStore";
 import { useTelegram } from "@/composables/useTelegram";
 import { useHomeStore, useHomeStoreRefs } from "@/stores/useHomeStore";
 
-const { sendToTelegram } = useTelegram();
+// const { sendToTelegram } = useTelegram();
 const { getHome } = useHomeStore();
 const { home } = useHomeStoreRefs();
 
