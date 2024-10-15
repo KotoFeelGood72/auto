@@ -1,12 +1,7 @@
 <template>
   <div class="calc__form_col_about">
     <div class="calc__about_img_w">
-      <img
-        class="calc__about_img"
-        src="/img/calc/face.jpg"
-        alt="some image"
-        loading="lazy"
-      />
+      <img class="calc__about_img" src="/img/calc/face.jpg" />
     </div>
     <div class="calc__about_heading">
       <div class="calc__about_title">Иванов Дмитрий</div>
