@@ -1,16 +1,33 @@
 import { defineStore, storeToRefs } from "pinia";
 
+interface StepOption {
+  title: string;
+  image?: string; // Поле image является опциональным
+}
+
+interface Step {
+  title: string;
+  options?: StepOption[]; // Опции могут быть отсутствовать на некоторых шагах (например, шаг с формой)
+  name?: string; // Поля для шага с формой
+  phone?: string; // Поля для шага с формой
+}
+
 interface formData {
   name: string;
   phone: string;
 }
 
+interface QuizData {
+  step: number;
+  selectedOption: StepOption;
+}
+
 export const useQuizStore = defineStore("quiz", {
   state: () => ({
     formData: {} as formData,
-    quiz: [] as any[],
+    quiz: [] as QuizData[], // Квиз хранит шаг и выбранную опцию
     currentStep: 1, // Текущий шаг
-    selectedOptions: [] as any[], // Выбранные опции для каждого шага
+    selectedOptions: [] as (StepOption | null)[],
     steps: [
       {
         title: "Есть ли у вас готовый проект?",
@@ -175,7 +192,7 @@ export const useQuizStore = defineStore("quiz", {
         name: "",
         phone: "",
       },
-    ],
+    ] as Step[],
   }),
   actions: {
     initializeSelectedOptions() {
