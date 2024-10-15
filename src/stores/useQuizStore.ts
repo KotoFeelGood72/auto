@@ -20,11 +20,11 @@ export const useQuizStore = defineStore("quiz", {
         options: [
           {
             title: "Дом с классической крышей",
-            image: "@/assets/images/calc/small.png",
+            image: "/img/calc/small.png",
           },
           {
             title: "Дом с плоской крышей",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
         ],
       },
@@ -51,27 +51,27 @@ export const useQuizStore = defineStore("quiz", {
         options: [
           {
             title: "Облицовочный кирпич",
-            image: "@/assets/images/calc/small.png",
+            image: "/img/calc/small.png",
           },
           {
             title: "Декоративная штукатурка",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
           {
             title: "Сайдинги",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
           {
             title: "Искусственный камень",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
           {
             title: "Фасадные панели",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
           {
             title: "Другой материал",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
         ],
       },
@@ -80,27 +80,27 @@ export const useQuizStore = defineStore("quiz", {
         options: [
           {
             title: "Черепица",
-            image: "@/assets/images/calc/small.png",
+            image: "/img/calc/small.png",
           },
           {
             title: "Фальцевая кровля",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
           {
             title: "Профнастил",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
           {
             title: "Наплавляемая кровля",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
           {
             title: "Мембрана",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
           {
             title: "Другой материал",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
         ],
       },
@@ -113,27 +113,27 @@ export const useQuizStore = defineStore("quiz", {
         options: [
           {
             title: "Терраса",
-            image: "@/assets/images/calc/small.png",
+            image: "/img/calc/small.png",
           },
           {
             title: "Ландшафтный дизайн ",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
           {
             title: "Забор",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
           {
             title: "Беседка",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
           {
             title: "Баня",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
           {
             title: "Другое",
-            image: "@/assets/images/calc/medium.png",
+            image: "/img/calc/medium.png",
           },
         ],
       },
