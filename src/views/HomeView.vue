@@ -758,7 +758,14 @@
                 ></use></svg></span
             ><span>г. Краснодар, ул.Соколова, д. 66/2, офис 1</span>
           </div>
-          <div class="contact__map" ref="mapContainer"></div>
+          <div class="contact__map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A4da2c5bba387fa2568380d887aae1c794786c9dac056a25f477cf46cd181a543&amp;source=constructor"
+              width="100%"
+              height="400"
+              frameborder="0"
+            ></iframe>
+          </div>
         </div>
         <div class="contact__col contact__col--info">
           <h2 class="contact__title">Наши контакты</h2>
@@ -843,13 +850,6 @@ const steps = ref<any>([
 
 onMounted(async () => {
   await getHome();
-  const script = document.createElement("script");
-  script.src =
-    "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4565ee6a00eb2d1338dea58d4bc9f09e930db7d186fb498a533f7605906a996e&amp;width=100%25&amp;height=400";
-  script.type = "text/javascript";
-  script.charset = "utf-8";
-  script.async = true;
-  mapContainer.value.appendChild(script);
 });
 </script>
 
