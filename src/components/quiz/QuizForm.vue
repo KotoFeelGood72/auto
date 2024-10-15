@@ -29,7 +29,6 @@
         <div class="popup_call__form_item js-step-form-submit">
           <input
             class="popup_call__form_submit btn_base"
-            type="button"
             value="Получить подарок"
           />
         </div>
