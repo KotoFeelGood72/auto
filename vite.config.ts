@@ -14,7 +14,7 @@ export default defineConfig({
         assetFileNames: "assets/[name].[ext]",
       },
     },
-    cssCodeSplit: false, // Это объединит все CSS файлы в один
+    cssCodeSplit: false,
   },
   plugins: [vue()],
   resolve: {
