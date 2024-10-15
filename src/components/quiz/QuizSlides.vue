@@ -4,7 +4,7 @@
       <div v-if="currentStep === stepIndex + 1" class="calc__slide">
         <div class="calc__slide_title">{{ step.title }}</div>
         <div v-if="stepIndex === steps?.length - 1">
-          <QuizFormStep :formData="formData" @submit="submitQuiz" />
+          <QuizFormStep @submit="submitQuiz" />
         </div>
         <ul v-else class="calc__slide_list" :class="'grid-' + step?.options?.length">
           <li
