@@ -66,6 +66,11 @@ const { steps, formData, selectedOptions, currentStep } = useQuizStoreRefs();
 const { addQuizData, updateCurrentStep } = useQuizStore();
 
 const onOptionSelected = (stepIndex: number, option: any) => {
+  if (!steps.value[stepIndex]?.options) {
+    console.error(`Options для шага ${stepIndex} не найдены.`);
+    return;
+  }
+
   addQuizData({ step: stepIndex, selectedOption: option });
   setTimeout(() => {
     nextStep();
