@@ -1,33 +1,10 @@
 import { defineStore, storeToRefs } from "pinia";
 
-interface StepOption {
-  title: string;
-  image?: string; // Поле image является опциональным
-}
-
-interface Step {
-  title: string;
-  options?: StepOption[]; // Опции могут быть отсутствовать на некоторых шагах (например, шаг с формой)
-  name?: string; // Поля для шага с формой
-  phone?: string; // Поля для шага с формой
-}
-
-interface formData {
-  name: string;
-  phone: string;
-}
-
-interface QuizData {
-  step: number;
-  selectedOption: StepOption;
-}
-
 export const useQuizStore = defineStore("quiz", {
   state: () => ({
-    formData: {} as formData,
-    quiz: [] as QuizData[], // Квиз хранит шаг и выбранную опцию
-    currentStep: 1, // Текущий шаг
-    selectedOptions: [] as (StepOption | null)[],
+    quiz: [] as any[],
+    currentStep: 1, 
+    selectedOptions: [] as any[],
     steps: [
       {
         title: "Есть ли у вас готовый проект?",
@@ -192,11 +169,10 @@ export const useQuizStore = defineStore("quiz", {
         name: "",
         phone: "",
       },
-    ] as Step[],
+    ],
   }),
   actions: {
     initializeSelectedOptions() {
-      // Инициализация массива выбранных опций с пустыми значениями
       this.selectedOptions = Array(this.steps.length).fill(null);
     },
 
@@ -205,7 +181,6 @@ export const useQuizStore = defineStore("quiz", {
     },
 
     addQuizData(newData: any) {
-      // Проверка, есть ли уже такой объект в массиве
       const exists = this.quiz.some(
         (data: any) =>
           data.step === newData.step &&
@@ -220,29 +195,25 @@ export const useQuizStore = defineStore("quiz", {
     },
 
     updateCurrentStep(step: number) {
-      this.currentStep = step; // Обновляем текущий шаг
+      this.currentStep = step; 
     },
 
-    // Переход к следующему шагу
     nextStep() {
       if (this.currentStep < this.steps.length) {
         this.currentStep++;
       }
     },
 
-    // Переход к предыдущему шагу
     prevStep() {
       if (this.currentStep > 1) {
         this.currentStep--;
       }
     },
 
-    // Проверка на последний шаг
     isLastStep() {
       return this.currentStep === this.steps.length;
     },
 
-    // Сброс квиза
     resetQuiz() {
       this.currentStep = 1;
       this.quiz = [];
@@ -251,5 +222,4 @@ export const useQuizStore = defineStore("quiz", {
   },
 });
 
-// Использование storeToRefs
 export const useQuizStoreRefs = () => storeToRefs(useQuizStore());

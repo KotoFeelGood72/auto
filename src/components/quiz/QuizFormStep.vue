@@ -6,11 +6,7 @@
           <div class="form_input">
             <label class="form_input__label">Ваше имя</label>
             <div class="form_input__field">
-              <input
-                class="form_input__element"
-                type="text"
-                placeholder="Имя"
-              />
+              <input class="form_input__element" type="text" placeholder="Имя" />
             </div>
           </div>
         </div>
@@ -27,10 +23,7 @@
           </div>
         </div>
         <div class="popup_call__form_item js-step-form-submit">
-          <input
-            class="popup_call__form_submit btn_base"
-            value="Получить подарок"
-          />
+          <input class="popup_call__form_submit btn_base" value="Получить подарок" />
         </div>
       </div>
     </div>

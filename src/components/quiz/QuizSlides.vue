@@ -39,14 +39,14 @@
   </div> -->
 </template>
 
-<script setup>
-import QuizFormStep from "./QuizFormStep.vue";
+<script setup lang="ts">
+import QuizFormStep from "@/components/quiz/QuizFormStep.vue";
 import { useQuizStore, useQuizStoreRefs } from "@/stores/useQuizStore";
 
-const { steps, formData, selectedOptions, currentStep } = useQuizStoreRefs();
+const { steps, selectedOptions, currentStep } = useQuizStoreRefs();
 const { addQuizData, updateCurrentStep } = useQuizStore();
 
-const onOptionSelected = (stepIndex, option) => {
+const onOptionSelected = (stepIndex: any, option: any) => {
   if (!steps.value[stepIndex]?.options) {
     console.error(`Options для шага ${stepIndex} не найдены.`);
     return;
@@ -59,15 +59,15 @@ const onOptionSelected = (stepIndex, option) => {
 };
 
 // Метод для отправки формы
-// const submitQuiz = () => {
-//   const quizData = {
-//     name: formData.name,
-//     phone: formData.phone,
-//   };
-//   console.log("Данные формы: ", quizData);
-//   alert("Данные отправлены!");
-//   // Логика отправки данных на сервер
-// };
+const submitQuiz = () => {
+  // const quizData = {
+  //   name: formData.name,
+  //   phone: formData.phone,
+  // };
+  // console.log("Данные формы: ", quizData);
+  alert("Данные отправлены!");
+  // Логика отправки данных на сервер
+};
 
 const nextStep = () => {
   if (currentStep.value < steps.value.length) {
