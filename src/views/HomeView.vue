@@ -35,31 +35,20 @@
     <div class="section_in system__in">
       <div class="system__row">
         <div class="system__col system__col--img">
-          <h2 class="system__title">
-            "Double wall system"© "Двойной каркас ЛСТК"©
-          </h2>
+          <h2 class="system__title">"Double wall system"© "Двойной каркас ЛСТК"©</h2>
           <div class="system__img_box">
             <div class="system__img_w">
-              <img
-                class="system__img"
-                src="@/assets/images/system/system.jpg"
-              />
+              <img class="system__img" src="@/assets/images/system/system.jpg" />
             </div>
           </div>
         </div>
         <div class="system__col system__col--info">
           <div class="system__info_img_box">
             <div class="system__info_img_w">
-              <img
-                class="system__info_img"
-                src="@/assets/images/system/0.jpg"
-              />
+              <img class="system__info_img" src="@/assets/images/system/0.jpg" />
             </div>
             <div class="system__info_img_w">
-              <img
-                class="system__info_img"
-                src="@/assets/images/system/1.jpg"
-              />
+              <img class="system__info_img" src="@/assets/images/system/1.jpg" />
             </div>
           </div>
           <div class="system__info_about">
@@ -67,12 +56,11 @@
               Проектирование и изготовление металлических каркасов домов
             </div>
             <div class="system__info_about_descr">
-              Возведение каркаса здания из металлоконструкции, собранной из
-              оцинкованной стали, произведенного автоматической линией с
-              технологическими отверстиями и пазами. Каркас с обеих сторон
-              обшивается плитным материалом, который является несъемной
-              опалубкой, полости заполняются полистиролбетоном, который делает
-              конструкцию монолитной и теплой
+              Возведение каркаса здания из металлоконструкции, собранной из оцинкованной
+              стали, произведенного автоматической линией с технологическими отверстиями и
+              пазами. Каркас с обеих сторон обшивается плитным материалом, который
+              является несъемной опалубкой, полости заполняются полистиролбетоном, который
+              делает конструкцию монолитной и теплой
             </div>
             <a
               class="btn_base_s system__info_about_btn"
@@ -84,8 +72,8 @@
           <div class="system__info_about system__info_about--green">
             <div class="system__info_about_title">Двойной каркас ЛСТК</div>
             <div class="system__info_about_descr">
-              Иновационная запатентованная технология строительства жилых домов
-              и коммерческих зданий комфорт-класса
+              Иновационная запатентованная технология строительства жилых домов и
+              коммерческих зданий комфорт-класса
             </div>
             <a class="system__info_about_link" href="#">Патент</a>
           </div>
@@ -100,11 +88,10 @@
       </h2>
       <div class="adv__info_row">
         <div class="adv__info">
-          По теплоизоляционным свойствам полистиролбетон значительно превосходит
-          кирпич и является лучшим среди легких бетонов. При заливке
-          полистиролбетона исключается возникновение мест с повышенным
-          теплообменом между наружным и внутренним контуром здания на протяжении
-          всего периода эксплуатации.
+          По теплоизоляционным свойствам полистиролбетон значительно превосходит кирпич и
+          является лучшим среди легких бетонов. При заливке полистиролбетона исключается
+          возникновение мест с повышенным теплообменом между наружным и внутренним
+          контуром здания на протяжении всего периода эксплуатации.
         </div>
         <ul class="adv__info_list">
           <li class="adv__info_item">Высокая скорость возведения</li>
@@ -120,20 +107,20 @@
       <div class="adv__about">
         <div class="adv__about_descr">
           <p>
-            Древесная омыленная смола (СДО), входящая в состав полистиролбетона,
-            подавляет рост патогенной микрофлоры (бактерий, грибов), т.е.
-            препятствует образованию плесени и гниению.
+            Древесная омыленная смола (СДО), входящая в состав полистиролбетона, подавляет
+            рост патогенной микрофлоры (бактерий, грибов), т.е. препятствует образованию
+            плесени и гниению.
           </p>
           <p>
-            Входящие в состав полистиролбетона компоненты безопасны для здоровья
-            и окружающей среды: вспененный полистирол используется для
-            изготовления упаковок для продуктов, одноразовой посуды,
-            детскихигрушек, одноразовых медицинских инструментов.
+            Входящие в состав полистиролбетона компоненты безопасны для здоровья и
+            окружающей среды: вспененный полистирол используется для изготовления упаковок
+            для продуктов, одноразовой посуды, детскихигрушек, одноразовых медицинских
+            инструментов.
           </p>
           <p>
-            Полистиролбетон в Двойном каркасе ЛСТК не препятствуютвоздухообмену,
-            т. е. стены способны «дышать», а благодаря высокой паропроницаемости
-            — регулировать влажность воздуха.
+            Полистиролбетон в Двойном каркасе ЛСТК не препятствуютвоздухообмену, т. е.
+            стены способны «дышать», а благодаря высокой паропроницаемости — регулировать
+            влажность воздуха.
           </p>
         </div>
         <div class="adv__img_w">
@@ -146,46 +133,41 @@
             Долговечность свыше 100 лет и сейсмостойкость до 9 баллов
           </div>
           <div class="adv__adv_descr">
-            обеспечат капитальный свайно-ростверковый фундамент и монолитная
-            сталебетонная стена
+            обеспечат капитальный свайно-ростверковый фундамент и монолитная сталебетонная
+            стена
           </div>
         </li>
         <li class="adv__adv_item">
-          <div class="adv__adv_title">
-            Экономия на отоплении и комфортный микроклимат
-          </div>
+          <div class="adv__adv_title">Экономия на отоплении и комфортный микроклимат</div>
           <div class="adv__adv_descr">
-            благодаря высокой энергоэффективности строения, заполненного
-            теплоизолирующего и шумоизолирующего материала полистиролбетона
+            благодаря высокой энергоэффективности строения, заполненного теплоизолирующего
+            и шумоизолирующего материала полистиролбетона
           </div>
         </li>
         <li class="adv__adv_item">
           <div class="adv__adv_title">Безопасность</div>
           <div class="adv__adv_descr">
-            все материалы, использующиеся для строительства каркасно-монолитных
-            домов, имеют высокий уровень пожарной и экологической безопасности
+            все материалы, использующиеся для строительства каркасно-монолитных домов,
+            имеют высокий уровень пожарной и экологической безопасности
           </div>
         </li>
         <li class="adv__adv_item">
           <div class="adv__adv_title">Внешний вид на любой вкус</div>
           <div class="adv__adv_descr">
-            от суперсовременного навесного фасада до классической кирпичной
-            кладки с возможностью полного обновления фасада в процессе
-            эксплуатации
+            от суперсовременного навесного фасада до классической кирпичной кладки с
+            возможностью полного обновления фасада в процессе эксплуатации
           </div>
         </li>
         <li class="adv__adv_item">
           <div class="adv__adv_title">Срок строительства дома</div>
           <div class="adv__adv_descr">
-            за 60 дней – это инновационный подход к возведению жилья, который
-            сочетает в себе современные технологии и стандартные строительные
-            процедуры. Сокращает время без ущерба для качества.
+            за 60 дней – это инновационный подход к возведению жилья, который сочетает в
+            себе современные технологии и стандартные строительные процедуры. Сокращает
+            время без ущерба для качества.
           </div>
         </li>
         <li class="adv__adv_item">
-          <div class="adv__adv_title">
-            Экономия времени и денег на ремонт и отделку
-          </div>
+          <div class="adv__adv_title">Экономия времени и денег на ремонт и отделку</div>
           <div class="adv__adv_descr">
             безусадочная технология позволит приступить к отделке сразу же после
             возведения коробки дома, технология обеспечит идеально ровные углы и
@@ -217,8 +199,8 @@
               Проводите время с семьей и встречайте друзей
             </div>
             <div class="imagine__item_descr">
-              Жарьте шашлыки и барбекю, гуляйте босиком по зеленой траве,
-              читайте у камина, играйте в бильярд!
+              Жарьте шашлыки и барбекю, гуляйте босиком по зеленой траве, читайте у
+              камина, играйте в бильярд!
             </div>
           </div>
         </li>
@@ -232,12 +214,10 @@
             />
           </div>
           <div class="imagine__info">
-            <div class="imagine__item_title">
-              Занимайтесь спортом на свежем воздухе
-            </div>
+            <div class="imagine__item_title">Занимайтесь спортом на свежем воздухе</div>
             <div class="imagine__item_descr">
-              Тренируйтесь в собственном зале, плавайте в бассейне, бегайте на
-              свежем воздухе и встречайте рассветы!
+              Тренируйтесь в собственном зале, плавайте в бассейне, бегайте на свежем
+              воздухе и встречайте рассветы!
             </div>
           </div>
         </li>
@@ -255,8 +235,8 @@
               Дарите детям здоровое и счастливое детство
             </div>
             <div class="imagine__item_descr">
-              У каждого ребенка будет своя комната, постройте детскую площадку с
-              игровым комплексом, создайте игровую комнату!
+              У каждого ребенка будет своя комната, постройте детскую площадку с игровым
+              комплексом, создайте игровую комнату!
             </div>
           </div>
         </li>
@@ -287,10 +267,7 @@
           }"
           :pagination="{ el: '.sys_slider__pag', clickable: true }"
         >
-          <SwiperSlide
-            v-for="(item, i) in steps"
-            :key="'works-item-slide-' + item.id"
-          >
+          <SwiperSlide v-for="(item, i) in steps" :key="'works-item-slide-' + item.id">
             <li class="step__card">
               <div class="step__card_info">
                 <div class="step__card_title">Дом за 3 месяца</div>
@@ -308,9 +285,7 @@
             aria-label="Prev slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use
-                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
-              ></use>
+              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
             </svg>
           </button>
           <button
@@ -319,9 +294,7 @@
             aria-label="Next slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use
-                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
-              ></use>
+              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
             </svg>
           </button>
         </div>
@@ -331,8 +304,7 @@
   <section class="section stage js-sys-slider-w">
     <div class="section_in stage__in">
       <h2 class="stage__title">
-        <strong>Посмотрите 4 этапа,</strong> как будет строиться ваш идеальный
-        дом
+        <strong>Посмотрите 4 этапа,</strong> как будет строиться ваш идеальный дом
       </h2>
       <div class="sys_slider__pag js-sys-pag-w"></div>
       <div class="stage__slider_w">
@@ -357,10 +329,7 @@
                       </div>
                       <div class="stage__info_subtitle">Включено:</div>
                       <ul class="stage__info_list">
-                        <li
-                          class="stage__info_item"
-                          v-for="subitem in item.list"
-                        >
+                        <li class="stage__info_item" v-for="subitem in item.list">
                           <span class="stage__info_item_icon">
                             <svg class="icon icon_checked icon--size_mod">
                               <use
@@ -385,8 +354,7 @@
                             <use
                               xlink:href="@/assets/images/sprite/sprite.svg#rub"
                             ></use></svg></span
-                        ><span>Стоимость: </span
-                        ><strong> {{ item.price }}</strong>
+                        ><span>Стоимость: </span><strong> {{ item.price }}</strong>
                       </div>
                     </div>
                   </div>
@@ -407,9 +375,7 @@
             aria-label="Prev slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use
-                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
-              ></use>
+              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
             </svg>
           </button>
           <button
@@ -418,9 +384,7 @@
             aria-label="Next slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use
-                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
-              ></use>
+              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
             </svg>
           </button>
         </div>
@@ -445,8 +409,8 @@
                     xlink:href="@/assets/images/sprite/sprite.svg#about-0"
                   ></use></svg></span
               ><span class="about_us__item_title"
-                >Строительство домов по технологии «МСБК» срок строительства: от
-                60 дней</span
+                >Строительство домов по технологии «МСБК» срок строительства: от 60
+                дней</span
               >
             </li>
             <li class="about_us__item">
@@ -465,9 +429,7 @@
                   <use
                     xlink:href="@/assets/images/sprite/sprite.svg#about-2"
                   ></use></svg></span
-              ><span class="about_us__item_title"
-                >Отделка домов «Под ключ»</span
-              >
+              ><span class="about_us__item_title">Отделка домов «Под ключ»</span>
             </li>
           </ul>
         </div>
@@ -504,16 +466,14 @@
         <div class="excursion__col excursion__col--info">
           <div class="excursion__info_in">
             <h2 class="excursion__title">
-              Приглашаем на <strong>бесплатную экскурсию</strong> по строящимся
-              объектам
+              Приглашаем на <strong>бесплатную экскурсию</strong> по строящимся объектам
             </h2>
             <div class="excursion__subtitle">
               Поговорите с нашими строителями, узнайте больше о процессе
             </div>
             <ul class="excursion__list">
               <li class="excursion__item">
-                <strong>Исследуйте</strong> используемые технологии
-                строительства
+                <strong>Исследуйте</strong> используемые технологии строительства
               </li>
               <li class="excursion__item">
                 <strong>Оцените</strong> качество стройматериалов
@@ -526,8 +486,8 @@
               <form action="GET">
                 <div class="excursion__form_in">
                   <h4 class="excursion__form_title">
-                    Укажите, когда вам удобно посетить экскурсию и оставьте
-                    контактные данные
+                    Укажите, когда вам удобно посетить экскурсию и оставьте контактные
+                    данные
                   </h4>
                   <div class="excursion__form_list">
                     <div class="excursion__form_item">
@@ -610,8 +570,8 @@
         >
       </h2>
       <div class="step__subtitle">
-        Как и у любой компании у нас есть как положительные, так и отрицательные
-        отзывы. Мы ничего от вас не скрываем
+        Как и у любой компании у нас есть как положительные, так и отрицательные отзывы.
+        Мы ничего от вас не скрываем
       </div>
       <div class="step__list js-step-slider js-step-slider--review">
         <Swiper
@@ -624,10 +584,7 @@
             nextEl: '.js-review-navigation-next',
           }"
         >
-          <SwiperSlide
-            v-for="(item, i) in home?.acf.rev"
-            :key="'reviews-home-' + i"
-          >
+          <SwiperSlide v-for="(item, i) in home?.acf.rev" :key="'reviews-home-' + i">
             <li class="step__card">
               <div class="step__rev_info">
                 <div class="step__rev_heading">
@@ -647,12 +604,9 @@
                 <div class="step__rev_descr">
                   {{ item.txt }}
                 </div>
-                <a
-                  class="step__rev_link"
-                  :href="item.link.url"
-                  target="_blank"
-                  >{{ item.link.title }}</a
-                >
+                <a class="step__rev_link" :href="item.link.url" target="_blank">{{
+                  item.link.title
+                }}</a>
               </div>
             </li>
           </SwiperSlide>
@@ -665,9 +619,7 @@
             aria-label="Prev slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use
-                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
-              ></use>
+              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
             </svg>
           </button>
           <button
@@ -676,9 +628,7 @@
             aria-label="Next slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use
-                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
-              ></use>
+              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
             </svg>
           </button>
         </div>
@@ -724,9 +674,7 @@
             aria-label="Prev slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use
-                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
-              ></use>
+              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
             </svg>
           </button>
           <button
@@ -735,9 +683,7 @@
             aria-label="Next slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use
-                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
-              ></use>
+              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
             </svg>
           </button>
         </div>
@@ -770,9 +716,7 @@
         <div class="contact__col contact__col--info">
           <h2 class="contact__title">Наши контакты</h2>
           <div class="contact__day">Без выходных 9:00-18:00</div>
-          <a class="contact__phone" href="tel:+7 928 275 54 56"
-            >+7 928 275 54 56</a
-          >
+          <a class="contact__phone" href="tel:+7 928 275 54 56">+7 928 275 54 56</a>
           <div class="contact__btn_w">
             <a class="btn_base_s contact__contact" @click="openModal('form')"
               >Заказать звонок</a
