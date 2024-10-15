@@ -41,7 +41,6 @@ const progressWidth = computed(
 
 const progressWidthRounded = computed(() => progressWidth.value.toFixed(0));
 
-// Данные формы
 const formData = ref({
   name: "",
   phone: "",
@@ -49,15 +48,15 @@ const formData = ref({
 });
 
 // Отправка формы
-const submitQuiz = () => {
-  const quizData = {
-    name: formData.value.name,
-    phone: formData.value.phone,
-    email: formData.value.email,
-  };
-  console.log("Данные квиза: ", quizData);
-  alert("Данные отправлены!");
-};
+// const submitQuiz = () => {
+//   const quizData = {
+//     name: formData.value.name,
+//     phone: formData.value.phone,
+//     email: formData.value.email,
+//   };
+//   console.log("Данные квиза: ", quizData);
+//   alert("Данные отправлены!");
+// };
 </script>
 
 <style scoped lang="scss">

@@ -111,7 +111,7 @@ import { useModalStore, useModalStoreRefs } from "@/stores/useModalStore";
 const isDragging = ref(false);
 const fileInput = ref<HTMLInputElement | null>(null);
 const files = reactive<{ file: File | null }>({ file: null });
-const filePreviewUrl = ref<string | null>(null);
+const filePreviewUrl = ref<any>(null);
 
 const { closeAllModals } = useModalStore();
 const { modalData } = useModalStoreRefs();

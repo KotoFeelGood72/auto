@@ -1,18 +1,12 @@
 <template>
   <component :is="layoutComponent">
     <router-view />
-
-    <!-- Затемнённый фон -->
     <transition name="fade-bg">
       <div v-if="isModalActive" class="page-bg" @click="closeAllModals"></div>
     </transition>
-
-    <!-- Анимация для ModalCallback -->
     <transition name="slide-up">
       <ModalCallback v-if="modals.form" />
     </transition>
-
-    <!-- Анимация для ModalObject -->
     <transition name="slide-up">
       <ModalObject v-if="modals.project" />
     </transition>
