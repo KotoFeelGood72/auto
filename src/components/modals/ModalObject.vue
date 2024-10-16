@@ -184,6 +184,10 @@ const toggleModal = () => {
   transform: translate(-50%, -50%);
   z-index: 100;
   background-color: #fff;
+  max-height: 95dvh;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .object_tab__links {

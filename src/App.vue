@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, watch } from "vue";
+import { computed, onMounted, onUnmounted, watch } from "vue";
 import DefaultLayout from "@/layouts/DefaultLayout.vue";
 import EmptyLayout from "@/layouts/EmptyLayout.vue";
 import ModalCallback from "./components/modals/ModalCallback.vue";
@@ -31,9 +31,12 @@ const isModalActive = computed(() => {
 });
 
 const route = useRoute();
-const { closeAllModals } = useModalStore();
+const { closeAllModals, openModal } = useModalStore();
 const { modals } = useModalStoreRefs();
 
+let isModalShown = false; // Флаг для отслеживания показа модального окна
+
+// Определяем, какой layout использовать
 const layoutComponent = computed(() => {
   switch (route.meta.layout) {
     case "default":
@@ -45,12 +48,71 @@ const layoutComponent = computed(() => {
   }
 });
 
+// Закрываем модальные окна при изменении маршрута
 watch(
   () => route.fullPath,
   () => {
     closeAllModals();
   }
 );
+
+// Метод, который срабатывает перед уходом пользователя со страницы
+const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+  console.log("Пользователь покидает сайт");
+  openModal("form");
+};
+
+// Метод, который открывает модальное окно при прокрутке страницы до 90%,
+// если модальное окно еще не было показано за сессию
+const handleScroll = () => {
+  const scrollPosition = window.scrollY + window.innerHeight;
+  const pageHeight = document.documentElement.scrollHeight;
+
+  // Если прокрутка доходит до 90% и модальное окно еще не было показано
+  if (scrollPosition / pageHeight >= 0.9 && !isModalShown) {
+    openModal("form");
+    isModalShown = true; // Устанавливаем флаг, чтобы окно открывалось только один раз
+  }
+};
+
+// Таймер бездействия
+let inactivityTimer: ReturnType<typeof setTimeout>;
+
+// Функция для сброса таймера
+const resetInactivityTimer = () => {
+  clearTimeout(inactivityTimer);
+  inactivityTimer = setTimeout(() => {
+    openModal("form"); // Открываем модальное окно после 1 минуты бездействия
+  }, 60000); // 60 секунд
+};
+
+// Добавляем обработчики событий для отслеживания активности
+const addInactivityListeners = () => {
+  window.addEventListener("mousemove", resetInactivityTimer);
+  window.addEventListener("keydown", resetInactivityTimer);
+  window.addEventListener("scroll", resetInactivityTimer); // Событие прокрутки также сбрасывает таймер
+};
+
+// Удаляем обработчики событий
+const removeInactivityListeners = () => {
+  window.removeEventListener("mousemove", resetInactivityTimer);
+  window.removeEventListener("keydown", resetInactivityTimer);
+  window.removeEventListener("scroll", resetInactivityTimer);
+};
+
+onMounted(() => {
+  window.addEventListener("beforeunload", handleBeforeUnload);
+  window.addEventListener("scroll", handleScroll); // Слушаем событие прокрутки
+  resetInactivityTimer(); // Устанавливаем таймер бездействия при загрузке
+  addInactivityListeners(); // Добавляем слушатели событий активности
+});
+
+onUnmounted(() => {
+  window.removeEventListener("beforeunload", handleBeforeUnload);
+  window.removeEventListener("scroll", handleScroll); // Убираем слушатель при размонтировании
+  removeInactivityListeners(); // Удаляем слушатели событий при размонтировании
+  clearTimeout(inactivityTimer); // Очищаем таймер
+});
 </script>
 
 <style lang="scss">

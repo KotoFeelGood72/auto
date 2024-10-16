@@ -239,8 +239,8 @@ const removeFile = () => {
 
 <style scoped lang="scss">
 .popup_call__form_item--file {
-  border: 2px dashed #ccc;
-  padding: 20px;
+  border: 0.2rem dashed #ccc;
+  padding: 2rem;
   text-align: center;
   cursor: pointer;
   transition: border-color 0.3s ease;
@@ -283,8 +283,8 @@ const removeFile = () => {
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        font-size: 18px;
-        margin-left: 10px;
+        font-size: 1.8rem;
+        margin-left: 1rem;
         color: red;
       }
     }
@@ -311,8 +311,10 @@ const removeFile = () => {
 }
 
 .popup__in {
-  max-height: 90dvh;
+  max-height: 97dvh;
   overflow-y: auto;
   scrollbar-width: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 </style>
