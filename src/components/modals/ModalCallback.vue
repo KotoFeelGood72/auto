@@ -21,19 +21,23 @@
               <div class="popup_call__form_list">
                 <div class="popup_call__form_item">
                   <div class="form_input">
-                    <label class="form_input__label" for="input_10"
-                      >Введите имя</label
-                    >
+                    <label class="form_input__label" for="input_10">Введите имя</label>
                     <div class="form_input__field">
                       <input
                         class="form_input__element"
                         type="text"
                         id="input_10"
-                        value=""
+                        v-model="form.name"
+                        @blur="v$.name.$touch"
+                        :class="{ error: v$.name.$error }"
                       />
+                      <div v-if="v$.name.$error" class="error-message">
+                        <span>Поле обязательно для заполнения</span>
+                      </div>
                     </div>
                   </div>
                 </div>
+
                 <div class="popup_call__form_item">
                   <div class="form_input">
                     <label class="form_input__label" for="input_11"
@@ -44,8 +48,13 @@
                         class="form_input__element"
                         type="text"
                         id="input_11"
-                        value=""
+                        v-model="form.phone"
+                        @blur="v$.phone.$touch"
+                        :class="{ error: v$.phone.$error }"
                       />
+                      <div v-if="v$.phone.$error" class="error-message">
+                        <span>Поле обязательно для заполнения</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -59,12 +68,7 @@
                   @drop.prevent="onDrop"
                   :class="{ 'file-dragging': isDragging }"
                 >
-                  <input
-                    type="file"
-                    ref="fileInput"
-                    @change="onFileChange"
-                    hidden
-                  />
+                  <input type="file" ref="fileInput" @change="onFileChange" hidden />
                   <label for=""
                     >Перетащите файл сюда или
                     <span @click="triggerFileInput">выберите файл</span></label
@@ -89,6 +93,7 @@
                     class="popup_call__form_submit btn_base"
                     type="button"
                     value="Получить консультацию"
+                    @click="submitForm"
                   />
                 </div>
               </div>
@@ -100,6 +105,9 @@
           </div>
         </div>
       </div>
+      <div class="loader" v-if="isLoading">
+        <Icons icon="svg-spinners:ring-resize" :size="100" />
+      </div>
     </div>
   </div>
 </template>
@@ -107,14 +115,72 @@
 <script setup lang="ts">
 import { ref, reactive } from "vue";
 import { useModalStore, useModalStoreRefs } from "@/stores/useModalStore";
+import useVuelidate from "@vuelidate/core";
+import { required, minLength, helpers } from "@vuelidate/validators";
+import { useTelegram } from "@/composables/useTelegram";
 
 const isDragging = ref(false);
 const fileInput = ref<HTMLInputElement | null>(null);
 const files = reactive<{ file: File | null }>({ file: null });
 const filePreviewUrl = ref<any>(null);
+const {
+  sendFormWithoutFile,
+  sendFormWithFile,
+  isLoading,
+  isSuccess,
+  errorMessage,
+} = useTelegram();
+
+const form = reactive({
+  name: "",
+  phone: "",
+  file: null,
+});
+
+const rules = {
+  name: { required, minLength: minLength(2) },
+  phone: {
+    required,
+  },
+};
+
+const v$ = useVuelidate(rules, form);
 
 const { closeAllModals } = useModalStore();
 const { modalData } = useModalStoreRefs();
+
+const submitForm = async () => {
+  v$.value.$touch(); // Активируем валидацию
+  if (v$.value.$invalid) {
+    console.log("Форма содержит ошибки.");
+  } else {
+    try {
+      // Проверяем, есть ли файл
+      if (files.file) {
+        await sendFormWithFile(form.name, form.phone, files.file); // Отправляем данные с файлом
+      } else {
+        await sendFormWithoutFile(form.name, form.phone);
+      }
+      resetForm();
+      closeAllModals();
+    } catch (error: any) {
+      // Выводим более подробную информацию об ошибке
+      console.error("Ошибка при отправке данных:", error?.message || error, error);
+    }
+  }
+};
+
+const resetForm = () => {
+  form.name = "";
+  form.phone = "";
+  files.file = null;
+  filePreviewUrl.value = null;
+
+  // Проверяем, существует ли элемент fileInput перед сбросом его значения
+  if (fileInput.value) {
+    fileInput.value.value = ""; // Сбрасываем input file, если он существует
+  }
+};
 
 // Определяем, является ли файл изображением
 const isImage = (file: File) => {
@@ -223,5 +289,30 @@ const removeFile = () => {
       }
     }
   }
+}
+
+.error-message {
+  color: red;
+  padding: 1rem;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff70;
+  backdrop-filter: blur(2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b2c593;
+}
+
+.popup__in {
+  max-height: 90dvh;
+  overflow-y: auto;
+  scrollbar-width: 0;
 }
 </style>

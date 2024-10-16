@@ -66,7 +66,7 @@
 
           <a
             class="btn_base popup_popular__btn js-popup-trigger-form"
-            @click.prevent="toggleModal"
+            @click.prevent="handleSubmit"
           >
             Оставить заявку
           </a>
@@ -75,9 +75,7 @@
     </div>
     <div class="object__tabs">
       <ul class="object_tab__links">
-        <li :class="{ active: activeTab === 1 }" @click="setActiveTab(1)">
-          Описание
-        </li>
+        <li :class="{ active: activeTab === 1 }" @click="setActiveTab(1)">Описание</li>
         <li :class="{ active: activeTab === 2 }" @click="setActiveTab(2)">
           Характеристики
         </li>
@@ -127,17 +125,18 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination } from "swiper/modules";
 import { useRoute } from "vue-router";
 import { onMounted, ref } from "vue";
-import { useProjectsStore } from "@/stores/useProjectStore";
+import { useProjectsStore, useProjectsStoreRefs } from "@/stores/useProjectStore";
 import { useModalStore } from "@/stores/useModalStore";
 import Close from "../ui/Close.vue";
 
 const { openModal, closeModal } = useModalStore();
-const { getProjectById } = useProjectsStore();
+const { getProjectById, setSendObject } = useProjectsStore();
+const { sendObject } = useProjectsStoreRefs();
 const project = ref<any>(null);
 const route = useRoute();
 
-const activeTab = ref(1); // Устанавливаем активную вкладку по умолчанию
-const activeComplect = ref<number | null>(null); // По умолчанию активная комплектация
+const activeTab = ref(1); // Активная вкладка по умолчанию
+const activeComplect = ref<number | null>(null); // Активная комплектация
 
 const setActiveTab = (tabIndex: number) => {
   activeTab.value = tabIndex;
@@ -147,18 +146,27 @@ const setActiveComplect = (complectIndex: number) => {
   activeComplect.value = complectIndex;
 };
 
+// Функция для отправки данных в стор при нажатии на "Оставить заявку"
+const handleSubmit = () => {
+  if (project.value && activeComplect.value !== null) {
+    const selectedComplect = project.value.acf.complects[activeComplect.value];
+    setSendObject(
+      project.value.acf.gallery[0]?.img || "", // Первая картинка
+      project.value.acf.title, // Название проекта
+      selectedComplect.item // Выбранная комплектация
+    );
+    toggleModal(); // Открытие формы
+  }
+};
+
 onMounted(async () => {
   if (route.query.project) {
     project.value = await getProjectById(Number(route.query.project));
   }
 
-  // Выбираем первый радио по умолчанию, если есть комплектации
-  if (
-    project.value &&
-    project.value.acf.complects &&
-    project.value.acf.complects.length > 0
-  ) {
-    activeComplect.value = 0; // Устанавливаем первый элемент активным
+  // По умолчанию выбираем первый радио, если есть комплектации
+  if (project.value && project.value.acf.complects.length > 0) {
+    activeComplect.value = 0;
   }
 });
 

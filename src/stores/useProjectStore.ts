@@ -3,7 +3,12 @@ import axios from "axios";
 
 export const useProjectsStore = defineStore("projects", {
   state: () => ({
-    projects: null as any, // Инициализируем проекты как null
+    projects: null as any, 
+    sendObject: {
+      image: null as string | null, 
+      title: null as string | null, 
+      complectation: null as string | null, 
+    },
   }),
   actions: {
     async getProjects() {
@@ -36,6 +41,12 @@ export const useProjectsStore = defineStore("projects", {
           }
         });
       }
+    },
+    // Метод для обновления объекта sendObject
+    setSendObject(image: string, title: string, complectation: string) {
+      this.sendObject.image = image;
+      this.sendObject.title = title;
+      this.sendObject.complectation = complectation;
     },
   },
 });

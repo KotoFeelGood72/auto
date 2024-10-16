@@ -20,11 +20,11 @@ export const useQuizStore = defineStore("quiz", {
         options: [
           {
             title: "Дом с классической крышей",
-            image: "/img/calc/small.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Дом с плоской крышей",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
         ],
       },
@@ -51,27 +51,27 @@ export const useQuizStore = defineStore("quiz", {
         options: [
           {
             title: "Облицовочный кирпич",
-            image: "/img/calc/small.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Декоративная штукатурка",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Сайдинги",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Искусственный камень",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Фасадные панели",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Другой материал",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
         ],
       },
@@ -80,27 +80,27 @@ export const useQuizStore = defineStore("quiz", {
         options: [
           {
             title: "Черепица",
-            image: "/img/calc/small.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Фальцевая кровля",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Профнастил",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Наплавляемая кровля",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Мембрана",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Другой материал",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
         ],
       },
@@ -113,27 +113,27 @@ export const useQuizStore = defineStore("quiz", {
         options: [
           {
             title: "Терраса",
-            image: "/img/calc/small.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Ландшафтный дизайн ",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Забор",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Беседка",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Баня",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
           {
             title: "Другое",
-            image: "/img/calc/medium.png",
+            image: "https://avatars.mds.yandex.net/i?id=12f5786e1ccb3a0f35ad9f75a4b84dd2_l-9044040-images-thumbs&n=13",
           },
         ],
       },

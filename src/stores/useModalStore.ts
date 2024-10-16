@@ -4,6 +4,7 @@ interface ModalsState {
   project: boolean;
   calc: boolean;
   form: boolean;
+  burger: boolean;
 }
 
 export const useModalStore = defineStore("modal", {
@@ -12,6 +13,7 @@ export const useModalStore = defineStore("modal", {
       project: false,
       calc: false,
       form: false,
+      burger: false,
     },
     modalData: "", // Строка для хранения переданных данных
   }),

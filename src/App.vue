@@ -10,6 +10,9 @@
     <transition name="slide-up">
       <ModalObject v-if="modals.project" />
     </transition>
+    <transition name="slide-left">
+      <ModalBurger v-if="modals.burger" />
+    </transition>
   </component>
 </template>
 
@@ -19,6 +22,7 @@ import DefaultLayout from "@/layouts/DefaultLayout.vue";
 import EmptyLayout from "@/layouts/EmptyLayout.vue";
 import ModalCallback from "./components/modals/ModalCallback.vue";
 import ModalObject from "./components/modals/ModalObject.vue";
+import ModalBurger from "./components/modals/ModalBurger.vue";
 import { useRoute } from "vue-router";
 import { useModalStoreRefs, useModalStore } from "./stores/useModalStore";
 
@@ -98,5 +102,22 @@ watch(
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.slide-left-enter-from,
+.slide-left-leave-to {
+  transform: translateX(10rem);
+  opacity: 0;
+}
+
+.slide-left-enter-to,
+.slide-left-leave-from {
+  transform: translateX(0);
+  opacity: 1;
 }
 </style>

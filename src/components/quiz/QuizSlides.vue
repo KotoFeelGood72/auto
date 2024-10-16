@@ -4,7 +4,7 @@
       <div v-if="currentStep === stepIndex + 1" class="calc__slide">
         <div class="calc__slide_title">{{ step.title }}</div>
         <div v-if="stepIndex === steps?.length - 1">
-          <!-- <QuizFormStep @submit="submitQuiz" /> -->
+          <QuizFormStep />
         </div>
         <ul v-else class="calc__slide_list" :class="'grid-' + step?.options?.length">
           <li
@@ -32,13 +32,10 @@
       </div>
     </transition>
   </div>
-  <!-- <div class="calc__slide_btn_w" v-if="currentStep < steps.length">
-    <div @click="nextStep" class="calc__slide_btn_forward btn_base">Далее</div>
-  </div> -->
 </template>
 
 <script setup lang="ts">
-// import QuizFormStep from "@/components/quiz/QuizFormStep.vue";
+import QuizFormStep from "@/components/quiz/QuizFormStep.vue";
 import { useQuizStore, useQuizStoreRefs } from "@/stores/useQuizStore";
 
 const { steps, selectedOptions, currentStep } = useQuizStoreRefs();
@@ -85,7 +82,6 @@ const nextStep = () => {
 .slide-fade-enter,
 .slide-fade-leave-to {
   opacity: 0;
-  // transform: translateX(100%);
 }
 
 .calc__slide_list {

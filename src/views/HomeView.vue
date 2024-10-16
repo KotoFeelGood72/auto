@@ -482,80 +482,12 @@
                 <strong>Задайте</strong> вопросы нашему прорабу
               </li>
             </ul>
-            <div class="excursion__form">
-              <form action="GET">
-                <div class="excursion__form_in">
-                  <h4 class="excursion__form_title">
-                    Укажите, когда вам удобно посетить экскурсию и оставьте контактные
-                    данные
-                  </h4>
-                  <div class="excursion__form_list">
-                    <div class="excursion__form_item">
-                      <div class="form_input">
-                        <label class="form_input__label" for="input_10"
-                          >Укажите дату</label
-                        >
-                        <div class="form_input__field">
-                          <input
-                            class="form_input__element"
-                            type="text"
-                            id="input_10"
-                            value=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="excursion__form_item">
-                      <div class="form_input">
-                        <label class="form_input__label" for="input_11"
-                          >Введите номер телефона</label
-                        >
-                        <div class="form_input__field">
-                          <input
-                            class="form_input__element"
-                            type="text"
-                            id="input_11"
-                            value=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="excursion__form_item">
-                      <div class="form_input">
-                        <label class="form_input__label" for="input_12"
-                          >Введите имя</label
-                        >
-                        <div class="form_input__field">
-                          <input
-                            class="form_input__element"
-                            type="text"
-                            id="input_12"
-                            value=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="excursion__form_item">
-                      <input
-                        class="excursion__form_submit btn_base"
-                        type="button"
-                        value="Записаться на экскурсию"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
+            <ExcursionForm />
           </div>
         </div>
         <div class="excursion__col excursion__col--img">
           <div class="excursion__img_w">
-            <img
-              class="excursion__img"
-              src="@/assets/images/form.jpg"
-              alt="some image"
-              loading="lazy"
-            />
+            <img class="excursion__img" src="@/assets/images/form.jpg" />
           </div>
         </div>
       </div>
@@ -764,8 +696,8 @@ import { ref, onMounted } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination, EffectFade } from "swiper/modules";
 import { useModalStore } from "@/stores/useModalStore";
-import { useTelegram } from "@/composables/useTelegram";
 import { useHomeStore, useHomeStoreRefs } from "@/stores/useHomeStore";
+import ExcursionForm from "@/components/ExcursionForm.vue";
 
 // const { sendToTelegram } = useTelegram();
 const { getHome } = useHomeStore();

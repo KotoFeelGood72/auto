@@ -1223,11 +1223,18 @@ input[type="submit"] {
   transition: box-shadow 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
   width: 100%;
   will-change: box-shadow;
+  border: .2rem solid transparent;
+  transition: all .3s ease-in-out
+  ;
 }
-.form_input__element:focus,
-.form_input__element:hover {
-  -webkit-box-shadow: inset 0 0 0 2px #b2c593;
-  box-shadow: inset 0 0 0 2px #b2c593;
+
+.form_input__element.error {
+  border: .2rem solid red;
+
+}
+.form_input__element:focus:not(.error),
+.form_input__element:hover:not(.error) {
+  border-color: #4242428d;
 }
 .form_input__element::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.4);
@@ -5471,9 +5478,9 @@ input:checked ~ .calc__slide_item_icon {
     gap: 2rem;
     grid-template-columns: 1fr 1fr;
   } */
-  .calc__slide_item_img_w {
+  /* .calc__slide_item_img_w {
     padding-bottom: 64%;
-  }
+  } */
   .calc__form_col_about {
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
