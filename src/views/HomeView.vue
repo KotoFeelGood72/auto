@@ -757,7 +757,7 @@
 </template>
 
 <script setup lang="ts">
-import QuizForm from "@/components/global/QuizForm.vue";
+import QuizForm from "@/components/QuizForm.vue";
 import Projects from "@/components/home/Projects.vue";
 import SystemsSlider from "@/components/home/SystemsSlider.vue";
 import { ref, onMounted } from "vue";
