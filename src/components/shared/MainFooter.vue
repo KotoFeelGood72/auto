@@ -5,7 +5,9 @@
         <div class="footer__col footer__col--logo">
           <div class="footer__logo_row">
             <RouterLink class="footer__logo" to="/">
-              <img src="/img/logo.png" />
+              <img
+                src="https://2klstk.ru/wp-content/uploads/2024/09/logo.png"
+              />
             </RouterLink>
             <div class="footer__logo_cta">
               <h2 class="footer__logo_title">Технологии комфорта</h2>
@@ -88,8 +90,14 @@ import { useModalStore } from "@/stores/useModalStore";
 
 const { openModal } = useModalStore();
 const socials = ref([
-  { img: "/img/tg.svg", link: "https://t.me/masternavse2" },
-  { img: "/img/wa.svg", link: "https://wtsp.cc/79282755456" },
+  {
+    img: "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/telegram.svg",
+    link: "https://t.me/masternavse2",
+  },
+  {
+    img: "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/whatsapp.svg",
+    link: "https://wtsp.cc/79282755456",
+  },
   { img: "/img/email.svg", link: "mailto:2klstk@mail.ru" },
 ]);
 

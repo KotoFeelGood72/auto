@@ -3,7 +3,7 @@
     <Close />
     <div class="header__logo_row">
       <RouterLink class="header__logo" to="/">
-        <img src="/img/logo.png" />
+        <img src="https://2klstk.ru/wp-content/uploads/2024/09/logo.png" />
       </RouterLink>
       <div class="header__logo_cta">
         <h2 class="header__logo_title">Технологии комфорта</h2>
@@ -52,9 +52,15 @@ import { ref } from "vue";
 import Close from "../ui/Close.vue";
 import { useModalStore } from "@/stores/useModalStore";
 const socials = ref([
-  { img: "/img/tg.svg", link: "https://t.me/masternavse2" },
-  { img: "/img/wa.svg", link: "https://wtsp.cc/79282755456" },
-  { img: "/img/email.svg", link: "mailto:2klstk@mail.ru" },
+  {
+    img: "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/telegram.svg",
+    link: "https://t.me/masternavse2",
+  },
+  {
+    img: "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/whatsapp.svg",
+    link: "https://wtsp.cc/79282755456",
+  },
+  // { img: "/img/email.svg", link: "mailto:2klstk@mail.ru" },
 ]);
 
 const menu = ref([

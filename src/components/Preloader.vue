@@ -2,7 +2,7 @@
   <transition name="fade">
     <div class="preloader" v-if="isLoading">
       <div class="preloader_logo">
-        <img src="/img/logo.png" />
+        <img src="https://2klstk.ru/wp-content/uploads/2024/09/logo.png" />
       </div>
       <Icons icon="eos-icons:three-dots-loading" :size="70" class="spinner" />
     </div>

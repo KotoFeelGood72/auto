@@ -40,7 +40,7 @@
             <div class="system__img_w">
               <img
                 class="system__img"
-                src="@/assets/images/system/system.jpg"
+                src="https://2klstk.ru/wp-content/uploads/2024/09/dom7.jpg"
               />
             </div>
           </div>
@@ -50,13 +50,13 @@
             <div class="system__info_img_w">
               <img
                 class="system__info_img"
-                src="@/assets/images/system/0.jpg"
+                src="https://2klstk.ru/wp-content/uploads/2024/09/dom2.jpg"
               />
             </div>
             <div class="system__info_img_w">
               <img
                 class="system__info_img"
-                src="@/assets/images/system/1.jpg"
+                src="https://2klstk.ru/wp-content/uploads/2024/09/dom1-e1727159517224.jpg"
               />
             </div>
           </div>
@@ -205,7 +205,10 @@
       <ul class="imagine__list">
         <li class="imagine__item">
           <div class="imagine__img_w">
-            <img class="imagine__img" src="@/assets/images/imagine/0.jpg" />
+            <img
+              class="imagine__img"
+              src="https://2klstk.ru/wp-content/themes/comfort/assets/images/imagine/0.jpg"
+            />
           </div>
           <div class="imagine__info">
             <div class="imagine__item_title">
@@ -219,7 +222,10 @@
         </li>
         <li class="imagine__item">
           <div class="imagine__img_w">
-            <img class="imagine__img" src="@/assets/images/imagine/1.jpg" />
+            <img
+              class="imagine__img"
+              src="https://2klstk.ru/wp-content/themes/comfort/assets/images/imagine/1.jpg"
+            />
           </div>
           <div class="imagine__info">
             <div class="imagine__item_title">
@@ -233,7 +239,10 @@
         </li>
         <li class="imagine__item">
           <div class="imagine__img_w">
-            <img class="imagine__img" src="@/assets/images/imagine/2.jpg" />
+            <img
+              class="imagine__img"
+              src="https://2klstk.ru/wp-content/themes/comfort/assets/images/imagine/2.jpg"
+            />
           </div>
           <div class="imagine__info">
             <div class="imagine__item_title">
