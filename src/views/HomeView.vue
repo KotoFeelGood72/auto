@@ -31,7 +31,7 @@
   </section>
   <QuizForm />
 
-  <section class="section system">
+  <section class="section system" id="about">
     <div class="section_in system__in">
       <div class="system__row">
         <div class="system__col system__col--img">
@@ -264,9 +264,7 @@
   <section class="section step js-step-slider-w">
     <div class="section_in step__in">
       <h2 class="step__title">
-        Чтобы быть спокойным и уверенным в качественном доме -<strong
-          >вам нужен надежный подрядчик</strong
-        >
+        Что о нас говорят <strong>довольные клиенты</strong>
       </h2>
       <!-- <div class="step__subtitle">
         Обсуждается индивидуально, в зависимости от задач и их сложности
@@ -329,7 +327,7 @@
       </div>
     </div>
   </section>
-  <section class="section stage js-sys-slider-w">
+  <section class="section stage js-sys-slider-w" id="steps">
     <div class="section_in stage__in">
       <h2 class="stage__title">
         <strong>Посмотрите 4 этапа,</strong> как будет строиться ваш идеальный
@@ -718,7 +716,7 @@
     </div>
   </section>
 
-  <section class="section contact">
+  <section class="section contact" id="contacts">
     <div class="section_in contact__in">
       <div class="contact__row">
         <div class="contact__col contact__col--map">
