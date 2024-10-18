@@ -111,10 +111,9 @@
 
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Navigation, Pagination, EffectFade } from "swiper/modules";
-import { ref } from "vue";
+import { Navigation, Pagination } from "swiper/modules";
 
-const props = defineProps<{
+defineProps<{
   systems: any;
   title: string;
 }>();
