@@ -41,7 +41,10 @@
                     v-model="selectedOptions[stepIndex]"
                     @change="onOptionSelected(stepIndex, option)"
                   />
-                  <div class="calc__slide_item_img_w" v-if="option.image">
+                  <div
+                    class="calc__slide_item_img_w"
+                    v-if="option && option.image"
+                  >
                     <img :src="option.image" />
                   </div>
                   <div class="calc__slide_item_title">
