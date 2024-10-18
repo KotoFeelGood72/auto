@@ -57,10 +57,10 @@ watch(
 );
 
 // Метод, который срабатывает перед уходом пользователя со страницы
-const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-  console.log("Пользователь покидает сайт");
-  openModal("form");
-};
+// const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+//   console.log("Пользователь покидает сайт");
+//   openModal("form");
+// };
 
 // Метод, который открывает модальное окно при прокрутке страницы до 90%,
 // если модальное окно еще не было показано за сессию
@@ -101,14 +101,14 @@ const removeInactivityListeners = () => {
 };
 
 onMounted(() => {
-  window.addEventListener("beforeunload", handleBeforeUnload);
+  // window.addEventListener("beforeunload", handleBeforeUnload);
   window.addEventListener("scroll", handleScroll); // Слушаем событие прокрутки
   resetInactivityTimer(); // Устанавливаем таймер бездействия при загрузке
   addInactivityListeners(); // Добавляем слушатели событий активности
 });
 
 onUnmounted(() => {
-  window.removeEventListener("beforeunload", handleBeforeUnload);
+  // window.removeEventListener("beforeunload", handleBeforeUnload);
   window.removeEventListener("scroll", handleScroll); // Убираем слушатель при размонтировании
   removeInactivityListeners(); // Удаляем слушатели событий при размонтировании
   clearTimeout(inactivityTimer); // Очищаем таймер

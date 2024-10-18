@@ -804,6 +804,12 @@ input[type="submit"] {
   font-size: 2.2rem;
   padding: 0 2.4rem;
 }
+
+@media (max-width: 767px) {
+  .header__btn_calc {
+    font-size: 1.6rem;
+  }
+}
 .header__btn_calc.header__btn_calc--mob {
   display: none;
 }
@@ -1223,14 +1229,12 @@ input[type="submit"] {
   transition: box-shadow 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
   width: 100%;
   will-change: box-shadow;
-  border: .2rem solid transparent;
-  transition: all .3s ease-in-out
-  ;
+  border: 0.2rem solid transparent;
+  transition: all 0.3s ease-in-out;
 }
 
 .form_input__element.error {
-  border: .2rem solid red;
-
+  border: 0.2rem solid red;
 }
 .form_input__element:focus:not(.error),
 .form_input__element:hover:not(.error) {
@@ -3675,7 +3679,7 @@ input:checked ~ .calc__slide_item_icon {
   .btn_base,
   .btn_base_s {
     border-radius: 1rem;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   .btn_base_s {
     height: 4.4rem;

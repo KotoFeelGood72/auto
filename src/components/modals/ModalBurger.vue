@@ -41,7 +41,9 @@
       <div class="header__work_time">
         <div class="header__date">Без выходных 9:00-18:00</div>
         <a class="header__phone" href="#">+7 919 123 45 67</a
-        ><a class="header__call_us" href="#" @click="openForm()">Заказать звонок</a>
+        ><a class="header__call_us" href="#" @click="openForm()"
+          >Заказать звонок</a
+        >
       </div>
     </div>
   </div>
@@ -86,6 +88,13 @@ const openForm = (mode?: string) => {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  max-width: 35rem;
+  width: 100%;
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+    justify-content: center;
+  }
 
   :deep(.header__social_list) {
     justify-content: center;
