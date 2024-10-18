@@ -65,7 +65,7 @@
 
               <div class="footer__inn">ИНН 2311188415</div>
             </div>
-            <div class="footer__studio_logo_w">
+            <!-- <div class="footer__studio_logo_w">
               <div class="footer__studio_img_w">
                 <img
                   class="footer__studio_img"
@@ -76,7 +76,7 @@
                 Разработчик <br />
                 <strong>Happines</strong>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
