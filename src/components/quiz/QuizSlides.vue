@@ -16,19 +16,19 @@
             v-else
             class="calc__slide_list"
             :class="[
-              step.options.some((option: any) => option.image) ? 'images' : 'text',
+              step?.options?.some((option: any) => option?.image) ? 'images' : 'text',
               'grid-' + step?.options?.length
             ]"
           >
             <li
-              v-for="(option, index) in step.options || []"
+              v-for="(option, index) in step?.options || []"
               :key="index"
               class="calc__slide_item"
             >
               <label>
                 <div
                   :class="[
-                    { 'default-item': !option.image },
+                    { 'default-item': !option?.image },
                     'calc__slide_item_img',
                   ]"
                   @mouseover="hoveredOption = option"
