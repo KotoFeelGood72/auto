@@ -13,9 +13,15 @@
             </div>
           </div>
         </div>
-        <a class="header__yandex" href="#">
+        <a
+          class="header__yandex"
+          href="https://yandex.ru/maps/org/tekhnologii_komforta/165810670612/reviews/?ll=38.984871%2C45.111020&utm_source=my_review&z=15"
+          target="_blank"
+        >
           <div class="header__yandex_img">
-            <img src="/img/yandex.png" />
+            <img
+              src="https://2klstk.ru/wp-content/uploads/2024/09/yandex.png"
+            />
           </div>
           На основании 50 отзывов</a
         >
@@ -67,9 +73,15 @@
               </li>
             </ul>
             <div class="header__contact">
-              <a class="header__yandex" href="#">
+              <a
+                class="header__yandex"
+                href="https://yandex.ru/maps/org/tekhnologii_komforta/165810670612/reviews/?ll=38.984871%2C45.111020&utm_source=my_review&z=15"
+                target="_blank"
+              >
                 <div class="header__yandex_img">
-                  <img src="/img/yandex.png" />
+                  <img
+                    src="https://2klstk.ru/wp-content/uploads/2024/09/yandex.png"
+                  />
                 </div>
                 На основании 50 отзывов</a
               >
