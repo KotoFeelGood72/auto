@@ -42,7 +42,7 @@ const { isLoading } = useLoadingStoreRefs();
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  //   width: 8rem;
+  width: 16rem;
   img {
     width: 100%;
     height: 100%;
