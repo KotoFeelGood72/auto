@@ -4,6 +4,9 @@
     <transition name="fade-bg">
       <div v-if="isModalActive" class="page-bg" @click="closeAllModals"></div>
     </transition>
+    <transition name="fade-bg">
+      <Preloader />
+    </transition>
     <transition name="slide-up">
       <ModalCallback v-if="modals.form" />
     </transition>
@@ -25,6 +28,7 @@ import ModalObject from "./components/modals/ModalObject.vue";
 import ModalBurger from "./components/modals/ModalBurger.vue";
 import { useRoute } from "vue-router";
 import { useModalStoreRefs, useModalStore } from "./stores/useModalStore";
+import Preloader from "./components/Preloader.vue";
 
 const isModalActive = computed(() => {
   return Object.values(modals.value).some((isActive) => isActive);
