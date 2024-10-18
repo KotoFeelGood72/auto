@@ -13,6 +13,10 @@
                 class="calc__progres_line js-step-form-progres"
                 :style="{ width: progressWidthRounded + '%' }"
               ></div>
+              <span
+                class="progress_decor"
+                :style="{ width: progressWidthRounded + '%' }"
+              ></span>
             </div>
 
             <div class="calc__slide_w">

@@ -60,44 +60,32 @@ watch(
   }
 );
 
-// Метод, который срабатывает перед уходом пользователя со страницы
-// const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-//   console.log("Пользователь покидает сайт");
-//   openModal("form");
-// };
-
-// Метод, который открывает модальное окно при прокрутке страницы до 90%,
-// если модальное окно еще не было показано за сессию
 const handleScroll = () => {
   const scrollPosition = window.scrollY + window.innerHeight;
   const pageHeight = document.documentElement.scrollHeight;
 
-  // Если прокрутка доходит до 90% и модальное окно еще не было показано
   if (scrollPosition / pageHeight >= 0.9 && !isModalShown) {
     openModal("form");
-    isModalShown = true; // Устанавливаем флаг, чтобы окно открывалось только один раз
+    isModalShown = true;
   }
 };
 
-// Таймер бездействия
 let inactivityTimer: ReturnType<typeof setTimeout>;
 
 // Функция для сброса таймера
 const resetInactivityTimer = () => {
   clearTimeout(inactivityTimer);
   inactivityTimer = setTimeout(() => {
-    openModal("form"); // Открываем модальное окно после 1 минуты бездействия
-  }, 60000); // 60 секунд
+    openModal("form");
+  }, 60000);
 };
 
-// Добавляем обработчики событий для отслеживания активности
 const addInactivityListeners = () => {
   window.addEventListener("mousemove", resetInactivityTimer);
   window.addEventListener("keydown", resetInactivityTimer);
-  window.addEventListener("scroll", resetInactivityTimer); // Событие прокрутки также сбрасывает таймер
+  window.addEventListener("scroll", resetInactivityTimer);
 };
 
-// Удаляем обработчики событий
 const removeInactivityListeners = () => {
   window.removeEventListener("mousemove", resetInactivityTimer);
   window.removeEventListener("keydown", resetInactivityTimer);
@@ -105,17 +93,15 @@ const removeInactivityListeners = () => {
 };
 
 onMounted(() => {
-  // window.addEventListener("beforeunload", handleBeforeUnload);
-  window.addEventListener("scroll", handleScroll); // Слушаем событие прокрутки
-  resetInactivityTimer(); // Устанавливаем таймер бездействия при загрузке
-  addInactivityListeners(); // Добавляем слушатели событий активности
+  window.addEventListener("scroll", handleScroll);
+  resetInactivityTimer();
+  addInactivityListeners();
 });
 
 onUnmounted(() => {
-  // window.removeEventListener("beforeunload", handleBeforeUnload);
-  window.removeEventListener("scroll", handleScroll); // Убираем слушатель при размонтировании
-  removeInactivityListeners(); // Удаляем слушатели событий при размонтировании
-  clearTimeout(inactivityTimer); // Очищаем таймер
+  window.removeEventListener("scroll", handleScroll);
+  removeInactivityListeners();
+  clearTimeout(inactivityTimer);
 });
 </script>
 

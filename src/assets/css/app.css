@@ -2023,9 +2023,44 @@ select.form_select__element {
   background-color: #e6e7dd;
   border-radius: 31rem;
   height: 2.3rem;
-  margin-bottom: -3rem;
+  margin-bottom: 2rem;
   overflow: hidden;
 }
+.progress_decor {
+  position: relative;
+  display: flex;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.progress_decor:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(-45deg,hsla(0,0%,100%,.08) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.08) 0,hsla(0,0%,100%,.08) 75%,transparent 0,transparent);
+  z-index: 1;
+  background-size: 20px 20px;
+  -webkit-animation: move 1.5s linear infinite;
+  animation: move 1.5s linear infinite;
+  border-radius: 20px;
+  overflow: hidden
+}
+
+@keyframes move {
+  0% {
+      background-position: 0 0
+  }
+
+  to {
+      background-position: 20px 20px
+  }
+}
+
+
 .calc__progres_line {
   background-color: #b2c593;
   border-radius: 31rem;
@@ -2131,10 +2166,10 @@ input:checked ~ .calc__slide_item_icon {
 .calc__about_img_w {
   border-radius: 50%;
   display: block;
-  height: 13rem;
+  height: 8rem;
   margin: 0 auto 1.5rem;
   overflow: hidden;
-  width: 13rem;
+  width: 8rem;
 }
 .calc__about_img_w img {
   display: block;
@@ -4381,10 +4416,10 @@ input:checked ~ .calc__slide_item_icon {
     font-size: 3rem;
   }
   .calc__slide_item_title {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   .calc__about_heading:not(:last-child) {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
   .calc__about_title {
     font-size: 2rem;
@@ -4396,7 +4431,7 @@ input:checked ~ .calc__slide_item_icon {
     font-size: 2rem;
   }
   .calc__about_info_title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .calc__about_info_title:not(:last-child) {
     margin-bottom: 2rem;
@@ -5043,7 +5078,7 @@ input:checked ~ .calc__slide_item_icon {
   .calc__about_descr,
   .calc__about_title,
   .calc__slide_item_title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .system__title {
     font-size: 3rem;

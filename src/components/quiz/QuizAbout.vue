@@ -14,9 +14,9 @@
         <li class="calc__about_info_item">
           Подарок на выбор при заказе строительства у нас
         </li>
-        <li class="calc__about_info_item">
+        <!-- <li class="calc__about_info_item">
           Индивидуальная подборка проектов согласно вашим ответам или новый проект
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
