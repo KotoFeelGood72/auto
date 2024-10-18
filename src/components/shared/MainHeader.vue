@@ -122,7 +122,10 @@ const socials = ref([
     img: "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/whatsapp.svg",
     link: "https://wtsp.cc/79282755456",
   },
-  { img: "/img/email.svg", link: "mailto:2klstk@mail.ru" },
+  {
+    img: "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/mail-social.svg",
+    link: "mailto:2klstk@mail.ru",
+  },
 ]);
 
 const menu = ref([
