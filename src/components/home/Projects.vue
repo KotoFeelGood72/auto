@@ -1,12 +1,12 @@
 <template>
-  <section class="section popular">
+  <section class="section popular" v-if="projects">
     <div class="section_in popular__in">
       <h2 class="popular__title"><strong>Популярные проекты</strong> и цены</h2>
       <div class="popular__list_w">
         <div class="popular__list">
           <div
             class="popular__card"
-            v-for="(item, i) in projects"
+            v-for="(item, i) in visibleProjects"
             :key="'popular-projects-item' + i"
             @click="opeModalProject(item.id)"
           >
@@ -39,6 +39,16 @@
             </div>
           </div>
         </div>
+
+        <div class="projects__bottom">
+          <button
+            v-if="visibleProjects.length < projects.length"
+            class="btn_base_s"
+            @click="loadMore"
+          >
+            Показать еще
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -46,9 +56,8 @@
 
 <script setup lang="ts">
 import { onMounted, ref, watch } from "vue";
-import axios from "axios";
-import { useModalStore } from "@/stores/useModalStore";
 import { useRouter } from "vue-router";
+import { useModalStore } from "@/stores/useModalStore";
 import {
   useProjectsStore,
   useProjectsStoreRefs,
@@ -59,13 +68,23 @@ const { getProjects } = useProjectsStore();
 const { projects } = useProjectsStoreRefs();
 const router = useRouter();
 
+// Управление видимыми проектами
+const visibleProjects = ref<any>([]); // Список проектов, которые отображаются
+const itemsPerPage = 6; // Количество проектов на странице
+let currentPage = 1; // Текущая страница
+
 // Открытие модального окна с добавлением query
 const opeModalProject = (id: number) => {
-  // Добавляем query параметр в URL
   router.push({ query: { project: id } }).then(() => {
-    // Открываем модальное окно после обновления URL
     openModal("project");
   });
+};
+
+// Функция для загрузки проектов по страницам
+const loadMore = () => {
+  const nextPageItems = projects.value.slice(0, currentPage * itemsPerPage);
+  visibleProjects.value = nextPageItems;
+  currentPage++;
 };
 
 // Следим за изменениями в параметрах URL и автоматически открываем/закрываем модальное окно
@@ -73,17 +92,18 @@ watch(
   () => router.currentRoute.value.query.project,
   (newValue) => {
     if (newValue) {
-      // Если параметр project есть в URL, открываем модальное окно
       openModal("project");
     } else {
-      // Если параметра нет, закрываем модальное окно
       closeModal("project");
     }
   }
 );
 
 onMounted(() => {
-  getProjects();
+  // Загружаем проекты и отображаем первую страницу
+  getProjects().then(() => {
+    loadMore(); // Показать первые 6 проектов
+  });
 });
 </script>
 
@@ -92,5 +112,32 @@ onMounted(() => {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
   gap: 2rem;
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+
+.load-more-btn {
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #bde977;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  &:hover {
+    background-color: #a9d669;
+  }
+}
+.projects__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
 }
 </style>

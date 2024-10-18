@@ -1,62 +1,116 @@
 <template>
-  <div v-for="(step, stepIndex) in steps" :key="stepIndex">
-    <transition name="slide-fade" mode="out-in">
-      <div v-if="currentStep === stepIndex + 1" class="calc__slide">
-        <div class="calc__slide_title">{{ step.title }}</div>
-        <div v-if="stepIndex === steps?.length - 1">
-          <QuizFormStep />
-        </div>
-        <ul
-          v-else
-          class="calc__slide_list"
-          :class="[
-    step.options.some((option: any) => option.image) ? 'images' : 'text',
-    'grid-' + step?.options?.length
-  ]"
-        >
-          <li
-            v-for="(option, index) in step.options || []"
-            :key="index"
-            class="calc__slide_item"
+  <div class="calc__container">
+    <div v-for="(step, stepIndex) in steps" :key="stepIndex">
+      <transition
+        @before-enter="beforeEnter"
+        @enter="enter"
+        @leave="leave"
+        mode="out-in"
+      >
+        <div v-if="currentStep === stepIndex + 1" class="calc__slide">
+          <div class="calc__slide_title">{{ step.title }}</div>
+          <div v-if="stepIndex === steps?.length - 1">
+            <QuizFormStep />
+          </div>
+          <ul
+            v-else
+            class="calc__slide_list"
+            :class="[
+              step.options.some((option: any) => option.image) ? 'images' : 'text',
+              'grid-' + step?.options?.length
+            ]"
           >
-            <label>
-              <div
-                :class="[
-                  { 'default-item': !option?.image },
-                  'calc__slide_item_img',
-                ]"
-              >
-                <input
-                  type="radio"
-                  :name="'step-' + stepIndex"
-                  :value="option"
-                  v-model="selectedOptions[stepIndex]"
-                  @change="onOptionSelected(stepIndex, option)"
-                />
+            <li
+              v-for="(option, index) in step.options || []"
+              :key="index"
+              class="calc__slide_item"
+            >
+              <label>
                 <div
-                  class="calc__slide_item_img_w"
-                  v-if="option && option.image"
+                  :class="[
+                    { 'default-item': !option.image },
+                    'calc__slide_item_img',
+                  ]"
+                  @mouseover="hoveredOption = option"
+                  @mouseleave="hoveredOption = null"
                 >
-                  <img :src="option.image" />
+                  <input
+                    type="radio"
+                    :name="'step-' + stepIndex"
+                    :value="option"
+                    v-model="selectedOptions[stepIndex]"
+                    @change="onOptionSelected(stepIndex, option)"
+                  />
+                  <div class="calc__slide_item_img_w" v-if="option.image">
+                    <img :src="option.image" />
+                  </div>
+                  <div class="calc__slide_item_title">
+                    <div class="calc_icon">
+                      <!-- Отображение иконки в зависимости от состояния -->
+                      <Icons
+                        :icon="
+                          selectedOptions[stepIndex] === option
+                            ? 'material-symbols:check-circle'
+                            : hoveredOption === option
+                            ? 'material-symbols:radio-button-checked'
+                            : 'material-symbols-light:circle-outline'
+                        "
+                        :size="option.image ? 30 : 25"
+                      />
+                    </div>
+                    <p>{{ option.title }}</p>
+                  </div>
                 </div>
-                <div class="calc__slide_item_title">{{ option.title }}</div>
-              </div>
-            </label>
-          </li>
-        </ul>
-      </div>
-    </transition>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </transition>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import QuizFormStep from "@/components/quiz/QuizFormStep.vue";
 import { useQuizStore, useQuizStoreRefs } from "@/stores/useQuizStore";
+import gsap from "gsap";
 
+// Ссылки на состояния из store
 const { steps, selectedOptions, currentStep } = useQuizStoreRefs();
 const { addQuizData, updateCurrentStep } = useQuizStore();
 
-const onOptionSelected = (stepIndex: any, option: any) => {
+// Переменная для хранения состояния hover
+const hoveredOption = ref(null);
+
+// GSAP анимация для входа
+const beforeEnter = (el: HTMLElement) => {
+  gsap.set(el, {
+    x: 100, // Начальная позиция справа
+    opacity: 0,
+  });
+};
+
+const enter = (el: HTMLElement, done: Function) => {
+  gsap.to(el, {
+    x: 0, // Сдвиг слайда на позицию
+    opacity: 1,
+    duration: 0.6,
+    ease: "power2.out", // Плавный эффект
+  });
+};
+
+// GSAP анимация для выхода
+const leave = (el: HTMLElement, done: Function) => {
+  gsap.to(el, {
+    x: -100, // Сдвиг слайда влево при выходе
+    opacity: 0,
+    duration: 0.8,
+    ease: "power2.in", // Плавный эффект
+  });
+};
+
+const onOptionSelected = (stepIndex: number, option: any) => {
   if (!steps.value[stepIndex]?.options) {
     console.error(`Options для шага ${stepIndex} не найдены.`);
     return;
@@ -65,18 +119,7 @@ const onOptionSelected = (stepIndex: any, option: any) => {
   addQuizData({ step: stepIndex, selectedOption: option });
   setTimeout(() => {
     nextStep();
-  }, 500);
-};
-
-// Метод для отправки формы
-const submitQuiz = () => {
-  // const quizData = {
-  //   name: formData.name,
-  //   phone: formData.phone,
-  // };
-  // console.log("Данные формы: ", quizData);
-  alert("Данные отправлены!");
-  // Логика отправки данных на сервер
+  }, 200);
 };
 
 const nextStep = () => {
@@ -87,48 +130,102 @@ const nextStep = () => {
 </script>
 
 <style scoped lang="scss">
-/* Стили для анимации смены шага */
-.slide-fade-enter-active,
-.slide-fade-leave-active {
-  transition: opacity 0.2s ease-in-out;
-  // transition: opacity 0.2s ease, transform 0.5s ease;
+.calc__container {
+  position: relative;
+  width: 100%;
+  height: 52rem;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 2rem;
+  overflow: hidden;
+  @media (max-width: 767px) {
+    height: 59rem;
+  }
 }
 
-.slide-fade-enter,
-.slide-fade-leave-to {
-  opacity: 0;
+.calc__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 2rem;
+  overflow-y: auto;
+  scrollbar-width: 0;
 }
 
 .calc__slide_list {
   display: grid;
-  gap: 2rem;
+  gap: 0.5rem 1rem;
+
+  @media (max-width: 767px) {
+    gap: 1.5rem 1rem;
+  }
 
   &.text {
     &.grid-2 {
       grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      }
+    }
+    &.grid-3 {
+      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      }
     }
     &.grid-4 {
       grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      }
     }
     &.grid-5 {
       grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      }
     }
     &.grid-6 {
-      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      }
     }
   }
+
   &.images {
     &.grid-2 {
-      grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      }
+    }
+    &.grid-3 {
+      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      }
     }
     &.grid-4 {
       grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      }
     }
     &.grid-5 {
       grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      }
     }
     &.grid-6 {
-      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      }
     }
   }
   li {
@@ -145,36 +242,20 @@ const nextStep = () => {
 
   .calc__slide_item_title {
     border: 0.1rem solid #b2c59375;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
     border-radius: 1rem;
     transition: all 0.3s ease-in-out;
     position: relative;
-    font-size: 1.8rem;
-    &:before {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 1rem;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 100%;
-      background-color: #b2c59354;
-      content: "";
-      border: 0.1rem solid #b2c593;
-    }
-    &:after {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 1.5rem;
-      width: 1rem;
-      height: 1rem;
-      border-radius: 100%;
-      background-color: white;
-      content: "";
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease-in-out;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 100%;
+
+    @media (max-width: 767px) {
+      font-size: 1.4rem;
+      padding: 1rem 1rem;
     }
   }
 }
@@ -219,34 +300,54 @@ const nextStep = () => {
   align-items: center;
   justify-content: center;
   border-radius: 1rem;
-  position: relative;
   border: 0.2rem solid transparent;
-  &:before {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 100%;
-    background-color: white;
-    content: "";
-    border: 0.1rem solid #b2c593;
-    opacity: 0.5;
-    backdrop-filter: blur(1rem);
+  transition: all 0.3s ease-in-out;
+}
+
+.calc__slide_item_img {
+  align-items: center;
+  text-align: center;
+  .calc__slide_item_title {
+    margin-top: -4rem;
   }
-  &:after {
-    position: absolute;
-    top: 2.8rem;
-    left: 2.75rem;
-    width: 1.5rem;
-    height: 1.5rem;
+  .calc_icon {
+    z-index: 99;
+    background-color: #ffffff;
+    display: inline-flex;
+    justify-content: center;
     border-radius: 100%;
-    background-color: #b2c593;
-    content: "";
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-    transform: scale(0);
   }
+
+  &:hover {
+    .calc__slide_item_img_w {
+      border-color: #bde977;
+    }
+  }
+}
+
+.default-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  @media (max-width: 767px) {
+    text-align: left;
+  }
+  .calc__slide_item_title {
+    margin-top: 0;
+  }
+  .calc_icon {
+    margin-top: 0;
+    background-color: transparent;
+  }
+}
+
+.calc_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b2c593;
 }
 </style>
