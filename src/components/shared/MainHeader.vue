@@ -141,11 +141,11 @@ const socials = ref([
 ]);
 
 const menu = ref([
-  { name: "Проекты и цены", link: "/" },
-  { name: "Этапы строительства", link: "/" },
-  { name: "О компании", link: "/" },
-  { name: "Контакты", link: "/" },
-  { name: "Отзывы", link: "/" },
+  { name: "Проекты и цены", link: "/#projects" },
+  { name: "Этапы строительства", link: "/#steps" },
+  { name: "О компании", link: "/#about" },
+  { name: "Контакты", link: "/#contacts" },
+  { name: "Отзывы", link: "/#reviews" },
 ]);
 
 const isScrolled = ref(false);
