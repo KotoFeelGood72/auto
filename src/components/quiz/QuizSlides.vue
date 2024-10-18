@@ -1,5 +1,5 @@
 <template>
-  <div class="calc__container">
+  <div class="calc__container" ref="calcContainer">
     <div v-for="(step, stepIndex) in steps" :key="stepIndex">
       <transition
         @before-enter="beforeEnter"
@@ -71,9 +71,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, nextTick, onMounted, watch } from "vue";
 import QuizFormStep from "@/components/quiz/QuizFormStep.vue";
 import { useQuizStore, useQuizStoreRefs } from "@/stores/useQuizStore";
+// @ts-ignore
 import gsap from "gsap";
 
 // Ссылки на состояния из store
@@ -82,31 +83,45 @@ const { addQuizData, updateCurrentStep } = useQuizStore();
 
 // Переменная для хранения состояния hover
 const hoveredOption = ref(null);
+const calcContainer = ref<any | null>(null); // Контейнер для квиза
+
+// Метод для динамического расчета высоты
+const updateContainerHeight = async () => {
+  await nextTick(); // Ждем, пока DOM обновится
+
+  const activeSlide = document.querySelector(".calc__slide");
+  if (activeSlide && calcContainer.value) {
+    const contentHeight = activeSlide.scrollHeight; // Высота активного слайда
+    calcContainer.value.style.height = `${contentHeight}px`; // Устанавливаем высоту контейнера
+  }
+};
 
 // GSAP анимация для входа
-const beforeEnter = (el: HTMLElement) => {
+const beforeEnter = (el: any) => {
   gsap.set(el, {
     x: 100, // Начальная позиция справа
     opacity: 0,
   });
 };
 
-const enter = (el: HTMLElement, done: Function) => {
+const enter = (el: any) => {
   gsap.to(el, {
     x: 0, // Сдвиг слайда на позицию
     opacity: 1,
     duration: 0.6,
     ease: "power2.out", // Плавный эффект
   });
+  updateContainerHeight(); // Обновляем высоту при появлении слайда
 };
 
 // GSAP анимация для выхода
-const leave = (el: HTMLElement, done: Function) => {
+const leave = (el: any, done: any) => {
   gsap.to(el, {
     x: -100, // Сдвиг слайда влево при выходе
     opacity: 0,
     duration: 0.8,
-    ease: "power2.in", // Плавный эффект
+    ease: "power2.in",
+    onComplete: done,
   });
 };
 
@@ -117,6 +132,22 @@ const onOptionSelected = (stepIndex: number, option: any) => {
   }
 
   addQuizData({ step: stepIndex, selectedOption: option });
+  switch (stepIndex) {
+    case 0:
+      ym(98477147, "reachGoal", "proekt");
+      break;
+    case 1:
+      ym(98477147, "reachGoal", "stil");
+      break;
+    case 2:
+      ym(98477147, "reachGoal", "etazh");
+      break;
+    case 3:
+      ym(98477147, "reachGoal", "m2");
+      break;
+    default:
+      break;
+  }
   setTimeout(() => {
     nextStep();
   }, 200);
@@ -127,19 +158,30 @@ const nextStep = () => {
     updateCurrentStep(currentStep.value + 1);
   }
 };
+
+// Обновление высоты при монтировании компонента
+onMounted(() => {
+  updateContainerHeight();
+});
+
+// Следим за изменением текущего шага, чтобы обновить высоту
+watch(currentStep, () => {
+  updateContainerHeight();
+});
 </script>
 
 <style scoped lang="scss">
 .calc__container {
   position: relative;
   width: 100%;
-  height: 52rem;
+  min-height: 52rem;
   overflow: hidden;
   background-color: #fff;
   border-radius: 2rem;
   overflow: hidden;
+  transition: min-height 0.3s ease;
   @media (max-width: 767px) {
-    height: 59rem;
+    min-height: 59rem;
   }
 }
 
@@ -160,7 +202,7 @@ const nextStep = () => {
   gap: 0.5rem 1rem;
 
   @media (max-width: 767px) {
-    gap: 1.5rem 1rem;
+    gap: 1.5rem 0.5rem;
   }
 
   &.text {
@@ -200,7 +242,7 @@ const nextStep = () => {
     &.grid-2 {
       grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
       @media (max-width: 767px) {
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
       }
     }
     &.grid-3 {
@@ -256,6 +298,14 @@ const nextStep = () => {
     @media (max-width: 767px) {
       font-size: 1.4rem;
       padding: 1rem 1rem;
+    }
+  }
+}
+
+.calc__slide_item_title {
+  p {
+    @media (max-width: 767px) {
+      font-size: 1.4rem;
     }
   }
 }

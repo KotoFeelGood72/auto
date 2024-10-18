@@ -35,20 +35,29 @@
     <div class="section_in system__in">
       <div class="system__row">
         <div class="system__col system__col--img">
-          <h2 class="system__title">"Double wall system"© "Двойной каркас ЛСТК"©</h2>
+          <h2 class="system__title">Технология строительства "МСБК"©</h2>
           <div class="system__img_box">
             <div class="system__img_w">
-              <img class="system__img" src="@/assets/images/system/system.jpg" />
+              <img
+                class="system__img"
+                src="@/assets/images/system/system.jpg"
+              />
             </div>
           </div>
         </div>
         <div class="system__col system__col--info">
           <div class="system__info_img_box">
             <div class="system__info_img_w">
-              <img class="system__info_img" src="@/assets/images/system/0.jpg" />
+              <img
+                class="system__info_img"
+                src="@/assets/images/system/0.jpg"
+              />
             </div>
             <div class="system__info_img_w">
-              <img class="system__info_img" src="@/assets/images/system/1.jpg" />
+              <img
+                class="system__info_img"
+                src="@/assets/images/system/1.jpg"
+              />
             </div>
           </div>
           <div class="system__info_about">
@@ -56,11 +65,12 @@
               Проектирование и изготовление металлических каркасов домов
             </div>
             <div class="system__info_about_descr">
-              Возведение каркаса здания из металлоконструкции, собранной из оцинкованной
-              стали, произведенного автоматической линией с технологическими отверстиями и
-              пазами. Каркас с обеих сторон обшивается плитным материалом, который
-              является несъемной опалубкой, полости заполняются полистиролбетоном, который
-              делает конструкцию монолитной и теплой
+              Возведение каркаса здания из металлоконструкции, собранной из
+              оцинкованной стали, произведенного автоматической линией с
+              технологическими отверстиями и пазами. Каркас с обеих сторон
+              обшивается плитным материалом, который является несъемной
+              опалубкой, полости заполняются полистиролбетоном, который делает
+              конструкцию монолитной и теплой
             </div>
             <a
               class="btn_base_s system__info_about_btn"
@@ -70,12 +80,11 @@
             >
           </div>
           <div class="system__info_about system__info_about--green">
-            <div class="system__info_about_title">Двойной каркас ЛСТК</div>
+            <div class="system__info_about_title">МСБК</div>
             <div class="system__info_about_descr">
-              Иновационная запатентованная технология строительства жилых домов и
-              коммерческих зданий комфорт-класса
+              Иновационная технология строительства жилых домов и коммерческих
+              зданий комфорт-класса
             </div>
-            <a class="system__info_about_link" href="#">Патент</a>
           </div>
         </div>
       </div>
@@ -84,14 +93,15 @@
   <section class="section adv">
     <div class="section_in adv__in">
       <h2 class="adv__title">
-        <strong>ПРЕИМУЩЕСТВА ТЕХНОЛОГИИ</strong> «ДВОЙНОЙ КАРКАС ЛСТК»
+        <strong>ПРЕИМУЩЕСТВА ТЕХНОЛОГИИ </strong> «МСБК»
       </h2>
       <div class="adv__info_row">
         <div class="adv__info">
-          По теплоизоляционным свойствам полистиролбетон значительно превосходит кирпич и
-          является лучшим среди легких бетонов. При заливке полистиролбетона исключается
-          возникновение мест с повышенным теплообменом между наружным и внутренним
-          контуром здания на протяжении всего периода эксплуатации.
+          По теплоизоляционным свойствам полистиролбетон значительно превосходит
+          кирпич и является лучшим среди легких бетонов. При заливке
+          полистиролбетона исключается возникновение мест с повышенным
+          теплообменом между наружным и внутренним контуром здания на протяжении
+          всего периода эксплуатации.
         </div>
         <ul class="adv__info_list">
           <li class="adv__info_item">Высокая скорость возведения</li>
@@ -107,24 +117,27 @@
       <div class="adv__about">
         <div class="adv__about_descr">
           <p>
-            Древесная омыленная смола (СДО), входящая в состав полистиролбетона, подавляет
-            рост патогенной микрофлоры (бактерий, грибов), т.е. препятствует образованию
-            плесени и гниению.
+            Древесная омыленная смола (СДО), входящая в состав полистиролбетона,
+            подавляет рост патогенной микрофлоры (бактерий, грибов), т.е.
+            препятствует образованию плесени и гниению.
           </p>
           <p>
-            Входящие в состав полистиролбетона компоненты безопасны для здоровья и
-            окружающей среды: вспененный полистирол используется для изготовления упаковок
-            для продуктов, одноразовой посуды, детскихигрушек, одноразовых медицинских
-            инструментов.
+            Входящие в состав полистиролбетона компоненты безопасны для здоровья
+            и окружающей среды: вспененный полистирол используется для
+            изготовления упаковок для продуктов, одноразовой посуды,
+            детскихигрушек, одноразовых медицинских инструментов.
           </p>
           <p>
-            Полистиролбетон в Двойном каркасе ЛСТК не препятствуютвоздухообмену, т. е.
-            стены способны «дышать», а благодаря высокой паропроницаемости — регулировать
-            влажность воздуха.
+            Полистиролбетон в Двойном каркасе МСБК не препятствуютвоздухообмену,
+            т. е. стены способны «дышать», а благодаря высокой паропроницаемости
+            — регулировать влажность воздуха.
           </p>
         </div>
         <div class="adv__img_w">
-          <img class="adv__img" src="@/assets/images/hero.jpg" />
+          <img
+            class="adv__img"
+            src="https://2klstk.ru/wp-content/uploads/2024/09/filesz500-res-wizualizacje-zx114-zx114_view1_jpg.jpg"
+          />
         </div>
       </div>
       <ul class="adv__adv_list">
@@ -133,41 +146,46 @@
             Долговечность свыше 100 лет и сейсмостойкость до 9 баллов
           </div>
           <div class="adv__adv_descr">
-            обеспечат капитальный свайно-ростверковый фундамент и монолитная сталебетонная
-            стена
+            обеспечат капитальный свайно-ростверковый фундамент и монолитная
+            сталебетонная стена
           </div>
         </li>
         <li class="adv__adv_item">
-          <div class="adv__adv_title">Экономия на отоплении и комфортный микроклимат</div>
+          <div class="adv__adv_title">
+            Экономия на отоплении и комфортный микроклимат
+          </div>
           <div class="adv__adv_descr">
-            благодаря высокой энергоэффективности строения, заполненного теплоизолирующего
-            и шумоизолирующего материала полистиролбетона
+            благодаря высокой энергоэффективности строения, заполненного
+            теплоизолирующего и шумоизолирующего материала полистиролбетона
           </div>
         </li>
         <li class="adv__adv_item">
           <div class="adv__adv_title">Безопасность</div>
           <div class="adv__adv_descr">
-            все материалы, использующиеся для строительства каркасно-монолитных домов,
-            имеют высокий уровень пожарной и экологической безопасности
+            все материалы, использующиеся для строительства каркасно-монолитных
+            домов, имеют высокий уровень пожарной и экологической безопасности
           </div>
         </li>
         <li class="adv__adv_item">
           <div class="adv__adv_title">Внешний вид на любой вкус</div>
           <div class="adv__adv_descr">
-            от суперсовременного навесного фасада до классической кирпичной кладки с
-            возможностью полного обновления фасада в процессе эксплуатации
+            от суперсовременного навесного фасада до классической кирпичной
+            кладки с возможностью полного обновления фасада в процессе
+            эксплуатации
           </div>
         </li>
         <li class="adv__adv_item">
           <div class="adv__adv_title">Срок строительства дома</div>
           <div class="adv__adv_descr">
-            за 60 дней – это инновационный подход к возведению жилья, который сочетает в
-            себе современные технологии и стандартные строительные процедуры. Сокращает
-            время без ущерба для качества.
+            от 60 дней – это инновационный подход к возведению жилья, который
+            сочетает в себе современные технологии и стандартные строительные
+            процедуры. Сокращает время без ущерба для качества.
           </div>
         </li>
         <li class="adv__adv_item">
-          <div class="adv__adv_title">Экономия времени и денег на ремонт и отделку</div>
+          <div class="adv__adv_title">
+            Экономия времени и денег на ремонт и отделку
+          </div>
           <div class="adv__adv_descr">
             безусадочная технология позволит приступить к отделке сразу же после
             возведения коробки дома, технология обеспечит идеально ровные углы и
@@ -187,63 +205,53 @@
       <ul class="imagine__list">
         <li class="imagine__item">
           <div class="imagine__img_w">
-            <img
-              class="imagine__img"
-              src="@/assets/images/imagine/0.jpg"
-              alt="some image"
-              loading="lazy"
-            />
+            <img class="imagine__img" src="@/assets/images/imagine/0.jpg" />
           </div>
           <div class="imagine__info">
             <div class="imagine__item_title">
               Проводите время с семьей и встречайте друзей
             </div>
             <div class="imagine__item_descr">
-              Жарьте шашлыки и барбекю, гуляйте босиком по зеленой траве, читайте у
-              камина, играйте в бильярд!
+              Жарьте шашлыки и барбекю, гуляйте босиком по зеленой траве,
+              читайте у камина, играйте в бильярд!
             </div>
           </div>
         </li>
         <li class="imagine__item">
           <div class="imagine__img_w">
-            <img
-              class="imagine__img"
-              src="@/assets/images/imagine/1.jpg"
-              alt="some image"
-              loading="lazy"
-            />
+            <img class="imagine__img" src="@/assets/images/imagine/1.jpg" />
           </div>
           <div class="imagine__info">
-            <div class="imagine__item_title">Занимайтесь спортом на свежем воздухе</div>
+            <div class="imagine__item_title">
+              Занимайтесь спортом на свежем воздухе
+            </div>
             <div class="imagine__item_descr">
-              Тренируйтесь в собственном зале, плавайте в бассейне, бегайте на свежем
-              воздухе и встречайте рассветы!
+              Тренируйтесь в собственном зале, плавайте в бассейне, бегайте на
+              свежем воздухе и встречайте рассветы!
             </div>
           </div>
         </li>
         <li class="imagine__item">
           <div class="imagine__img_w">
-            <img
-              class="imagine__img"
-              src="@/assets/images/imagine/2.jpg"
-              alt="some image"
-              loading="lazy"
-            />
+            <img class="imagine__img" src="@/assets/images/imagine/2.jpg" />
           </div>
           <div class="imagine__info">
             <div class="imagine__item_title">
               Дарите детям здоровое и счастливое детство
             </div>
             <div class="imagine__item_descr">
-              У каждого ребенка будет своя комната, постройте детскую площадку с игровым
-              комплексом, создайте игровую комнату!
+              У каждого ребенка будет своя комната, постройте детскую площадку с
+              игровым комплексом, создайте игровую комнату!
             </div>
           </div>
         </li>
       </ul>
     </div>
   </section>
-  <SystemsSlider :systems="home?.acf.case_list" :title="home?.acf.case_title" />
+  <SystemsSlider
+    :systems="home?.acf.case_list"
+    :title="home?.acf?.case_title"
+  />
   <section class="section step js-step-slider-w">
     <div class="section_in step__in">
       <h2 class="step__title">
@@ -251,9 +259,9 @@
           >вам нужен надежный подрядчик</strong
         >
       </h2>
-      <div class="step__subtitle">
+      <!-- <div class="step__subtitle">
         Обсуждается индивидуально, в зависимости от задач и их сложности
-      </div>
+      </div> -->
       <div class="step__list_w">
         <Swiper
           :slides-per-view="4"
@@ -266,14 +274,21 @@
             nextEl: '.js-step-navigation-next',
           }"
           :pagination="{ el: '.sys_slider__pag', clickable: true }"
+          :breakpoints="{
+            1200: { slidesPerView: 4, spaceBetween: 40 },
+            992: { slidesPerView: 1, spaceBetween: 30 },
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            320: { slidesPerView: 1.2, spaceBetween: 10 },
+          }"
         >
-          <SwiperSlide v-for="(item, i) in steps" :key="'works-item-slide-' + item.id">
+          <SwiperSlide
+            v-for="(item, i) in steps"
+            :key="'works-item-slide-' + item.id"
+          >
             <li class="step__card">
               <div class="step__card_info">
-                <div class="step__card_title">Дом за 3 месяца</div>
-                <div class="step__card_descr">
-                  Ваш дом будет готов без необходимости в доработках и покраске
-                </div>
+                <div class="step__card_title">{{ item.title }}</div>
+                <div class="step__card_descr">{{ item.txt }}</div>
               </div>
             </li>
           </SwiperSlide>
@@ -285,7 +300,9 @@
             aria-label="Prev slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
+              <use
+                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
+              ></use>
             </svg>
           </button>
           <button
@@ -294,7 +311,9 @@
             aria-label="Next slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
+              <use
+                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
+              ></use>
             </svg>
           </button>
         </div>
@@ -304,7 +323,8 @@
   <section class="section stage js-sys-slider-w">
     <div class="section_in stage__in">
       <h2 class="stage__title">
-        <strong>Посмотрите 4 этапа,</strong> как будет строиться ваш идеальный дом
+        <strong>Посмотрите 4 этапа,</strong> как будет строиться ваш идеальный
+        дом
       </h2>
       <div class="sys_slider__pag js-sys-pag-w"></div>
       <div class="stage__slider_w">
@@ -329,7 +349,10 @@
                       </div>
                       <div class="stage__info_subtitle">Включено:</div>
                       <ul class="stage__info_list">
-                        <li class="stage__info_item" v-for="subitem in item.list">
+                        <li
+                          class="stage__info_item"
+                          v-for="subitem in item.list"
+                        >
                           <span class="stage__info_item_icon">
                             <svg class="icon icon_checked icon--size_mod">
                               <use
@@ -354,7 +377,8 @@
                             <use
                               xlink:href="@/assets/images/sprite/sprite.svg#rub"
                             ></use></svg></span
-                        ><span>Стоимость: </span><strong> {{ item.price }}</strong>
+                        ><span>Стоимость: </span
+                        ><strong> {{ item.price }}</strong>
                       </div>
                     </div>
                   </div>
@@ -375,7 +399,9 @@
             aria-label="Prev slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
+              <use
+                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
+              ></use>
             </svg>
           </button>
           <button
@@ -384,14 +410,16 @@
             aria-label="Next slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
+              <use
+                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
+              ></use>
             </svg>
           </button>
         </div>
       </div>
     </div>
   </section>
-  <section class="section about_us">
+  <!-- <section class="section about_us">
     <div class="section_in about_us__in">
       <h2 class="about_us__title">
         Чтобы быть спокойным и уверенным в качественном доме -<strong
@@ -409,8 +437,8 @@
                     xlink:href="@/assets/images/sprite/sprite.svg#about-0"
                   ></use></svg></span
               ><span class="about_us__item_title"
-                >Строительство домов по технологии «МСБК» срок строительства: от 60
-                дней</span
+                >Строительство домов по технологии «МСБК» срок строительства: от
+                60 дней</span
               >
             </li>
             <li class="about_us__item">
@@ -429,7 +457,9 @@
                   <use
                     xlink:href="@/assets/images/sprite/sprite.svg#about-2"
                   ></use></svg></span
-              ><span class="about_us__item_title">Отделка домов «Под ключ»</span>
+              ><span class="about_us__item_title"
+                >Отделка домов «Под ключ»</span
+              >
             </li>
           </ul>
         </div>
@@ -458,7 +488,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="section excursion">
     <div class="section_in excursion__in">
@@ -466,14 +496,16 @@
         <div class="excursion__col excursion__col--info">
           <div class="excursion__info_in">
             <h2 class="excursion__title">
-              Приглашаем на <strong>бесплатную экскурсию</strong> по строящимся объектам
+              Приглашаем на <strong>бесплатную экскурсию</strong> по строящимся
+              объектам
             </h2>
             <div class="excursion__subtitle">
               Поговорите с нашими строителями, узнайте больше о процессе
             </div>
             <ul class="excursion__list">
               <li class="excursion__item">
-                <strong>Исследуйте</strong> используемые технологии строительства
+                <strong>Исследуйте</strong> используемые технологии
+                строительства
               </li>
               <li class="excursion__item">
                 <strong>Оцените</strong> качество стройматериалов
@@ -487,7 +519,10 @@
         </div>
         <div class="excursion__col excursion__col--img">
           <div class="excursion__img_w">
-            <img class="excursion__img" src="@/assets/images/form.jpg" />
+            <img
+              class="excursion__img"
+              src="https://2klstk.ru/wp-content/uploads/2024/09/a40026533b53cfc61db1f98d9f031307.jpg"
+            />
           </div>
         </div>
       </div>
@@ -502,8 +537,8 @@
         >
       </h2>
       <div class="step__subtitle">
-        Как и у любой компании у нас есть как положительные, так и отрицательные отзывы.
-        Мы ничего от вас не скрываем
+        Как и у любой компании у нас есть как положительные, так и отрицательные
+        отзывы. Мы ничего от вас не скрываем
       </div>
       <div class="step__list js-step-slider js-step-slider--review">
         <Swiper
@@ -511,12 +546,21 @@
           :modules="[Navigation, Pagination]"
           :space-between="40"
           :speed="700"
+          :breakpoints="{
+            1200: { slidesPerView: 3, spaceBetween: 40 },
+            992: { slidesPerView: 1, spaceBetween: 30 },
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            320: { slidesPerView: 1.2, spaceBetween: 10 },
+          }"
           :navigation="{
             prevEl: '.js-review-navigation-prev',
             nextEl: '.js-review-navigation-next',
           }"
         >
-          <SwiperSlide v-for="(item, i) in home?.acf.rev" :key="'reviews-home-' + i">
+          <SwiperSlide
+            v-for="(item, i) in home?.acf.rev"
+            :key="'reviews-home-' + i"
+          >
             <li class="step__card">
               <div class="step__rev_info">
                 <div class="step__rev_heading">
@@ -536,9 +580,12 @@
                 <div class="step__rev_descr">
                   {{ item.txt }}
                 </div>
-                <a class="step__rev_link" :href="item.link.url" target="_blank">{{
-                  item.link.title
-                }}</a>
+                <a
+                  class="step__rev_link"
+                  :href="item.link.url"
+                  target="_blank"
+                  >{{ item.link.title }}</a
+                >
               </div>
             </li>
           </SwiperSlide>
@@ -551,7 +598,9 @@
             aria-label="Prev slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
+              <use
+                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
+              ></use>
             </svg>
           </button>
           <button
@@ -560,7 +609,9 @@
             aria-label="Next slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
+              <use
+                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
+              ></use>
             </svg>
           </button>
         </div>
@@ -584,11 +635,42 @@
           :modules="[Navigation, Pagination]"
           :space-between="40"
           :speed="700"
+          :breakpoints="{
+            1200: { slidesPerView: 4, spaceBetween: 40 },
+            992: { slidesPerView: 1, spaceBetween: 30 },
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            320: { slidesPerView: 1, spaceBetween: 10 },
+          }"
           :navigation="{
             prevEl: '.js-builder-navigation-prev',
             nextEl: '.js-builder-navigation-next',
           }"
         >
+          <SwiperSlide>
+            <li class="step__card">
+              <div class="step__card_info">
+                <div class="step__card_title">Помощь в подборе участка</div>
+              </div>
+            </li>
+          </SwiperSlide>
+          <SwiperSlide>
+            <li class="step__card">
+              <div class="step__card_info">
+                <div class="step__card_title">
+                  Получение разрешения на строительство
+                </div>
+              </div>
+            </li>
+          </SwiperSlide>
+          <SwiperSlide>
+            <li class="step__card">
+              <div class="step__card_info">
+                <div class="step__card_title">
+                  Помощь с подключением внешних коммуникаций
+                </div>
+              </div>
+            </li>
+          </SwiperSlide>
           <SwiperSlide>
             <li class="step__card">
               <div class="step__card_info">
@@ -606,7 +688,9 @@
             aria-label="Prev slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
+              <use
+                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
+              ></use>
             </svg>
           </button>
           <button
@@ -615,7 +699,9 @@
             aria-label="Next slide"
           >
             <svg class="icon icon_slider-arr icon--size_mod">
-              <use xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"></use>
+              <use
+                xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
+              ></use>
             </svg>
           </button>
         </div>
@@ -648,7 +734,7 @@
         <div class="contact__col contact__col--info">
           <h2 class="contact__title">Наши контакты</h2>
           <div class="contact__day">Без выходных 9:00-18:00</div>
-          <a class="contact__phone" href="tel:+7 928 275 54 56">+7 928 275 54 56</a>
+          <a class="contact__phone" href="tel:+79282755456">+7 928 275 54 56</a>
           <div class="contact__btn_w">
             <a class="btn_base_s contact__contact" @click="openModal('form')"
               >Заказать звонок</a
@@ -657,29 +743,27 @@
           <h3 class="contact__subtitle">Отвечаем мгновенно</h3>
           <ul class="contact__social_list">
             <li class="contact__social_item">
-              <a class="contact__social_link" href=""
-                ><img src="@/assets/images/contact/telegram.svg" alt=""
+              <a class="contact__social_link" href="https://t.me/masternavse2"
+                ><img src="@/assets/images/contact/telegram.svg"
               /></a>
             </li>
             <li class="contact__social_item">
-              <a class="contact__social_link" href=""
-                ><img src="@/assets/images/contact/whatsapp.svg" alt=""
+              <a class="contact__social_link" href="https://wtsp.cc/79282755456"
+                ><img src="@/assets/images/contact/whatsapp.svg"
               /></a>
             </li>
           </ul>
           <div class="contact__row_icon contact__row_icon--wheight">
             <span class="contact__icon">
               <Icons icon="clarity:envelope-solid" :size="30" /> </span
-            ><a href="mailto:">komfort@gmail.com</a>
+            ><a href="mailto:komfort@gmail.com">komfort@gmail.com</a>
           </div>
         </div>
         <div class="contact__col contact__col--img">
           <div class="contact__img_w">
             <img
               class="contact__img"
-              src="@/assets/images/contact/contact.jpg"
-              alt="some image"
-              loading="lazy"
+              src="https://2klstk.ru/wp-content/uploads/2024/09/px7dirxpmww1up4pve20j9ksa5so17h4.jpg"
             />
           </div>
         </div>
@@ -689,21 +773,21 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, ref } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import QuizForm from "@/components/QuizForm.vue";
 import Projects from "@/components/home/Projects.vue";
 import SystemsSlider from "@/components/home/SystemsSlider.vue";
-import { ref, onMounted } from "vue";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { Navigation, Pagination, EffectFade } from "swiper/modules";
+import ExcursionForm from "@/components/ExcursionForm.vue";
 import { useModalStore } from "@/stores/useModalStore";
 import { useHomeStore, useHomeStoreRefs } from "@/stores/useHomeStore";
-import ExcursionForm from "@/components/ExcursionForm.vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Navigation, Pagination, EffectFade } from "swiper/modules";
+gsap.registerPlugin(ScrollTrigger);
 
-// const { sendToTelegram } = useTelegram();
 const { getHome } = useHomeStore();
 const { home } = useHomeStoreRefs();
-
-const mapContainer = ref(null);
 const { openModal } = useModalStore();
 const steps = ref<any>([
   {
@@ -726,7 +810,28 @@ const steps = ref<any>([
 
 onMounted(async () => {
   await getHome();
+
+  // Анимация при скролле для всех секций с классом '.section'
+  const sections = document.querySelectorAll(".section");
+
+  sections.forEach((section) => {
+    gsap.from(section, {
+      opacity: 0,
+      y: 100,
+      duration: 1.5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%", // Запуск анимации, когда секция видна на 80%
+        toggleActions: "play none none reverse", // Настройка повторной анимации
+      },
+    });
+  });
 });
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.swiper-button-disabled {
+  opacity: 0;
+}
+</style>

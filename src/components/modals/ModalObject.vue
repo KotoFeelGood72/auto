@@ -19,7 +19,7 @@
                 v-for="(item, i) in project.acf.gallery"
                 :key="'project-modal-gallery-item-' + i"
               >
-                <div class="place__gallery_slide f-carousel__slide">
+                <div class="place__gallery_slide">
                   <div class="place__gallery_img_w">
                     <img class="place__gallery_img" :src="item.img" />
                   </div>
@@ -75,7 +75,9 @@
     </div>
     <div class="object__tabs">
       <ul class="object_tab__links">
-        <li :class="{ active: activeTab === 1 }" @click="setActiveTab(1)">Описание</li>
+        <li :class="{ active: activeTab === 1 }" @click="setActiveTab(1)">
+          Описание
+        </li>
         <li :class="{ active: activeTab === 2 }" @click="setActiveTab(2)">
           Характеристики
         </li>
@@ -125,7 +127,10 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination } from "swiper/modules";
 import { useRoute } from "vue-router";
 import { onMounted, ref } from "vue";
-import { useProjectsStore, useProjectsStoreRefs } from "@/stores/useProjectStore";
+import {
+  useProjectsStore,
+  useProjectsStoreRefs,
+} from "@/stores/useProjectStore";
 import { useModalStore } from "@/stores/useModalStore";
 import Close from "../ui/Close.vue";
 
@@ -138,8 +143,23 @@ const route = useRoute();
 const activeTab = ref(1); // Активная вкладка по умолчанию
 const activeComplect = ref<number | null>(null); // Активная комплектация
 
+const scrollToTab = (index: number) => {
+  const tabsContainer = document.querySelector(".object_tab__links");
+  const tabElement = tabsContainer?.children[index] as HTMLElement | null;
+
+  if (tabElement) {
+    tabElement.scrollIntoView({
+      behavior: "smooth", // Плавная прокрутка
+      block: "nearest", // Прокрутить элемент к ближайшей границе
+      inline: "center", // Прокрутить элемент по горизонтали к центру
+    });
+  }
+};
+
+// Функция для смены активной вкладки
 const setActiveTab = (tabIndex: number) => {
   activeTab.value = tabIndex;
+  scrollToTab(tabIndex); // Прокрутка к элементу
 };
 
 const setActiveComplect = (complectIndex: number) => {
@@ -188,12 +208,31 @@ const toggleModal = () => {
   overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+
+  @media (max-width: 767px) {
+    top: auto;
+    bottom: 0;
+    transform: translateY(0);
+    transform: translateX(-50%);
+  }
 }
 
 .object_tab__links {
   display: flex;
   list-style: none;
   padding: 0;
+
+  @media (max-width: 767px) {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE и Edge */
+  }
+
+  /* Для Chrome, Safari, Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .object_tab__links li {
@@ -202,6 +241,10 @@ const toggleModal = () => {
   cursor: pointer;
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.3s ease-in-out;
+
+  @media (max-width: 767px) {
+    margin-right: 1rem;
+  }
 }
 
 .object_tab__links li.active {
@@ -251,12 +294,16 @@ const toggleModal = () => {
   position: relative;
   label {
     display: flex;
-    &:hover {
-      background-color: #b2c59328;
-    }
+
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     padding: 1.5rem 2rem 1.5rem 4rem;
+    &:hover {
+      background-color: #b2c59328;
+    }
+    @media (max-width: 767px) {
+      font-size: 1.4rem;
+    }
     &:after {
       position: absolute;
       top: 50%;

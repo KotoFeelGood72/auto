@@ -37,7 +37,9 @@
               v-for="(item, i) in socials"
               :key="'footer-social-item' + i"
             >
-              <a class="footer__social_link" href=""><img :src="item.img" /></a>
+              <a class="footer__social_link" :href="item.link"
+                ><img :src="item.img"
+              /></a>
             </li>
           </ul>
         </div>
@@ -55,10 +57,11 @@
           </nav>
           <div class="footer__rights_row">
             <div class="footer__rights_link_w">
-              <a class="footer__politic" href="#"
-                >Политика конфиденциальности</a
-              >
-              <div class="footer__inn">ИНН 029922233324</div>
+              <RouterLink to="/privacy/" class="footer__politic">
+                Политика конфиденциальности
+              </RouterLink>
+
+              <div class="footer__inn">ИНН 2311188415</div>
             </div>
             <div class="footer__studio_logo_w">
               <div class="footer__studio_img_w">
@@ -85,9 +88,9 @@ import { useModalStore } from "@/stores/useModalStore";
 
 const { openModal } = useModalStore();
 const socials = ref([
-  { img: "/img/tg.svg", link: "/" },
-  { img: "/img/wa.svg", link: "/" },
-  { img: "/img/email.svg", link: "/" },
+  { img: "/img/tg.svg", link: "https://t.me/masternavse2" },
+  { img: "/img/wa.svg", link: "https://wtsp.cc/79282755456" },
+  { img: "/img/email.svg", link: "mailto:2klstk@mail.ru" },
 ]);
 
 const menu = ref([

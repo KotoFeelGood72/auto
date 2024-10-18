@@ -2,7 +2,8 @@
   <section class="section calc js-step-form-w">
     <div class="section_in calc__in">
       <h2 class="calc__title">
-        <strong>Получите предварительный расчет стоимости </strong> дома за 1 минуту
+        <strong>Получите предварительный расчет стоимости </strong> дома за 1
+        минуту
       </h2>
       <div class="calc__form">
         <div class="calc__form_row">
@@ -38,7 +39,9 @@ import { useQuizStoreRefs } from "@/stores/useQuizStore";
 const { currentStep, steps } = useQuizStoreRefs();
 const totalSteps = computed(() => steps.value.length);
 
-const progressWidth = computed(() => (currentStep.value / totalSteps.value) * 100);
+const progressWidth = computed(
+  () => (currentStep.value / totalSteps.value) * 100
+);
 
 const progressWidthRounded = computed(() => progressWidth.value.toFixed(0));
 </script>

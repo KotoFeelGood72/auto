@@ -51,7 +51,10 @@ export function useTelegram() {
     try {
       if (file) {
         const formData = new FormData();
-        formData.append("caption", `Имя: ${name}\nТелефон: ${phone}\nЗаявка на рассчет`);
+        formData.append(
+          "caption",
+          `Имя: ${name}\nТелефон: ${phone}\nЗаявка на рассчет`
+        );
         formData.append("chat_id", CHAT_ID);
         formData.append("document", file);
 
@@ -66,7 +69,10 @@ export function useTelegram() {
           throw new Error("Ошибка при отправке файла");
         }
       } else {
-        await sendToTelegram(`Имя: ${name}\nТелефон: ${phone}\nЗаявка на рассчет`);
+        await sendToTelegram(
+          `Имя: ${name}\nТелефон: ${phone}\nЗаявка на рассчет`
+        );
+        ym(98477147, "reachGoal", "send_form");
       }
     } catch (error: any) {
       errorMessage.value = error.message || "Ошибка отправки";
@@ -77,26 +83,30 @@ export function useTelegram() {
 
   // Метод для отправки формы без файла
   const sendFormWithoutFile = async (
-    name: string, 
-    phone: string, 
-    date: string | null = null,  // Добавляем параметр date
-    title: string = "Заявка на консультацию"  // Добавляем параметр title с дефолтным значением
+    name: string,
+    phone: string,
+    date: string | null = null, // Добавляем параметр date
+    title: string = "Заявка на консультацию" // Добавляем параметр title с дефолтным значением
   ) => {
     isLoading.value = true;
     isSuccess.value = false;
     errorMessage.value = null;
-  
+
     try {
       // Формируем сообщение
       let message = `${title}\nИмя: ${name}\nТелефон: ${phone}`;
-  
+
       // Если передана дата, добавляем ее в сообщение
       if (date) {
         message += `\nДата экскурсии: ${date}`;
       }
-  
+
       // Проверяем, не пуст ли объект sendObject
-      if (sendObject.value && sendObject.value.title && sendObject.value.complectation) {
+      if (
+        sendObject.value &&
+        sendObject.value.title &&
+        sendObject.value.complectation
+      ) {
         message += `\n\nДетали проекта:\n`;
         message += `Название проекта: ${sendObject.value.title}`;
         message += `\nКомплектация: ${sendObject.value.complectation}`;
@@ -104,21 +114,21 @@ export function useTelegram() {
           message += `\nИзображение: ${sendObject.value.image}`;
         }
       }
-  
+
       // Отправляем сообщение в Telegram
       await sendToTelegram(message);
+      ym(98477147, "reachGoal", "send_form");
     } catch (error: any) {
       errorMessage.value = error.message || "Ошибка отправки";
     } finally {
       isLoading.value = false;
-      sendObject.value = { 
-        image: '', 
-        title: '', 
-        complectation: '', 
-      }
+      sendObject.value = {
+        image: "",
+        title: "",
+        complectation: "",
+      };
     }
   };
-  
 
   // Метод для отправки формы с quiz данными
   const sendFormWithQuiz = async (
@@ -129,7 +139,7 @@ export function useTelegram() {
     isLoading.value = true;
     isSuccess.value = false;
     errorMessage.value = null;
-  
+
     try {
       // Массив вопросов, сопоставленный с порядком ответов
       const questions = [
@@ -145,10 +155,10 @@ export function useTelegram() {
         "Когда планируете строительство?",
         "При заказе дома от 100 м²",
       ];
-  
+
       // Формируем сообщение, включая данные квиза
       let message = `Имя: ${name}\nТелефон: ${phone}\n\nЗаявка по квизу\nОтветы на квиз:\n`;
-  
+
       // Проходим по массиву данных quiz и добавляем в сообщение вопросы и ответы
       quizAnswers.forEach((answer, index) => {
         const question = questions[index] || "Вопрос не найден"; // Подставляем вопрос или сообщение, если вопрос не найден
@@ -158,18 +168,17 @@ export function useTelegram() {
         }
         message += "\n\n"; // Добавляем разделение между вопросами для удобства чтения
       });
-  
+
       // Отправляем сообщение в Telegram
       await sendToTelegram(message);
+      ym(98477147, "reachGoal", "quiz");
+      ym(98477147, "reachGoal", "send_form");
     } catch (error: any) {
       errorMessage.value = error.message || "Ошибка отправки данных quiz";
     } finally {
       isLoading.value = false;
     }
   };
-  
-  
-  
 
   return {
     sendToTelegram,

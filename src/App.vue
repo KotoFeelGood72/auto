@@ -18,7 +18,6 @@
     </transition>
   </component>
 </template>
-
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, watch } from "vue";
 import DefaultLayout from "@/layouts/DefaultLayout.vue";
@@ -30,17 +29,14 @@ import { useRoute } from "vue-router";
 import { useModalStoreRefs, useModalStore } from "./stores/useModalStore";
 import Preloader from "./components/Preloader.vue";
 
-const isModalActive = computed(() => {
-  return Object.values(modals.value).some((isActive) => isActive);
-});
-
-const route = useRoute();
+// Управление модальными окнами
 const { closeAllModals, openModal } = useModalStore();
 const { modals } = useModalStoreRefs();
 
-let isModalShown = false; // Флаг для отслеживания показа модального окна
+let isModalShownByScroll = false; // Флаг для отслеживания показа модального окна при скролле
 
 // Определяем, какой layout использовать
+const route = useRoute();
 const layoutComponent = computed(() => {
   switch (route.meta.layout) {
     case "default":
@@ -52,7 +48,12 @@ const layoutComponent = computed(() => {
   }
 });
 
-// Закрываем модальные окна при изменении маршрута
+// Определение, активны ли модальные окна
+const isModalActive = computed(() => {
+  return Object.values(modals.value).some((isActive) => isActive);
+});
+
+// Закрытие всех модальных окон при изменении маршрута
 watch(
   () => route.fullPath,
   () => {
@@ -60,38 +61,57 @@ watch(
   }
 );
 
-const handleScroll = () => {
-  const scrollPosition = window.scrollY + window.innerHeight;
-  const pageHeight = document.documentElement.scrollHeight;
+// Добавление класса is_fixed к body при открытых модальных окнах
+watch(isModalActive, (newValue) => {
+  if (newValue) {
+    document.body.classList.add("is_fixed");
+  } else {
+    document.body.classList.remove("is_fixed");
+  }
+});
 
-  if (scrollPosition / pageHeight >= 0.9 && !isModalShown) {
-    openModal("form");
-    isModalShown = true;
+// Функция для открытия модального окна при скролле
+const handleScroll = () => {
+  if (!isModalActive.value && !isModalShownByScroll) {
+    // Проверяем, нет ли активных модальных окон и не была ли модалка показана ранее
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const pageHeight = document.documentElement.scrollHeight;
+
+    if (scrollPosition / pageHeight >= 0.9) {
+      openModal("form");
+      isModalShownByScroll = true; // После показа модалки устанавливаем флаг в true
+    }
   }
 };
 
 let inactivityTimer: ReturnType<typeof setTimeout>;
 
-// Функция для сброса таймера
+// Функция для сброса таймера бездействия
 const resetInactivityTimer = () => {
   clearTimeout(inactivityTimer);
-  inactivityTimer = setTimeout(() => {
-    openModal("form");
-  }, 60000);
+  if (!isModalActive.value) {
+    // Проверяем, нет ли активных модальных окон
+    inactivityTimer = setTimeout(() => {
+      openModal("form");
+    }, 60000); // 60 секунд бездействия
+  }
 };
 
+// Добавляем слушатели для отслеживания активности пользователя
 const addInactivityListeners = () => {
   window.addEventListener("mousemove", resetInactivityTimer);
   window.addEventListener("keydown", resetInactivityTimer);
   window.addEventListener("scroll", resetInactivityTimer);
 };
 
+// Убираем слушатели активности
 const removeInactivityListeners = () => {
   window.removeEventListener("mousemove", resetInactivityTimer);
   window.removeEventListener("keydown", resetInactivityTimer);
   window.removeEventListener("scroll", resetInactivityTimer);
 };
 
+// Обработчики событий при монтировании и размонтировании компонента
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
   resetInactivityTimer();

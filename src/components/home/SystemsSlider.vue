@@ -1,10 +1,11 @@
 <template>
   <section class="section sys_slider js-sys-slider-w">
     <div class="section_in sys_slider__in">
-      <h2 class="sys_slider__title" v-html="title"></h2>
+      <h2 class="sys_slider__title" v-html="title ? title : ''"></h2>
       <div class="sys_slider__pag"></div>
       <Swiper
         :slides-per-view="1"
+        :space-between="20"
         :modules="[Navigation, Pagination]"
         :speed="700"
         class="sys_slider__slider js-sys-slider"
@@ -22,12 +23,7 @@
             <div class="sys_slider__row">
               <div class="sys_slider__col sys_slider__col--img">
                 <h3 v-html="item.dedline" class="sys_slider__item_title"></h3>
-                <!-- <span class="sys_slider__title_icon">
-                    <svg class="icon icon_sys-icon icon--size_mod">
-                      <use
-                        xlink:href="@/assets/images/sprite/sprite.svg#sys-icon"
-                      ></use></svg
-                  ></span> -->
+
                 <div class="sys_slider__img_box">
                   <div class="sys_slider__img_w">
                     <img class="sys_slider__img" :src="item.img" />
@@ -124,4 +120,10 @@ const props = defineProps<{
 }>();
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.sys_slider__img_w {
+  @media (max-width: 767px) {
+    position: static;
+  }
+}
+</style>

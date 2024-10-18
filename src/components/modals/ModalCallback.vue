@@ -21,7 +21,9 @@
               <div class="popup_call__form_list">
                 <div class="popup_call__form_item">
                   <div class="form_input">
-                    <label class="form_input__label" for="input_10">Введите имя</label>
+                    <label class="form_input__label" for="input_10"
+                      >Введите имя</label
+                    >
                     <div class="form_input__field">
                       <input
                         class="form_input__element"
@@ -68,7 +70,12 @@
                   @drop.prevent="onDrop"
                   :class="{ 'file-dragging': isDragging }"
                 >
-                  <input type="file" ref="fileInput" @change="onFileChange" hidden />
+                  <input
+                    type="file"
+                    ref="fileInput"
+                    @change="onFileChange"
+                    hidden
+                  />
                   <label for=""
                     >Перетащите файл сюда или
                     <span @click="triggerFileInput">выберите файл</span></label
@@ -101,7 +108,7 @@
           </div>
           <div class="popup_call__info">
             Нажимая “Получить консультацию” вы соглашаетесь с
-            <a href="#">политикой конфидециальности</a>
+            <RouterLink to="/privacy/">политикой конфидециальности</RouterLink>
           </div>
         </div>
       </div>
@@ -165,7 +172,11 @@ const submitForm = async () => {
       closeAllModals();
     } catch (error: any) {
       // Выводим более подробную информацию об ошибке
-      console.error("Ошибка при отправке данных:", error?.message || error, error);
+      console.error(
+        "Ошибка при отправке данных:",
+        error?.message || error,
+        error
+      );
     }
   }
 };
@@ -316,5 +327,16 @@ const removeFile = () => {
   scrollbar-width: 0;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.popup--contact {
+  @media (max-width: 767px) {
+    transform: translateY(0);
+    top: auto;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
 }
 </style>

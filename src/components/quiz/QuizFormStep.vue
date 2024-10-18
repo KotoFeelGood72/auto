@@ -78,9 +78,12 @@ const rules = {
   name: { required, minLength: minLength(2) },
   phone: {
     required,
-    phone: helpers.withMessage("Введите корректный номер телефона", (value: any) => {
-      return /^\+?[1-9]\d{1,14}$/.test(value); // Пример для проверки международного формата номера
-    }),
+    phone: helpers.withMessage(
+      "Введите корректный номер телефона",
+      (value: any) => {
+        return /^\+?[1-9]\d{1,14}$/.test(value); // Пример для проверки международного формата номера
+      }
+    ),
   },
 };
 

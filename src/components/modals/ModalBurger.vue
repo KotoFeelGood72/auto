@@ -40,10 +40,8 @@
       >
       <div class="header__work_time">
         <div class="header__date">Без выходных 9:00-18:00</div>
-        <a class="header__phone" href="#">+7 919 123 45 67</a
-        ><a class="header__call_us" href="#" @click="openForm()"
-          >Заказать звонок</a
-        >
+        <a class="header__phone" href="tel:+79191234567">+7 919 123 45 67</a
+        ><a class="header__call_us" @click="openForm()">Заказать звонок</a>
       </div>
     </div>
   </div>
@@ -54,9 +52,9 @@ import { ref } from "vue";
 import Close from "../ui/Close.vue";
 import { useModalStore } from "@/stores/useModalStore";
 const socials = ref([
-  { img: "/img/tg.svg", link: "/" },
-  { img: "/img/wa.svg", link: "/" },
-  { img: "/img/email.svg", link: "/" },
+  { img: "/img/tg.svg", link: "https://t.me/masternavse2" },
+  { img: "/img/wa.svg", link: "https://wtsp.cc/79282755456" },
+  { img: "/img/email.svg", link: "mailto:2klstk@mail.ru" },
 ]);
 
 const menu = ref([
@@ -88,7 +86,7 @@ const openForm = (mode?: string) => {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  max-width: 35rem;
+  max-width: 80rem;
   width: 100%;
 
   @media (max-width: 767px) {
