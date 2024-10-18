@@ -49,7 +49,6 @@
                   </div>
                   <div class="calc__slide_item_title">
                     <div class="calc_icon">
-                      <!-- Отображение иконки в зависимости от состояния -->
                       <Icons
                         :icon="
                           selectedOptions[stepIndex] === option
@@ -85,7 +84,7 @@ const { steps, selectedOptions, currentStep } = useQuizStoreRefs();
 const { addQuizData, updateCurrentStep } = useQuizStore();
 
 // Переменная для хранения состояния hover
-const hoveredOption = ref(null);
+const hoveredOption = ref<any>(null);
 const calcContainer = ref<any | null>(null); // Контейнер для квиза
 
 // Метод для динамического расчета высоты
@@ -128,7 +127,7 @@ const leave = (el: any, done: any) => {
   });
 };
 
-const onOptionSelected = (stepIndex: number, option: any) => {
+const onOptionSelected = (stepIndex: any, option: any) => {
   if (!steps.value[stepIndex]?.options) {
     console.error(`Options для шага ${stepIndex} не найдены.`);
     return;
