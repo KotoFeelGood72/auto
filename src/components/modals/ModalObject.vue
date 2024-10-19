@@ -20,9 +20,14 @@
                 :key="'project-modal-gallery-item-' + i"
               >
                 <div class="place__gallery_slide">
-                  <div class="place__gallery_img_w">
+                  <a
+                    :href="item.img"
+                    data-fancybox="gallery"
+                    class="place__gallery_img_w"
+                    :data-src="item.img"
+                  >
                     <img class="place__gallery_img" :src="item.img" />
-                  </div>
+                  </a>
                 </div>
               </SwiperSlide>
             </Swiper>
@@ -125,20 +130,18 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination } from "swiper/modules";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { onMounted, ref } from "vue";
-import {
-  useProjectsStore,
-  useProjectsStoreRefs,
-} from "@/stores/useProjectStore";
+import { useProjectsStore } from "@/stores/useProjectStore";
 import { useModalStore } from "@/stores/useModalStore";
+import { Fancybox } from "@fancyapps/ui";
 import Close from "../ui/Close.vue";
 
 const { openModal, closeModal } = useModalStore();
 const { getProjectById, setSendObject } = useProjectsStore();
-const { sendObject } = useProjectsStoreRefs();
 const project = ref<any>(null);
 const route = useRoute();
+const router = useRouter();
 
 const activeTab = ref(1); // Активная вкладка по умолчанию
 const activeComplect = ref<number | null>(null); // Активная комплектация
@@ -179,12 +182,12 @@ const handleSubmit = () => {
   }
 };
 
+Fancybox.bind("[data-fancybox='gallery']", {});
+
 onMounted(async () => {
   if (route.query.project) {
     project.value = await getProjectById(Number(route.query.project));
   }
-
-  // По умолчанию выбираем первый радио, если есть комплектации
   if (project.value && project.value.acf.complects.length > 0) {
     activeComplect.value = 0;
   }

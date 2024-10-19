@@ -1,4 +1,5 @@
 import { defineStore, storeToRefs } from "pinia";
+import { useRouter, useRoute } from "vue-router";
 
 interface ModalsState {
   project: boolean;
@@ -15,7 +16,7 @@ export const useModalStore = defineStore("modal", {
       form: false,
       burger: false,
     },
-    modalData: "", // Строка для хранения переданных данных
+    modalData: "",
   }),
   actions: {
     openModal(modalName: keyof ModalsState, data?: string) {
@@ -25,14 +26,32 @@ export const useModalStore = defineStore("modal", {
       }
     },
     closeModal(modalName: keyof ModalsState) {
+      const router = useRouter();
+      const route = useRoute();
+
       this.modals[modalName] = false;
       this.modalData = ""; // Очищаем данные при закрытии
+
+      // Проверяем, что route и query существуют
+      if (modalName === "project" && route && route.query.project) {
+        const { project, ...otherQueryParams } = route.query;
+        router.replace({ query: { ...otherQueryParams } });
+      }
     },
     closeAllModals() {
+      const router = useRouter();
+      const route = useRoute();
+
       Object.keys(this.modals).forEach((modalName) => {
         this.modals[modalName as keyof ModalsState] = false;
       });
       this.modalData = ""; // Очищаем данные всех модальных окон
+
+      // Проверяем, что route и query существуют
+      if (route && route.query.project) {
+        const { project, ...otherQueryParams } = route.query;
+        router.replace({ query: { ...otherQueryParams } });
+      }
     },
   },
 });

@@ -140,4 +140,14 @@ onMounted(() => {
   justify-content: center;
   padding: 2rem 0;
 }
+
+.popular__card {
+  .card {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 0 0 2rem 0 #0000003d;
+      transform: translateY(-0.5rem);
+    }
+  }
+}
 </style>

@@ -830,7 +830,7 @@ onMounted(async () => {
       scrollTrigger: {
         trigger: section,
         start: "top 80%", // Запуск анимации, когда секция видна на 80%
-        toggleActions: "play none none reverse", // Настройка повторной анимации
+        toggleActions: "play none none none",
       },
     });
   });

@@ -2,7 +2,7 @@
   <component :is="layoutComponent">
     <router-view />
     <transition name="fade-bg">
-      <div v-if="isModalActive" class="page-bg" @click="closeAllModals"></div>
+      <div v-if="isModalActive" class="page-bg" @click="allCloserModal"></div>
     </transition>
     <transition name="fade-bg">
       <Preloader />
@@ -27,11 +27,14 @@ import ModalObject from "./components/modals/ModalObject.vue";
 import ModalBurger from "./components/modals/ModalBurger.vue";
 import { useRoute } from "vue-router";
 import { useModalStoreRefs, useModalStore } from "./stores/useModalStore";
+import { useCloserModal } from "./composables/useCloserModal";
 import Preloader from "./components/Preloader.vue";
 
 // Управление модальными окнами
-const { closeAllModals, openModal } = useModalStore();
+const { openModal } = useModalStore();
 const { modals } = useModalStoreRefs();
+
+const { allCloserModal } = useCloserModal();
 
 let isModalShownByScroll = false; // Флаг для отслеживания показа модального окна при скролле
 
@@ -55,9 +58,9 @@ const isModalActive = computed(() => {
 
 // Закрытие всех модальных окон при изменении маршрута
 watch(
-  () => route.fullPath,
+  () => route.path,
   () => {
-    closeAllModals();
+    allCloserModal();
   }
 );
 

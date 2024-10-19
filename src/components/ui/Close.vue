@@ -1,13 +1,13 @@
 <template>
-  <div class="close" @click="closeAllModals()">
+  <div class="close" @click="allCloserModal()">
     <Icons icon="material-symbols:close" :size="40" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { useModalStore } from "@/stores/useModalStore";
+import { useCloserModal } from "@/composables/useCloserModal";
 
-const { openModal, closeAllModals } = useModalStore();
+const { allCloserModal } = useCloserModal();
 </script>
 
 <style scoped lang="scss">
