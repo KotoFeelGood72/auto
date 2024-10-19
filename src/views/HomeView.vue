@@ -74,7 +74,6 @@
             </div>
             <a
               class="btn_base_s system__info_about_btn"
-              href="#"
               @click.prevent="openModal('form')"
               >Получить консультацию</a
             >

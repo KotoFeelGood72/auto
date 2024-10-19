@@ -39,13 +39,12 @@
           </ul>
           <a
             class="header__btn_calc btn_base_s js-popup-trigger-form"
-            href="#"
             @click="openModal('form', 'price')"
             >Отправить проект на просчет</a
           >
           <div class="header__work_time">
             <div class="header__date">Без выходных 9:00-18:00</div>
-            <a class="header__phone" href="#">+7 919 123 45 67</a
+            <a class="header__phone" href="tel:+79191234567">+7 919 123 45 67</a
             ><a class="header__call_us" @click="openModal('form')"
               >Заказать звонок</a
             >
@@ -102,7 +101,6 @@
               </ul>
               <a
                 class="header__btn_calc btn_base_s js-popup-trigger-form"
-                href="#"
                 @click="openModal('form', 'price')"
                 >Отправить проект на просчет</a
               >

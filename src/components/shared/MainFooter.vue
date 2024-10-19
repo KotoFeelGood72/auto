@@ -29,7 +29,7 @@
         </div>
         <div class="footer__col footer__col--info">
           <div class="footer__date">Без выходных 9:00-18:00</div>
-          <a class="footer__phone" href="#">+7 919 123 45 67</a
+          <a class="footer__phone" href="tel:+79191234567">+7 919 123 45 67</a
           ><a class="footer__call_us" @click="openModal('form')"
             >Заказать звонок</a
           >
