@@ -44,7 +44,7 @@
               :key="'project-modal-character-item' + i"
             >
               <div class="card__item_icon">
-                <Icons :icon="item.icon" />
+                <Icons :icon="getIcon(item.icon)" />
               </div>
               <div class="card__item_title">{{ item.name }}</div>
               <div class="card__item_descr">{{ item.value }}</div>
@@ -196,6 +196,19 @@ onMounted(async () => {
 const toggleModal = () => {
   openModal("form");
   closeModal("project");
+};
+
+const getIcon = (icon: string) => {
+  switch (icon) {
+    case "size-1":
+      return "ph:resize-thin";
+    case "room":
+      return "fluent:conference-room-20-regular";
+    case "square":
+      return "tabler:meter-square";
+    case "bad":
+      return "material-symbols-light:bedroom-child-outline-rounded";
+  }
 };
 </script>
 
