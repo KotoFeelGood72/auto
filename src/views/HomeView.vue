@@ -305,14 +305,14 @@
             type="button"
             aria-label="Prev slide"
           >
-            <Icons icon="fluent:chevron-left-28-regular" />
+            <Icons icon="fluent:chevron-left-28-regular" :size="30" />
           </button>
           <button
             class="sys_slider__navigation sys_slider__navigation--next_mod js-step-navigation-next"
             type="button"
             aria-label="Next slide"
           >
-            <Icons icon="fluent:chevron-right-28-regular" />
+            <Icons icon="fluent:chevron-right-28-regular" :size="30" />
           </button>
         </div>
       </div>
@@ -396,14 +396,14 @@
             type="button"
             aria-label="Prev slide"
           >
-            <Icons icon="fluent:chevron-left-28-regular" />
+            <Icons icon="fluent:chevron-left-28-regular" :size="30" />
           </button>
           <button
             class="sys_slider__navigation sys_slider__navigation--next_mod js-bigstep-navigation-next"
             type="button"
             aria-label="Next slide"
           >
-            <Icons icon="fluent:chevron-right-28-regular" />
+            <Icons icon="fluent:chevron-right-28-regular" :size="30" />
           </button>
         </div>
       </div>
@@ -587,14 +587,14 @@
             type="button"
             aria-label="Prev slide"
           >
-            <Icons icon="fluent:chevron-left-28-regular" />
+            <Icons icon="fluent:chevron-left-28-regular" :size="30" />
           </button>
           <button
             class="sys_slider__navigation sys_slider__navigation--next_mod js-review-navigation-next"
             type="button"
             aria-label="Next slide"
           >
-            <Icons icon="fluent:chevron-right-28-regular" />
+            <Icons icon="fluent:chevron-right-28-regular" :size="30" />
           </button>
         </div>
       </div>
@@ -669,14 +669,14 @@
             type="button"
             aria-label="Prev slide"
           >
-            <Icons icon="fluent:chevron-left-28-regular" />
+            <Icons icon="fluent:chevron-left-28-regular" :size="30" />
           </button>
           <button
             class="sys_slider__navigation sys_slider__navigation--next_mod js-builder-navigation-next"
             type="button"
             aria-label="Next slide"
           >
-            <Icons icon="fluent:chevron-right-28-regular" />
+            <Icons icon="fluent:chevron-right-28-regular" :size="30" />
           </button>
         </div>
       </div>

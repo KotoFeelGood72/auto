@@ -2749,8 +2749,8 @@ input:checked ~ .calc__slide_item_icon {
   background-color: #b2c593;
 }
 .sys_slider__navigation.sys_slider__navigation--prev_mod {
-  -webkit-transform: rotate(-180deg);
-  transform: rotate(-180deg);
+  /* -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg); */
 }
 .sys_slider__navigation.swiper-button-disabled {
   opacity: 0.4;
