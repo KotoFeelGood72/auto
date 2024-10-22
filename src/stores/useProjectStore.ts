@@ -1,19 +1,19 @@
 import { defineStore, storeToRefs } from "pinia";
-import axios from "axios";
+import { api } from "@/api/axios";
 
 export const useProjectsStore = defineStore("projects", {
   state: () => ({
-    projects: null as any, 
+    projects: null as any,
     sendObject: {
-      image: null as string | null, 
-      title: null as string | null, 
-      complectation: null as string | null, 
+      image: null as string | null,
+      title: null as string | null,
+      complectation: null as string | null,
     },
   }),
   actions: {
     async getProjects() {
       try {
-        const response = await axios.get("/projects.json");
+        const response = await api.get("/projects.json");
         this.projects = response.data;
         this.addIconNamesToCharacters(); // Вызываем метод для добавления иконок
       } catch (error) {
