@@ -13,7 +13,7 @@ export const useProjectsStore = defineStore("projects", {
   actions: {
     async getProjects() {
       try {
-        const response = await api.get("/projects.json");
+        const response = await api.get("/projects/all-projects.json");
         this.projects = response.data;
         this.addIconNamesToCharacters(); // Вызываем метод для добавления иконок
       } catch (error) {

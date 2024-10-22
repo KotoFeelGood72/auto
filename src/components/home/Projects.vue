@@ -26,7 +26,7 @@
                     :key="'character-item' + i"
                   >
                     <div class="card__item_icon">
-                      <Icons :icon="character.icon" />
+                      <Icons :icon="getIcon(character.icon)" />
                     </div>
                     <div class="card__item_title">{{ character.name }}:</div>
                     <div class="card__item_descr">{{ character.value }}</div>
@@ -105,6 +105,19 @@ onMounted(() => {
     loadMore(); // Показать первые 6 проектов
   });
 });
+
+const getIcon = (icon: string) => {
+  switch (icon) {
+    case "size-1":
+      return "ph:resize-thin";
+    case "room":
+      return "fluent:conference-room-20-regular";
+    case "square":
+      return "tabler:meter-square";
+    case "bad":
+      return "material-symbols-light:bedroom-child-outline-rounded";
+  }
+};
 </script>
 
 <style scoped lang="scss">
