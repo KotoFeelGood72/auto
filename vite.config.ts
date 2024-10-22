@@ -23,6 +23,13 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: "modern-compiler",
+      },
+    },
+  },
   server: {
     port: 5173,
     host: true,
@@ -32,7 +39,7 @@ export default defineConfig({
     },
     proxy: {
       "/api": {
-        target: "http://2klstk.ru/wp-content/uploads/json",
+        target: "http://2k.gleede.ru/wp-content/uploads/json",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
