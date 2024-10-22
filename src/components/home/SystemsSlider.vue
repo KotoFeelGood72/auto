@@ -87,22 +87,14 @@
           type="button"
           aria-label="Prev slide"
         >
-          <svg class="icon icon_slider-arr icon--size_mod">
-            <use
-              xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
-            ></use>
-          </svg>
+          <Icons icon="fluent:chevron-left-28-regular" />
         </button>
         <button
           class="sys_slider__navigation sys_slider__navigation--next_mod js-sys-navigation-next"
           type="button"
           aria-label="Next slide"
         >
-          <svg class="icon icon_slider-arr icon--size_mod">
-            <use
-              xlink:href="@/assets/images/sprite/sprite.svg#slider-arr"
-            ></use>
-          </svg>
+          <Icons icon="fluent:chevron-right-28-regular" />
         </button>
       </div>
     </div>
