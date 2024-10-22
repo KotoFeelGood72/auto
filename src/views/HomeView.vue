@@ -262,9 +262,7 @@
   />
   <section class="section step js-step-slider-w">
     <div class="section_in step__in">
-      <h2 class="step__title">
-        Что о нас говорят <strong>довольные клиенты</strong>
-      </h2>
+      <h2 class="step__title">Как мы <strong> работаем</strong></h2>
       <!-- <div class="step__subtitle">
         Обсуждается индивидуально, в зависимости от задач и их сложности
       </div> -->
@@ -521,15 +519,13 @@
 
   <section class="section step js-step-slider-w">
     <div class="section_in step__in">
-      <h2 class="step__title">
-        Чтобы быть спокойным и уверенным в качественном доме -<strong
-          >вам нужен надежный подрядчик</strong
-        >
+      <h2 data-v-b4e148ca="" class="step__title">
+        Что о нас говорят <strong data-v-b4e148ca="">довольные клиенты</strong>
       </h2>
-      <div class="step__subtitle">
+      <!-- <div class="step__subtitle">
         Как и у любой компании у нас есть как положительные, так и отрицательные
         отзывы. Мы ничего от вас не скрываем
-      </div>
+      </div> -->
       <div class="step__list js-step-slider js-step-slider--review">
         <Swiper
           :slides-per-view="3"
