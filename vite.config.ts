@@ -39,7 +39,7 @@ export default defineConfig({
     },
     proxy: {
       "/api": {
-        target: "http://2klstk.ru/wp-content/uploads/json",
+        target: "https://2klstk.ru/wp-content/uploads/json",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
