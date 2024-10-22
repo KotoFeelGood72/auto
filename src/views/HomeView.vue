@@ -750,12 +750,14 @@
           <ul class="contact__social_list">
             <li class="contact__social_item">
               <a class="contact__social_link" href="https://t.me/masternavse2"
-                ><img src="@/assets/images/contact/telegram.svg"
+                ><img
+                  src="https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/telegram.svg"
               /></a>
             </li>
             <li class="contact__social_item">
               <a class="contact__social_link" href="https://wtsp.cc/79282755456"
-                ><img src="@/assets/images/contact/whatsapp.svg"
+                ><img
+                  src="https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/whatsapp.svg"
               /></a>
             </li>
           </ul>
