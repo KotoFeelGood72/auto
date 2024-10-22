@@ -46,7 +46,7 @@
                   информации, которую Оператор может получить о посетителях
                   веб-сайта
                   <span class="link mark owner-site-url-field"
-                    >http://2klstk.ru/</span
+                    >https://2klstk.ru/</span
                   >.
                 </div>
               </div>
@@ -72,7 +72,7 @@
                   обеспечивающих их доступность в сети интернет по сетевому
                   адресу
                   <span class="link mark owner-site-url-field"
-                    >http://2klstk.ru/</span
+                    >https://2klstk.ru/</span
                   >.
                 </div>
                 <div class="li">
@@ -112,7 +112,7 @@
                   или косвенно к определенному или определяемому Пользователю
                   веб-сайта
                   <span class="link mark owner-site-url-field"
-                    >http://2klstk.ru/</span
+                    >https://2klstk.ru/</span
                   >.
                 </div>
                 <div class="li">
@@ -128,7 +128,7 @@
                 <div class="li">
                   2.10. Пользователь — любой посетитель веб-сайта
                   <span class="link mark owner-site-url-field"
-                    >http://2klstk.ru/</span
+                    >https://2klstk.ru/</span
                   >.
                 </div>
                 <div class="li">
@@ -675,7 +675,7 @@
                   <span
                     id="owner-privacy-url-value"
                     class="link mark owner-privacy-url-field"
-                    >http://2klstk.ru/privacy</span
+                    >https://2klstk.ru/privacy</span
                   >.
                 </div>
               </div>
