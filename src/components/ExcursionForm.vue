@@ -3,7 +3,8 @@
     <form @submit.prevent="submitForm">
       <div class="excursion__form_in">
         <h4 class="excursion__form_title">
-          Укажите, когда вам удобно посетить экскурсию и оставьте контактные данные
+          Укажите, когда вам удобно посетить экскурсию и оставьте контактные
+          данные
         </h4>
         <div class="excursion__form_list">
           <div class="excursion__form_item">
@@ -27,16 +28,16 @@
           </div>
           <div class="excursion__form_item">
             <div class="form_input">
-              <label class="form_input__label" for="phone">Введите номер телефона</label>
+              <label class="form_input__label" for="phone"
+                >Введите номер телефона</label
+              >
               <div class="form_input__field">
-                <input
-                  class="form_input__element"
-                  type="text"
-                  id="phone"
+                <MaskInput
+                  type="tel"
                   v-model="formData.phone"
                   @blur="v$.phone.$touch"
-                  :class="{ error: v$.phone.$error }"
-                  placeholder="+7 (999) 999-99-99"
+                  :class="[{ error: v$.phone.$error }, 'form_input__element']"
+                  mask="+7 (###) ###-##-##"
                 />
                 <div v-if="v$.phone.$error" class="error-message">
                   <span>Введите корректный номер телефона</span>

@@ -46,13 +46,15 @@
                       >Введите номер телефона</label
                     >
                     <div class="form_input__field">
-                      <input
-                        class="form_input__element"
-                        type="text"
-                        id="input_11"
+                      <MaskInput
+                        type="tel"
                         v-model="form.phone"
                         @blur="v$.phone.$touch"
-                        :class="{ error: v$.phone.$error }"
+                        :class="[
+                          { error: v$.phone.$error },
+                          'form_input__element',
+                        ]"
+                        mask="+7 (###) ###-##-##"
                       />
                       <div v-if="v$.phone.$error" class="error-message">
                         <span>Поле обязательно для заполнения</span>

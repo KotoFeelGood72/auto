@@ -21,12 +21,11 @@ export const useQuizStore = defineStore("quiz", {
           {
             title: "Дом с классической крышей",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://www.ilya-stroy.ru/upload/iblock/d67/d673ae3a51eb74f56d4eb732bfad82f4.jpg",
           },
           {
             title: "Дом с плоской крышей",
-            image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+            image: "https://delo-dom.ru/img/project/dd77/2.jpg",
           },
         ],
       },
