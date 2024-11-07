@@ -811,6 +811,7 @@ input[type="submit"] {
   text-underline-offset: 0.4rem;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 .header__call_us:hover {
   opacity: 0.6;
@@ -986,6 +987,7 @@ input[type="submit"] {
   text-underline-offset: 0.4rem;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 .footer__call_us:hover {
   opacity: 0.6;
