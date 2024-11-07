@@ -354,6 +354,13 @@ watch(currentStep, () => {
   border-radius: 1rem;
   border: 0.2rem solid transparent;
   transition: all 0.3s ease-in-out;
+  height: 19rem;
+  width: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .calc__slide_item_img {

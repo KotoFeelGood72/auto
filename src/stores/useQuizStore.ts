@@ -21,11 +21,11 @@ export const useQuizStore = defineStore("quiz", {
           {
             title: "Дом с классической крышей",
             image:
-              "https://www.ilya-stroy.ru/upload/iblock/d67/d673ae3a51eb74f56d4eb732bfad82f4.jpg",
+              "https://i.pinimg.com/236x/4d/2a/b7/4d2ab79c00d86ea9fa93a5f32c2e12ad--dream-houses-doors.jpg?nii=t",
           },
           {
             title: "Дом с плоской крышей",
-            image: "https://delo-dom.ru/img/project/dd77/2.jpg",
+            image: "https://dom4m.ru/photos/prjmain/img1622_34741_480p.jpg",
           },
         ],
       },
@@ -53,32 +53,32 @@ export const useQuizStore = defineStore("quiz", {
           {
             title: "Облицовочный кирпич",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://likolorpro.ru/upload/resize_cache/iblock/a97/400_200_0/dm4xuymzwntjgg7q1awsitmi63n4axzh.jpg",
           },
           {
             title: "Декоративная штукатурка",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://avatars.mds.yandex.net/i?id=b5f04ea4196c654bd45b63ae6e104b04_sr-5859172-images-thumbs&n=13",
           },
           {
             title: "Сайдинги",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://st29.stpulscen.ru/images/product/259/113/881_medium3.jpg",
           },
           {
             title: "Искусственный камень",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://perimetr-shop.ru/upload/iblock/810/h8hmfo0z2tpahxo9kgtiaea0mb7xhvjo/Iskusstvennyy-kamen-Baltfasad-Tobol-uglovoy-280_80_130mm-093.jpeg",
           },
           {
             title: "Фасадные панели",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://avatars.mds.yandex.net/i?id=c6b23a965d80b3abe0373c3f31bb4879_l-12643411-images-thumbs&n=13",
           },
           {
             title: "Другой материал",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://headlinermagazine.net/assets/image-cache/css/img/no-img.16f9bb3f.jpg",
           },
         ],
       },
@@ -88,32 +88,32 @@ export const useQuizStore = defineStore("quiz", {
           {
             title: "Черепица",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://avatars.mds.yandex.net/i?id=f29bfba2d1f9c51e13c27d034e5876f2_sr-5680793-images-thumbs&n=13",
           },
           {
             title: "Фальцевая кровля",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://durat.ru/wp-content/uploads/2020/12/b2dd964637795559e1e16481b5ce8e70.jpg",
           },
           {
             title: "Профнастил",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://sun9-40.userapi.com/iyRe2mlZpFDFP-WlM6be8SteAckFunKano202A/_byS5_ZVnDI.jpg",
           },
           {
             title: "Наплавляемая кровля",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://img5.lalafo.com/i/posters/api/1c/4d/2b/8d1b96c2cac9c27d7e39c02be4.jpeg",
           },
           {
             title: "Мембрана",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://www.kpoem.ru/upload/iblock/9dc/9dc6c76fb3c5cb8ff33c6044fdd04ee4.jpg",
           },
           {
             title: "Другой материал",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://headlinermagazine.net/assets/image-cache/css/img/no-img.16f9bb3f.jpg",
           },
         ],
       },
@@ -130,32 +130,31 @@ export const useQuizStore = defineStore("quiz", {
           {
             title: "Терраса",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://i.pinimg.com/736x/52/19/86/5219864e8e6cb7785a1162db6b8466e4.jpg",
           },
           {
             title: "Ландшафтный дизайн ",
-            image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+            image: "https://i.ytimg.com/vi/fo4q-OGQlsU/mqdefault.jpg",
           },
           {
             title: "Забор",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://vectorgroup.pro/assets/cache/images/sub/2/zabor_hero-320x230-d51.jpg",
           },
           {
             title: "Беседка",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://disput-pmr.ru/data/ams/47/47798-5009bb4ceca1d3f7dba5c9e2371835b2.jpg",
           },
           {
             title: "Баня",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://92.img.avito.st/image/1/1.pTDZlLauCdmPMYPen_aZew83Cw.qKDgNFrXBTYL3ScX8Z2GxZ2W7Hs0-uuSycXoooBgnFk",
           },
           {
             title: "Другое",
             image:
-              "https://st41.stpulscen.ru/images/product/518/225/718_big.png",
+              "https://headlinermagazine.net/assets/image-cache/css/img/no-img.16f9bb3f.jpg",
           },
         ],
       },
@@ -181,9 +180,21 @@ export const useQuizStore = defineStore("quiz", {
       {
         title: "При заказе дома от 100 м²",
         options: [
-          { title: "Биосептик", image: "" },
-          { title: "Дизайн проект дома", image: "" },
-          { title: "2% Скидка", image: "" },
+          {
+            title: "Биосептик",
+            image:
+              "https://avatars.mds.yandex.net/i?id=7fd6037c222646a3146e87a066d7f85a_sr-5301392-images-thumbs&n=13",
+          },
+          {
+            title: "Дизайн проект дома",
+            image:
+              "https://avatars.mds.yandex.net/i?id=6680814050e59175ae541c8beee6c670_sr-5858040-images-thumbs&n=13",
+          },
+          {
+            title: "2% Скидка",
+            image:
+              "https://avatars.mds.yandex.net/i?id=685234a3c39162e2753f5335257aa414_sr-12574745-images-thumbs&n=13",
+          },
         ],
       },
       {
