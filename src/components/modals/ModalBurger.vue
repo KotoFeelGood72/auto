@@ -11,7 +11,12 @@
       </div>
     </div>
     <ul class="header__nav_list">
-      <li class="menu-item" v-for="(item, i) in menu" :key="'menu-item-' + i">
+      <li
+        class="menu-item"
+        v-for="(item, i) in menu"
+        :key="'menu-item-' + i"
+        @click="closeModal('burger')"
+      >
         <a :href="item.link">{{ item.name }}</a>
       </li>
     </ul>
@@ -101,6 +106,8 @@ const openForm = (mode?: string) => {
   gap: 3rem;
   max-width: 80rem;
   width: 100%;
+  // max-height: 90dvh;
+  overflow-y: auto;
 
   @media (max-width: 767px) {
     max-width: 100%;
@@ -120,6 +127,19 @@ const openForm = (mode?: string) => {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
+}
+
+.header__nav_list {
+  .menu-item {
+    @media (max-width: 768px) {
+      margin-bottom: 0.5rem;
+    }
+  }
+  a {
+    @media (max-width: 768px) {
+      font-size: 1.6rem;
+    }
+  }
 }
 </style>
