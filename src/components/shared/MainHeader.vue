@@ -44,7 +44,7 @@
           >
           <div class="header__work_time">
             <div class="header__date">Без выходных 9:00-18:00</div>
-            <a class="header__phone" href="tel:+79191234567">+7 919 123 45 67</a
+            <a class="header__phone" href="tel:+79282755456">+7 928 275-54-56</a
             ><a class="header__call_us" @click="openModal('form')"
               >Заказать звонок</a
             >
@@ -106,8 +106,8 @@
               >
               <div class="header__work_time">
                 <div class="header__date">Без выходных 9:00-18:00</div>
-                <a class="header__phone" href="tel:+79191234567"
-                  >+7 919 123 45 67</a
+                <a class="header__phone" href="tel:+79282755456"
+                  >+7 928 275-54-56</a
                 ><a class="header__call_us" href="#" @click="openModal('form')"
                   >Заказать звонок</a
                 >

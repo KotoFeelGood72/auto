@@ -297,9 +297,7 @@ const getIcon = (icon: string) => {
 
 .complect-description {
   margin-top: 0.5rem;
-  padding: 1rem;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
+  padding: 2rem 1rem;
   border-radius: 0.5rem;
 }
 

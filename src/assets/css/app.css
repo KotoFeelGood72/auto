@@ -3634,7 +3634,7 @@ input:checked ~ .calc__slide_item_icon {
     display: none;
   }
   .header__social_list:not(:last-child) {
-    margin-right: 4rem;
+    margin-right: 2rem;
   }
   .header__btn_calc {
     margin-right: 3rem;
