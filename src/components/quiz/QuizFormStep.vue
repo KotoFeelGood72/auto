@@ -11,7 +11,7 @@
                 type="text"
                 v-model="formData.name"
                 @blur="v$.name.$touch"
-                :class="{ error: v$.name.$error }"
+                :class="{ error: v$?.name?.$error }"
                 placeholder="Имя"
               />
               <div v-if="v$.name.$error" class="error-message">
@@ -28,10 +28,10 @@
                 type="tel"
                 v-model="formData.phone"
                 @blur="v$.phone.$touch"
-                :class="[{ error: v$.phone.$error }, 'form_input__element']"
+                :class="[{ error: v$?.phone?.$error }, 'form_input__element']"
                 mask="+7 (###) ###-##-##"
               />
-              <div v-if="v$.phone.$error" class="error-message">
+              <div v-if="v$?.phone?.$error" class="error-message">
                 <span>Поле обязательно для заполнения</span>
               </div>
             </div>
@@ -72,15 +72,15 @@ const { selectedOptions, currentStep } = useQuizStoreRefs();
 // Telegram API methods
 const { sendFormWithQuiz, isLoading, errorMessage } = useTelegram();
 
-// Правила валидации
 const rules = {
   name: { required, minLength: minLength(2) },
   phone: {
     required,
     phone: helpers.withMessage(
       "Введите корректный номер телефона",
-      (value: any) => {
-        return /^\+?[1-9]\d{1,14}$/.test(value); // Пример для проверки международного формата номера
+      (value: string) => {
+        const cleanedValue = value.replace(/[\s()-]/g, ""); // Убираем пробелы, скобки и дефисы
+        return /^(\+7|7|8)?\d{10}$/.test(cleanedValue); // Проверка для российских номеров
       }
     ),
   },

@@ -150,6 +150,13 @@ const rules = {
   name: { required, minLength: minLength(2) },
   phone: {
     required,
+    phone: helpers.withMessage(
+      "Введите корректный номер телефона",
+      (value: string) => {
+        const cleanedValue = value.replace(/[\s()-]/g, ""); // Убираем пробелы, скобки и дефисы
+        return /^(\+7|7|8)?\d{10}$/.test(cleanedValue); // Проверка для российских номеров
+      }
+    ),
   },
 };
 

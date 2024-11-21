@@ -55,7 +55,7 @@
                   id="name"
                   v-model="formData.name"
                   @blur="v$.name.$touch"
-                  :class="{ error: v$.name.$error }"
+                  :class="{ error: v$?.name?.$error }"
                   placeholder="Имя"
                 />
                 <div v-if="v$.name.$error" class="error-message">
@@ -85,7 +85,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import useVuelidate from "@vuelidate/core";
-import { required } from "@vuelidate/validators";
+import { helpers, required } from "@vuelidate/validators";
 import { useTelegram } from "@/composables/useTelegram";
 
 // Данные формы
@@ -101,7 +101,16 @@ const { sendFormWithoutFile, isLoading, errorMessage } = useTelegram();
 // Правила валидации (просто обязательное поле для даты)
 const rules = {
   date: { required },
-  phone: { required },
+  phone: {
+    required,
+    phone: helpers.withMessage(
+      "Введите корректный номер телефона",
+      (value: string) => {
+        const cleanedValue = value.replace(/[\s()-]/g, ""); // Убираем пробелы, скобки и дефисы
+        return /^(\+7|7|8)?\d{10}$/.test(cleanedValue); // Проверка для российских номеров
+      }
+    ),
+  },
   name: { required },
 };
 
