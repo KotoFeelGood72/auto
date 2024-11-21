@@ -1,128 +1,132 @@
 <template>
   <div class="popup_popular" v-if="project && project.acf">
-    <Close />
-    <div class="popup_popular__row">
-      <div class="popup_popular__col popup_popular__col--img">
-        <div class="popup_popular__slider">
-          <div class="place__gallery">
-            <Swiper
-              :slides-per-view="1"
-              :modules="[Navigation, Pagination]"
-              :space-between="20"
-              :speed="700"
-              :navigation="{
-                prevEl: '.js-builder-navigation-prev',
-                nextEl: '.js-builder-navigation-next',
-              }"
-            >
-              <SwiperSlide
-                v-for="(item, i) in project.acf.gallery"
-                :key="'project-modal-gallery-item-' + i"
+    <div class="popup_popular__main">
+      <Close />
+      <div class="popup_popular__row">
+        <div class="popup_popular__col popup_popular__col--img">
+          <div class="popup_popular__slider">
+            <div class="place__gallery">
+              <Swiper
+                :slides-per-view="1"
+                :modules="[Navigation, Pagination]"
+                :space-between="20"
+                :speed="700"
+                :navigation="{
+                  prevEl: '.js-builder-navigation-prev',
+                  nextEl: '.js-builder-navigation-next',
+                }"
               >
-                <div class="place__gallery_slide">
-                  <a
-                    :href="item.img"
-                    data-fancybox="gallery"
-                    class="place__gallery_img_w"
-                    :data-src="item.img"
-                  >
-                    <img class="place__gallery_img" :src="item.img" />
-                  </a>
+                <SwiperSlide
+                  v-for="(item, i) in project.acf.gallery"
+                  :key="'project-modal-gallery-item-' + i"
+                >
+                  <div class="place__gallery_slide">
+                    <a
+                      :href="item.img"
+                      data-fancybox="gallery"
+                      class="place__gallery_img_w"
+                      :data-src="item.img"
+                    >
+                      <img class="place__gallery_img" :src="item.img" />
+                    </a>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+          </div>
+        </div>
+        <div class="popup_popular__col popup_popular__col--info">
+          <div class="popup_popular__info">
+            <div class="card__title">{{ project.acf.title }}</div>
+            <ul class="card__list">
+              <li
+                class="card__item"
+                v-for="(item, i) in project.acf.character"
+                :key="'project-modal-character-item' + i"
+              >
+                <div class="card__item_icon">
+                  <Icons :icon="getIcon(item.icon)" />
                 </div>
-              </SwiperSlide>
-            </Swiper>
+                <div class="card__item_title">{{ item.name }}</div>
+                <div class="card__item_descr">{{ item.value }}</div>
+              </li>
+            </ul>
+            <ul class="card__about_list">
+              <li
+                class="card__about_item"
+                v-for="(item, i) in project.acf.complects"
+                :key="'project-modal-complect' + i"
+              >
+                <input
+                  type="radio"
+                  name="complects"
+                  :id="'card__about_item' + i"
+                  v-model="activeComplect"
+                  :value="i"
+                />
+                <label :for="'card__about_item' + i">
+                  {{ item.item }}
+                </label>
+              </li>
+            </ul>
+
+            <a
+              class="btn_base popup_popular__btn js-popup-trigger-form"
+              @click.prevent="handleSubmit"
+            >
+              Оставить заявку
+            </a>
           </div>
         </div>
       </div>
-      <div class="popup_popular__col popup_popular__col--info">
-        <div class="popup_popular__info">
-          <div class="card__title">{{ project.acf.title }}</div>
-          <ul class="card__list">
-            <li
-              class="card__item"
-              v-for="(item, i) in project.acf.character"
-              :key="'project-modal-character-item' + i"
-            >
-              <div class="card__item_icon">
-                <Icons :icon="getIcon(item.icon)" />
-              </div>
-              <div class="card__item_title">{{ item.name }}</div>
-              <div class="card__item_descr">{{ item.value }}</div>
-            </li>
-          </ul>
-          <ul class="card__about_list">
-            <li
-              class="card__about_item"
-              v-for="(item, i) in project.acf.complects"
-              :key="'project-modal-complect' + i"
-            >
-              <input
-                type="radio"
-                name="complects"
-                :id="'card__about_item' + i"
-                v-model="activeComplect"
-                :value="i"
-              />
-              <label :for="'card__about_item' + i">
-                {{ item.item }}
-              </label>
-            </li>
-          </ul>
+      <div class="object__tabs">
+        <ul class="object_tab__links">
+          <li :class="{ active: activeTab === 1 }" @click="setActiveTab(1)">
+            Описание
+          </li>
+          <li :class="{ active: activeTab === 2 }" @click="setActiveTab(2)">
+            Характеристики
+          </li>
+          <li :class="{ active: activeTab === 3 }" @click="setActiveTab(3)">
+            Комплектации
+          </li>
+        </ul>
 
-          <a
-            class="btn_base popup_popular__btn js-popup-trigger-form"
-            @click.prevent="handleSubmit"
-          >
-            Оставить заявку
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="object__tabs">
-      <ul class="object_tab__links">
-        <li :class="{ active: activeTab === 1 }" @click="setActiveTab(1)">
-          Описание
-        </li>
-        <li :class="{ active: activeTab === 2 }" @click="setActiveTab(2)">
-          Характеристики
-        </li>
-        <li :class="{ active: activeTab === 3 }" @click="setActiveTab(3)">
-          Комплектации
-        </li>
-      </ul>
-
-      <ul class="object_tab__contents">
-        <li v-if="activeTab === 1" class="object_tab__content">
-          <div class="card__descr js-popular-descr">{{ project.acf.txt }}</div>
-        </li>
-        <li v-if="activeTab === 2" class="object_tab__content">
-          <ul class="params__list">
-            <li v-for="(param, i) in project.acf.characteristics" :key="i">
-              {{ param }}
-            </li>
-          </ul>
-        </li>
-        <li v-if="activeTab === 3" class="object_tab__content">
-          <ul class="tab__about_list">
-            <li
-              class="tab__about_item"
-              v-for="(item, i) in project.acf.complects"
-              :key="'tab-modal-complect' + i"
-            >
-              <div
-                class="complect-item"
-                :class="{ active: activeComplect === i }"
-                @click="setActiveComplect(i)"
+        <ul class="object_tab__contents">
+          <li v-if="activeTab === 1" class="object_tab__content">
+            <div class="card__descr js-popular-descr">
+              {{ project.acf.txt }}
+            </div>
+          </li>
+          <li v-if="activeTab === 2" class="object_tab__content">
+            <ul class="params__list">
+              <li v-for="(param, i) in project.acf.characteristics" :key="i">
+                {{ param }}
+              </li>
+            </ul>
+          </li>
+          <li v-if="activeTab === 3" class="object_tab__content">
+            <ul class="tab__about_list">
+              <li
+                class="tab__about_item"
+                v-for="(item, i) in project.acf.complects"
+                :key="'tab-modal-complect' + i"
               >
-                {{ item.item }}
-              </div>
-              <div v-if="activeComplect === i" class="complect-description">
-                {{ item.description }}
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ul>
+                <div
+                  class="complect-item"
+                  :class="{ active: activeComplect === i }"
+                  @click="setActiveComplect(i)"
+                >
+                  {{ item.item }}
+                </div>
+                <div v-if="activeComplect === i" class="complect-description">
+                  {{ item.description }}
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -220,16 +224,47 @@ const getIcon = (icon: string) => {
   transform: translate(-50%, -50%);
   z-index: 100;
   background-color: #fff;
-  height: 90dvh;
-  overflow-y: auto;
+  overflow: hidden;
+  // max-height: 90dvh;
+  // overflow-y: auto;
   // -ms-overflow-style: none;
   // scrollbar-width: none;
+
+  height: 90dvh;
+  @media (min-width: 1024px) {
+  }
 
   @media (max-width: 767px) {
     top: auto;
     bottom: 0;
     transform: translateY(0);
     transform: translateX(-50%);
+  }
+}
+
+.popup_popular__main {
+  height: 100%;
+  // max-height: 95%;
+  overflow-y: auto;
+
+  @media (min-width: 767px) {
+    margin-top: 2rem;
+    padding-right: 2rem;
+    margin-right: 1.5rem;
+    &::-webkit-scrollbar {
+      width: 1rem;
+      background-color: #f5f5f5;
+      border-radius: 1rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #b2c593;
+      border-radius: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #e0e0e0;
+    }
   }
 }
 
