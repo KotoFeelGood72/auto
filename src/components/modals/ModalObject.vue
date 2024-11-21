@@ -220,10 +220,10 @@ const getIcon = (icon: string) => {
   transform: translate(-50%, -50%);
   z-index: 100;
   background-color: #fff;
-  max-height: 95dvh;
+  height: 90dvh;
   overflow-y: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  // -ms-overflow-style: none;
+  // scrollbar-width: none;
 
   @media (max-width: 767px) {
     top: auto;

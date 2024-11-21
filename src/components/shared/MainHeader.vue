@@ -174,12 +174,19 @@ onUnmounted(() => {
 }
 
 .header__btn_calc {
-  @media (min-width: 1372px) and (max-width: 1667px) {
+  @media (min-width: 1372px) and (max-width: 1500px) {
     font-size: 1.8rem;
   }
 
   @media (max-width: 1372px) {
     display: none;
+  }
+}
+
+.header__social_item {
+  @media (max-width: 1500px) {
+    width: 4rem;
+    height: 4rem;
   }
 }
 </style>
