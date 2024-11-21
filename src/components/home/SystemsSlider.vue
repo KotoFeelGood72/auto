@@ -116,4 +116,10 @@ defineProps<{
     position: static;
   }
 }
+
+.sys_slider__info_about_descr {
+  @media (min-width: 768px) {
+    max-width: 75%;
+  }
+}
 </style>

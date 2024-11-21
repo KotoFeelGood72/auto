@@ -263,9 +263,6 @@
   <section class="section step js-step-slider-w">
     <div class="section_in step__in">
       <h2 class="step__title">Как мы <strong> работаем</strong></h2>
-      <!-- <div class="step__subtitle">
-        Обсуждается индивидуально, в зависимости от задач и их сложности
-      </div> -->
       <div class="step__list_w">
         <Swiper
           :slides-per-view="4"
@@ -407,76 +404,6 @@
       </div>
     </div>
   </section>
-  <!-- <section class="section about_us">
-    <div class="section_in about_us__in">
-      <h2 class="about_us__title">
-        Чтобы быть спокойным и уверенным в качественном доме -<strong
-          >вам нужен надежный подрядчик</strong
-        >
-      </h2>
-      <div class="about_us__row">
-        <div class="about_us__col about_us__col--info">
-          <h3 class="about_us__col_title">Чем мы занимаемся?</h3>
-          <ul class="about_us__list">
-            <li class="about_us__item">
-              <span class="about_us__item_icon">
-                <svg class="icon icon_about-0 icon--size_mod">
-                  <use
-                    xlink:href="@/assets/images/sprite/sprite.svg#about-0"
-                  ></use></svg></span
-              ><span class="about_us__item_title"
-                >Строительство домов по технологии «МСБК» срок строительства: от
-                60 дней</span
-              >
-            </li>
-            <li class="about_us__item">
-              <span class="about_us__item_icon">
-                <svg class="icon icon_about-1 icon--size_mod">
-                  <use
-                    xlink:href="@/assets/images/sprite/sprite.svg#about-1"
-                  ></use></svg></span
-              ><span class="about_us__item_title"
-                >Проектирование дома строим по выбранному проекту</span
-              >
-            </li>
-            <li class="about_us__item">
-              <span class="about_us__item_icon">
-                <svg class="icon icon_about-2 icon--size_mod">
-                  <use
-                    xlink:href="@/assets/images/sprite/sprite.svg#about-2"
-                  ></use></svg></span
-              ><span class="about_us__item_title"
-                >Отделка домов «Под ключ»</span
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="about_us__col about_us__col--img">
-          <div class="about_us__col_heading">
-            <h3 class="about_us__col_title">Мы есть на</h3>
-            <div class="about_us__logo_img_w">
-              <img
-                class="about_us__logo_img"
-                src="@/assets/images/about-us/logo.png"
-                alt="some image"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div class="about__img_box">
-            <div class="about__img_w">
-              <img
-                class="about__img"
-                src="@/assets/images/about-us/about.jpg"
-                alt="some image"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
 
   <section class="section excursion">
     <div class="section_in excursion__in">
@@ -519,13 +446,9 @@
 
   <section class="section step js-step-slider-w">
     <div class="section_in step__in">
-      <h2 data-v-b4e148ca="" class="step__title">
+      <h2 class="step__title">
         Что о нас говорят <strong data-v-b4e148ca="">довольные клиенты</strong>
       </h2>
-      <!-- <div class="step__subtitle">
-        Как и у любой компании у нас есть как положительные, так и отрицательные
-        отзывы. Мы ничего от вас не скрываем
-      </div> -->
       <div class="step__list js-step-slider js-step-slider--review">
         <Swiper
           :slides-per-view="3"
@@ -627,14 +550,16 @@
           <SwiperSlide>
             <li class="step__card">
               <div class="step__card_info">
-                <div class="step__card_title">Помощь в подборе участка</div>
+                <div class="step__card_title" data-num="1">
+                  Помощь в подборе участка
+                </div>
               </div>
             </li>
           </SwiperSlide>
           <SwiperSlide>
             <li class="step__card">
               <div class="step__card_info">
-                <div class="step__card_title">
+                <div class="step__card_title" data-num="2">
                   Получение разрешения на строительство
                 </div>
               </div>
@@ -643,7 +568,7 @@
           <SwiperSlide>
             <li class="step__card">
               <div class="step__card_info">
-                <div class="step__card_title">
+                <div class="step__card_title" data-num="3">
                   Помощь с подключением внешних коммуникаций
                 </div>
               </div>
@@ -652,7 +577,7 @@
           <SwiperSlide>
             <li class="step__card">
               <div class="step__card_info">
-                <div class="step__card_title">
+                <div class="step__card_title" data-num="4">
                   Сдача объекта строительства в эксплуатацию
                 </div>
               </div>
@@ -805,5 +730,13 @@ onMounted(async () => {
 <style scoped lang="scss">
 .swiper-button-disabled {
   opacity: 0;
+}
+
+.step__card {
+  .step__card_title {
+    &:before {
+      content: attr(data-num);
+    }
+  }
 }
 </style>
