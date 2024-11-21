@@ -172,4 +172,14 @@ onUnmounted(() => {
   background-color: #ffffff52;
   backdrop-filter: blur(20px);
 }
+
+.header__btn_calc {
+  @media (min-width: 1372px) and (max-width: 1667px) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 1372px) {
+    display: none;
+  }
+}
 </style>

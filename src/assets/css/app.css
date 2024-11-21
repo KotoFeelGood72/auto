@@ -3601,7 +3601,7 @@ input:checked ~ .calc__slide_item_icon {
 .fancybox__content > .f-button.is-close-btn:hover {
   color: #ec1111 !important;
 }
-@media screen and (min-width: 1668px) {
+@media screen and (min-width: 1200px) {
   :root {
     --height-header: 16.6rem;
   }
@@ -3640,9 +3640,9 @@ input:checked ~ .calc__slide_item_icon {
     margin-right: 3rem;
   }
 }
-@media screen and (max-width: 1667px) {
+@media screen and (max-width: 1200px) {
   :root {
-    --height-header: 10rem;
+    --height-header: 12rem;
   }
   .header__row:last-child {
     opacity: 0;
@@ -4315,10 +4315,10 @@ input:checked ~ .calc__slide_item_icon {
     font-size: 2rem;
   }
   .header {
-    padding: 2rem var(--gl-indent);
+    padding: 2rem;
   }
   .header__logo_row {
-    margin-right: 3.5rem;
+    margin-right: 1.5rem;
   }
   .header__logo {
     height: 5rem;
@@ -5093,7 +5093,7 @@ input:checked ~ .calc__slide_item_icon {
     font-size: 2.5vw;
   }
 }
-@media screen and (max-width: 1668px) {
+@media screen and (max-width: 1200px) {
   .header__nav_list li:not(:last-child) {
     margin-bottom: 2rem;
   }
