@@ -1,9 +1,5 @@
 <template>
   <component :is="layoutComponent">
-    <router-view />
-    <transition name="fade-bg">
-      <div v-if="isModalActive" class="page-bg" @click="allCloserModal"></div>
-    </transition>
     <transition name="fade-bg">
       <Preloader />
     </transition>
@@ -15,6 +11,10 @@
     </transition>
     <transition name="slide-left">
       <ModalBurger v-if="modals.burger" />
+    </transition>
+    <router-view />
+    <transition name="fade-bg">
+      <div v-if="isModalActive" class="page-bg" @click="allCloserModal"></div>
     </transition>
   </component>
 </template>
