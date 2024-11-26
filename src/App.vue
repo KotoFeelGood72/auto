@@ -15,6 +15,7 @@
     <transition name="slide-right">
       <ModalBurger v-if="modals.burger" />
     </transition>
+    <RouterView />
     <snow />
   </component>
 </template>
