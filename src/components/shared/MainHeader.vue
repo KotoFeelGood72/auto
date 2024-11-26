@@ -127,6 +127,12 @@ onUnmounted(() => {
   }
 }
 
+.header__social_list {
+  @media (max-width: 1502px) {
+    display: none;
+  }
+}
+
 .header__social_item {
   @media (max-width: 1500px) {
     width: 4rem;
