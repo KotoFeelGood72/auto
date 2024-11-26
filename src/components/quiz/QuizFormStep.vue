@@ -28,6 +28,8 @@
                 type="tel"
                 v-model="formData.phone"
                 @blur="v$.phone.$touch"
+                @input="handlePhoneInput"
+                @keypress="blockInvalidInput"
                 :class="[{ error: v$?.phone?.$error }, 'form_input__element']"
                 mask="+7 (###) ###-##-##"
               />
@@ -59,7 +61,9 @@ import useVuelidate from "@vuelidate/core";
 import { required, minLength, helpers } from "@vuelidate/validators";
 import { useTelegram } from "@/composables/useTelegram";
 import { useQuizStoreRefs } from "@/stores/useQuizStore";
-
+import { usePhoneValidation } from "@/composables/usePhoneValidation";
+const { phoneValidator, blockInvalidInput, handlePhoneInput } =
+  usePhoneValidation();
 // Данные формы
 const formData = ref({
   name: "",
@@ -76,13 +80,7 @@ const rules = {
   name: { required, minLength: minLength(2) },
   phone: {
     required,
-    phone: helpers.withMessage(
-      "Введите корректный номер телефона",
-      (value: string) => {
-        const cleanedValue = value.replace(/[\s()-]/g, ""); // Убираем пробелы, скобки и дефисы
-        return /^(\+7|7|8)?\d{10}$/.test(cleanedValue); // Проверка для российских номеров
-      }
-    ),
+    phone: phoneValidator,
   },
 };
 
