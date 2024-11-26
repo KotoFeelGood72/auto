@@ -1,5 +1,9 @@
 <template>
   <component :is="layoutComponent">
+    <router-view />
+    <transition name="fade-bg">
+      <div v-if="isModalActive" class="page-bg" @click="allCloserModal"></div>
+    </transition>
     <transition name="fade-bg">
       <Preloader />
     </transition>
@@ -15,7 +19,6 @@
     <transition name="slide-right">
       <ModalBurger v-if="modals.burger" />
     </transition>
-    <RouterView />
     <snow />
   </component>
 </template>
