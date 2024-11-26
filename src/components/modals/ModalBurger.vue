@@ -1,14 +1,10 @@
 <template>
   <div class="burger">
     <Close />
-    <div class="header__logo_row">
+    <div class="burger-logo">
       <RouterLink class="header__logo" to="/">
         <img src="https://2klstk.ru/wp-content/uploads/2024/09/logo.png" />
       </RouterLink>
-      <div class="header__logo_cta">
-        <h2 class="header__logo_title">Технологии комфорта</h2>
-        <div class="header__logo_descr">Строительство качественных домов</div>
-      </div>
     </div>
     <ul class="header__nav_list">
       <li
@@ -21,7 +17,7 @@
       </li>
     </ul>
     <div class="burger__contact">
-      <a
+      <!-- <a
         class="header__yandex"
         href="https://yandex.ru/maps/org/tekhnologii_komforta/165810670612/reviews/?ll=38.984871%2C45.111020&utm_source=my_review&z=15"
         target="_blank"
@@ -30,8 +26,9 @@
           <img src="https://2klstk.ru/wp-content/uploads/2024/09/yandex.png" />
         </div>
         На основании 50 отзывов</a
-      >
-      <ul class="header__social_list">
+      > -->
+      <YandexStar />
+      <ul class="burger-social">
         <li
           class="header__social_item"
           v-for="(item, i) in socials"
@@ -42,11 +39,7 @@
           </a>
         </li>
       </ul>
-      <a
-        class="header__btn_calc btn_base_s js-popup-trigger-form"
-        @click="openForm('price')"
-        >Отправить проект на просчет</a
-      >
+      <btn name="Отправить проект на просчет" @click="openForm('price')" />
       <div class="header__work_time">
         <div class="header__date">Без выходных 9:00-18:00</div>
         <a class="header__phone" href="tel:+79282755456">+7 928 275-54-56</a
@@ -57,8 +50,10 @@
 </template>
 
 <script setup lang="ts">
+import btn from "../ui/btn.vue";
 import { ref } from "vue";
 import Close from "../ui/Close.vue";
+import YandexStar from "../promo/YandexStar.vue";
 import { useModalStore } from "@/stores/useModalStore";
 const socials = ref([
   {
@@ -141,5 +136,15 @@ const openForm = (mode?: string) => {
       font-size: 1.6rem;
     }
   }
+}
+
+.burger-logo {
+  @include flex-center;
+}
+
+.burger-social {
+  @include flex-center;
+  padding: 2rem 0;
+  gap: 1.5rem;
 }
 </style>

@@ -1,7 +1,9 @@
 <template>
   <section class="section popular" v-if="projects" id="projects">
     <div class="section_in popular__in">
-      <h2 class="popular__title"><strong>Популярные проекты</strong> и цены</h2>
+      <h2 class="popular__title">
+        <cap :num="5" /><strong>Популярные проекты</strong> и цены
+      </h2>
       <div class="popular__list_w">
         <div class="popular__list">
           <div
@@ -12,6 +14,11 @@
           >
             <div class="card js-popular-card-popup">
               <div class="card__img_w">
+                <div class="card__decor">
+                  <img
+                    src="http://2klstk.ru/wp-content/uploads/2024/11/bda4f13cd3190eed9d5544edeec51085.png"
+                  />
+                </div>
                 <img
                   class="card__img"
                   :src="item.acf.gallery[item.acf.gallery.length - 1].img"
@@ -41,13 +48,14 @@
         </div>
 
         <div class="projects__bottom">
-          <button
+          <btn
+            name="Показать еще"
+            size="large"
             v-if="visibleProjects.length < projects.length"
             class="btn_base_s"
             @click="loadMore"
-          >
-            Показать еще
-          </button>
+            :caps="5"
+          />
         </div>
       </div>
     </div>
@@ -55,6 +63,8 @@
 </template>
 
 <script setup lang="ts">
+import btn from "../ui/btn.vue";
+import cap from "../ui/cap.vue";
 import { onMounted, ref, watch } from "vue";
 import { useRouter } from "vue-router";
 import { useModalStore } from "@/stores/useModalStore";
@@ -152,6 +162,19 @@ const getIcon = (icon: string) => {
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
+}
+
+.card__decor {
+  position: absolute;
+  top: -4rem;
+  left: -2rem;
+  width: 20rem;
+  height: 20rem;
+  z-index: 22;
+}
+
+.card__img_w {
+  position: relative;
 }
 
 .popular__card {

@@ -13,18 +13,7 @@
             </div>
           </div>
         </div>
-        <a
-          class="header__yandex"
-          href="https://yandex.ru/maps/org/tekhnologii_komforta/165810670612/reviews/?ll=38.984871%2C45.111020&utm_source=my_review&z=15"
-          target="_blank"
-        >
-          <div class="header__yandex_img">
-            <img
-              src="https://2klstk.ru/wp-content/uploads/2024/09/yandex.png"
-            />
-          </div>
-          На основании 50 отзывов</a
-        >
+        <YandexStar />
         <div class="header__contact">
           <ul class="header__social_list">
             <li
@@ -37,11 +26,11 @@
               </a>
             </li>
           </ul>
-          <a
-            class="header__btn_calc btn_base_s js-popup-trigger-form"
+          <btn
+            name="Отправить проект на просчет"
+            :caps="5"
             @click="openModal('form', 'price')"
-            >Отправить проект на просчет</a
-          >
+          />
           <div class="header__work_time">
             <div class="header__date">Без выходных 9:00-18:00</div>
             <a class="header__phone" href="tel:+79282755456">+7 928 275-54-56</a
@@ -59,69 +48,20 @@
           <span></span>
         </button>
       </div>
-      <div class="header__row header__row--mobile">
-        <nav class="header__nav">
-          <div class="header__nav_in">
-            <ul class="header__nav_list">
-              <li
-                class="menu-item"
-                v-for="(item, i) in menu"
-                :key="'menu-item-' + i"
-              >
-                <a :href="item.link">{{ item.name }}</a>
-              </li>
-            </ul>
-            <div class="header__contact">
-              <a
-                class="header__yandex"
-                href="https://yandex.ru/maps/org/tekhnologii_komforta/165810670612/reviews/?ll=38.984871%2C45.111020&utm_source=my_review&z=15"
-                target="_blank"
-              >
-                <div class="header__yandex_img">
-                  <img
-                    src="https://2klstk.ru/wp-content/uploads/2024/09/yandex.png"
-                  />
-                </div>
-                На основании 50 отзывов</a
-              >
-              <ul class="header__social_list">
-                <li
-                  class="header__social_item"
-                  v-for="(item, i) in socials"
-                  :key="'mobile-socials-item' + i"
-                >
-                  <a
-                    class="header__social_link"
-                    :href="item.link"
-                    target="_blank"
-                  >
-                    <img :src="item.img" />
-                  </a>
-                </li>
-              </ul>
-              <a
-                class="header__btn_calc btn_base_s js-popup-trigger-form"
-                @click="openModal('form', 'price')"
-                >Отправить проект на просчет</a
-              >
-              <div class="header__work_time">
-                <div class="header__date">Без выходных 9:00-18:00</div>
-                <a class="header__phone" href="tel:+79282755456"
-                  >+7 928 275-54-56</a
-                ><a class="header__call_us" href="#" @click="openModal('form')"
-                  >Заказать звонок</a
-                >
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
+      <ul class="header__nav_list">
+        <li class="menu-item" v-for="(item, i) in menu" :key="'menu-item-' + i">
+          <a :href="item.link">{{ item.name }}</a>
+        </li>
+      </ul>
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
+import btn from "../ui/btn.vue";
 import { ref, onMounted, onUnmounted } from "vue";
+import YandexStar from "../promo/YandexStar.vue";
+
 import { useModalStore } from "@/stores/useModalStore";
 const socials = ref([
   {
@@ -166,11 +106,15 @@ onUnmounted(() => {
 
 <style scoped lang="scss">
 .header {
-  // background-color: #fff;
+  background-color: #ffffffc2;
+  overflow: hidden;
+  .header__in {
+    position: relative;
+    z-index: 2;
+  }
 }
 .header--scrolled {
-  background-color: #ffffff52;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(0.5rem);
 }
 
 .header__btn_calc {
@@ -187,6 +131,92 @@ onUnmounted(() => {
   @media (max-width: 1500px) {
     width: 4rem;
     height: 4rem;
+  }
+}
+
+.header__contact {
+  @include flex-start;
+  gap: 2rem;
+}
+
+.header__social_list {
+  @include bp($point_1) {
+    display: none;
+  }
+}
+
+.header__nav_list {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.header__logo {
+  position: relative;
+}
+
+.header__in {
+  position: relative;
+}
+
+.header__row {
+  // background-color: #ffffff8f;
+
+  :deep(.yandex-star) {
+    @include bp($point_1) {
+      display: none;
+    }
+  }
+  @include bp($point_1) {
+    gap: 1rem;
+  }
+
+  .btn {
+    @include bp($point_1) {
+      display: none;
+    }
+  }
+
+  @include bp($point_2) {
+    @include flex-start;
+    height: 100%;
+  }
+}
+
+.header__in {
+  @include bp($point_2) {
+    height: 100%;
+  }
+}
+
+.header__date,
+.header__call_us {
+  @include bp($point_1) {
+    display: none;
+  }
+}
+
+.header__logo_row {
+  @include bp($point_1) {
+    margin-right: 0;
+  }
+}
+
+.header__phone {
+  @include bp($point_1) {
+    // font-size: 1.6rem;
+    margin: 0;
+  }
+}
+
+.header__logo_cta {
+  @include bp($point_2) {
+    display: none;
+  }
+}
+
+.header__nav_list {
+  @include bp($point_2) {
+    display: none;
   }
 }
 </style>

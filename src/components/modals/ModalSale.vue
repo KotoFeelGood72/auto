@@ -1,120 +1,120 @@
 <template>
-  <div class="popup popup--contact">
+  <div class="popup popup--sale">
     <div class="popup__in">
-      <button
+      <Close />
+      <!-- <button
         class="popup_close js-popup-close"
         type="button"
         aria-label="Close Popup"
         tabindex="0"
         @click="closeAllModals()"
-      ></button>
+      ></button> -->
       <div class="popup__content">
         <div class="popup_call">
           <h2 class="popup_call__title">
-            <strong>Получите консультацию</strong> по вашему проекту
+            <strong>Зафиксируйте цену</strong> и получите подарок
           </h2>
           <div class="popup_call__subtitle">
-            Оставьте свои данные и менеджер свяжется с вами
+            Сделайте заказ дома от 150 м² до 28.11.2024
           </div>
           <div class="popup_call__form">
-            <form action="GET">
-              <div class="popup_call__form_list">
-                <div class="popup_call__form_item">
-                  <div class="form_input">
-                    <label class="form_input__label" for="input_10"
-                      >Введите имя</label
-                    >
-                    <div class="form_input__field">
-                      <input
-                        class="form_input__element"
-                        type="text"
-                        id="input_10"
-                        v-model="form.name"
-                        @blur="v$.name.$touch"
-                        :class="{ error: v$.name.$error }"
-                      />
-                      <div v-if="v$.name.$error" class="error-message">
-                        <span>Поле обязательно для заполнения</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="popup_call__form_item">
-                  <div class="form_input">
-                    <label class="form_input__label" for="input_11"
-                      >Введите номер телефона</label
-                    >
-                    <div class="form_input__field">
-                      <MaskInput
-                        type="tel"
-                        v-model="form.phone"
-                        @blur="v$.phone.$touch"
-                        @input="handlePhoneInput"
-                        @keypress="blockInvalidInput"
-                        :class="[
-                          { error: v$.phone.$error },
-                          'form_input__element',
-                        ]"
-                        mask="+7 (###) ###-##-##"
-                      />
-                      <div v-if="v$.phone.$error" class="error-message">
-                        <span>Поле обязательно для заполнения</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Зона для перетаскивания файлов -->
-                <div
-                  v-if="modalData === 'price'"
-                  class="popup_call__form_item popup_call__form_item--file"
-                  @dragover.prevent="onDragOver"
-                  @dragleave.prevent="onDragLeave"
-                  @drop.prevent="onDrop"
-                  :class="{ 'file-dragging': isDragging }"
-                >
-                  <input
-                    type="file"
-                    ref="fileInput"
-                    @change="onFileChange"
-                    hidden
-                  />
-                  <label for=""
-                    >Перетащите файл сюда или
-                    <span @click="triggerFileInput">выберите файл</span></label
+            <div class="popup_call__form_list">
+              <div class="popup_call__form_item">
+                <div class="form_input">
+                  <label class="form_input__label" for="input_10"
+                    >Введите имя</label
                   >
-
-                  <!-- Preview файла -->
-                  <div v-if="files.file" class="file-preview">
-                    <div v-if="isImage(files.file)" class="image-preview">
-                      <img :src="filePreviewUrl" alt="file preview" />
-                    </div>
-                    <div v-else class="file-info">
-                      <span>{{ files.file.name }}</span>
-                      <div class="remove-file" @click="removeFile">
-                        <Icons icon="clarity:close-line" />
-                      </div>
+                  <div class="form_input__field">
+                    <input
+                      class="form_input__element"
+                      type="text"
+                      id="input_10"
+                      v-model="form.name"
+                      @blur="v$.name.$touch"
+                      :class="{ error: v$.name.$error }"
+                    />
+                    <div v-if="v$.name.$error" class="error-message">
+                      <span>Поле обязательно для заполнения</span>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="popup_call__form_item">
-                  <btn
-                    @click="submitForm"
-                    name="Получить консультацию"
-                    size="large"
-                    style="justify-content: center"
-                  />
-                  <!-- <input
+              <div class="popup_call__form_item">
+                <div class="form_input">
+                  <label class="form_input__label" for="input_11"
+                    >Введите номер телефона</label
+                  >
+                  <div class="form_input__field">
+                    <MaskInput
+                      type="tel"
+                      v-model="form.phone"
+                      @blur="v$.phone.$touch"
+                      @input="handlePhoneInput"
+                      @keypress="blockInvalidInput"
+                      :class="[
+                        { error: v$.phone.$error },
+                        'form_input__element',
+                      ]"
+                      mask="+7 (###) ###-##-##"
+                    />
+                    <div v-if="v$.phone.$error" class="error-message">
+                      <span>Поле обязательно для заполнения</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Зона для перетаскивания файлов -->
+              <div
+                v-if="modalData === 'price'"
+                class="popup_call__form_item popup_call__form_item--file"
+                @dragover.prevent="onDragOver"
+                @dragleave.prevent="onDragLeave"
+                @drop.prevent="onDrop"
+                :class="{ 'file-dragging': isDragging }"
+              >
+                <input
+                  type="file"
+                  ref="fileInput"
+                  @change="onFileChange"
+                  hidden
+                />
+                <label for=""
+                  >Перетащите файл сюда или
+                  <span @click="triggerFileInput">выберите файл</span></label
+                >
+
+                <!-- Preview файла -->
+                <div v-if="files.file" class="file-preview">
+                  <div v-if="isImage(files.file)" class="image-preview">
+                    <img :src="filePreviewUrl" alt="file preview" />
+                  </div>
+                  <div v-else class="file-info">
+                    <span>{{ files.file.name }}</span>
+                    <div class="remove-file" @click="removeFile">
+                      <Icons icon="clarity:close-line" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="popup_call__form_item">
+                <btn
+                  :caps="5"
+                  @click="submitForm"
+                  name="Получить консультацию"
+                  size="large"
+                  style="justify-content: center"
+                />
+                <!-- <input
                     class="popup_call__form_submit btn_base"
                     type="button"
                     value="Получить консультацию"
                     @click="submitForm"
                   /> -->
-                </div>
               </div>
-            </form>
+            </div>
           </div>
           <div class="popup_call__info">
             Нажимая “Получить консультацию” вы соглашаетесь с
@@ -137,6 +137,7 @@ import { required, minLength, helpers } from "@vuelidate/validators";
 import { useTelegram } from "@/composables/useTelegram";
 import { usePhoneValidation } from "@/composables/usePhoneValidation";
 import btn from "../ui/btn.vue";
+import Close from "../ui/Close.vue";
 
 const isDragging = ref(false);
 const fileInput = ref<HTMLInputElement | null>(null);
@@ -358,5 +359,32 @@ const removeFile = () => {
 
 .popup_call__info {
   padding-top: 1rem;
+}
+
+.popup--sale {
+  .popup__in {
+    position: relative;
+    max-width: 60rem;
+    background-image: url("https://cdn.culture.ru/images/9b030018-a669-554e-9d78-bcae7fe58435");
+    color: $white;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #424242a2;
+      content: "";
+    }
+
+    label {
+      color: $white;
+    }
+  }
+}
+
+.popup__content {
+  position: relative;
+  z-index: 2;
 }
 </style>

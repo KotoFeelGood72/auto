@@ -2033,12 +2033,14 @@ select.form_select__element {
   line-height: 1.2;
   max-width: 99rem;
   width: 100%;
+  position: relative;
 }
 .calc__title strong {
   font-weight: 700;
 }
 .calc__progres {
-  background-color: #e6e7dd;
+  /* background-color: #e6e7dd; */
+  background-color: #cc241e10;
   border-radius: 31rem;
   height: 2.3rem;
   margin-bottom: 2rem;
@@ -2088,7 +2090,8 @@ select.form_select__element {
 }
 
 .calc__progres_line {
-  background-color: #b2c593;
+  background-color: #cc231e;
+  /* background-color: #b2c593; */
   border-radius: 31rem;
   height: 100%;
   width: 0;
@@ -2312,6 +2315,7 @@ input:checked ~ .calc__slide_item_icon {
 }
 .adv__title {
   font-weight: 400;
+  position: relative;
 }
 .adv__info_row {
   display: grid;
@@ -2393,6 +2397,7 @@ input:checked ~ .calc__slide_item_icon {
 }
 .popular__title {
   font-weight: 400;
+  position: relative;
 }
 .popular__title strong {
   font-weight: 700;
@@ -2563,6 +2568,7 @@ input:checked ~ .calc__slide_item_icon {
 }
 .imagine__title {
   font-weight: 400;
+  position: relative;
 }
 .imagine__list {
   display: grid;
@@ -2610,6 +2616,7 @@ input:checked ~ .calc__slide_item_icon {
   font-weight: 400;
   max-width: 90rem;
   width: 100%;
+  position: relative;
 }
 .sys_slider__title strong {
   font-weight: 700;
@@ -2830,6 +2837,7 @@ input:checked ~ .calc__slide_item_icon {
 }
 .step__title {
   font-weight: 400;
+  position: relative;
 }
 .step__title strong {
   font-weight: 700;
@@ -2850,9 +2858,10 @@ input:checked ~ .calc__slide_item_icon {
   counter-increment: step;
   height: 100%;
   padding: 3rem 2rem 4rem;
+  min-height: 19rem;
 }
 .step__card_title {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 600;
   max-width: 60rem;
   width: 100%;
@@ -2963,6 +2972,7 @@ input:checked ~ .calc__slide_item_icon {
   font-weight: 400;
   max-width: 110rem;
   width: 100%;
+  position: relative;
 }
 .stage__title strong {
   font-weight: 700;
@@ -3161,6 +3171,7 @@ input:checked ~ .calc__slide_item_icon {
 }
 .excursion__title {
   font-weight: 400;
+  position: relative;
 }
 .excursion__title strong {
   font-weight: 700;
@@ -3359,19 +3370,19 @@ input:checked ~ .calc__slide_item_icon {
   position: relative;
   width: 100%;
 }
-.contact__img_w img {
-  display: block;
+/* .contact__img_w img { */
+/* display: block;
   -o-object-fit: cover;
-  object-fit: cover;
-  position: absolute;
-}
-.contact__img_w img {
-  /* height: 100%; */
-  left: 50%;
+  object-fit: cover; */
+/* position: absolute; */
+/* } */
+/* .contact__img_w img { */
+/* height: 100%; */
+/* left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  /* width: 100%; */
-}
+  transform: translate(-50%, -50%); */
+/* width: 100%; */
+/* } */
 .popup {
   -ms-flex-line-pack: stretch;
   align-content: stretch;
@@ -4231,8 +4242,8 @@ input:checked ~ .calc__slide_item_icon {
     margin-bottom: 1.5rem;
   }
   .contact__row {
-    gap: 2rem;
-    grid-template-columns: 1fr;
+    /* gap: 2rem; */
+    /* grid-template-columns: 1fr; */
   }
   .contact__row_icon {
     font-size: 2rem;
@@ -4254,10 +4265,10 @@ input:checked ~ .calc__slide_item_icon {
   .contact__subtitle:not(:last-child) {
     margin-bottom: 1.5rem;
   }
-  .contact__img_w {
+  /* .contact__img_w {
     border-radius: 2rem;
     padding-bottom: max(25%, 30rem);
-  }
+  } */
   .popup_close {
     height: 4rem;
     width: 4rem;
@@ -4810,6 +4821,7 @@ input:checked ~ .calc__slide_item_icon {
   }
   .step__title {
     font-size: 5rem;
+    position: relative;
   }
   .step__title:not(:last-child) {
     margin-bottom: 3rem;
@@ -4825,7 +4837,7 @@ input:checked ~ .calc__slide_item_icon {
     margin-bottom: 2.5rem;
   }
   .step__card_descr {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   .step__rev_info {
     border-radius: 2rem;
@@ -4990,8 +5002,8 @@ input:checked ~ .calc__slide_item_icon {
     margin-bottom: 2rem;
   }
   .contact__row {
-    gap: 4rem;
-    grid-template-columns: 0.8fr 0.6fr 1fr;
+    /* gap: 4rem; */
+    /* grid-template-columns: 0.8fr 0.6fr 1fr; */
   }
   .contact__row_icon {
     font-size: 2.2rem;
@@ -5010,7 +5022,7 @@ input:checked ~ .calc__slide_item_icon {
     font-size: 2.5rem;
   }
   .contact__btn_w:not(:last-child) {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
   .contact__subtitle {
     font-size: 3rem;
@@ -5022,8 +5034,8 @@ input:checked ~ .calc__slide_item_icon {
     margin-bottom: 3rem;
   }
   .contact__img_w {
-    border-radius: 3rem;
-    height: 100%;
+    /* border-radius: 3rem; */
+    /* height: 100%; */
   }
   .popup__in {
     border-radius: 3rem;

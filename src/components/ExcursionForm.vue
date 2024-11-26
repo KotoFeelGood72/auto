@@ -65,11 +65,16 @@
             </div>
           </div>
           <div class="excursion__form_item">
-            <input
+            <!-- <input
               class="excursion__form_submit btn_base"
               type="button"
               :disabled="isLoading"
               value="Записаться на экскурсию"
+              @click="submitForm"
+            /> -->
+            <btn
+              name="Записаться на экскурсию"
+              size="medium"
               @click="submitForm"
             />
           </div>
@@ -87,6 +92,7 @@ import { ref } from "vue";
 import useVuelidate from "@vuelidate/core";
 import { helpers, required } from "@vuelidate/validators";
 import { useTelegram } from "@/composables/useTelegram";
+import btn from "./ui/btn.vue";
 
 // Данные формы
 const formData = ref({

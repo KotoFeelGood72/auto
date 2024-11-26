@@ -69,13 +69,13 @@
                 </label>
               </li>
             </ul>
-
-            <a
-              class="btn_base popup_popular__btn js-popup-trigger-form"
+            <btn
+              style="display: inline-flex"
+              name="Оставить заявку"
               @click.prevent="handleSubmit"
-            >
-              Оставить заявку
-            </a>
+              size="large"
+              :caps="5"
+            />
           </div>
         </div>
       </div>
@@ -132,6 +132,7 @@
 </template>
 
 <script setup lang="ts">
+import btn from "../ui/btn.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination } from "swiper/modules";
 import { useRoute, useRouter } from "vue-router";

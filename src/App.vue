@@ -13,9 +13,13 @@
     <transition name="slide-up">
       <ModalObject v-if="modals.project" />
     </transition>
-    <transition name="slide-left">
+    <transition name="slide-up">
+      <ModalSale v-if="modals.sale" />
+    </transition>
+    <transition name="slide-right">
       <ModalBurger v-if="modals.burger" />
     </transition>
+    <snow />
   </component>
 </template>
 <script setup lang="ts">
@@ -29,8 +33,11 @@ import { useRoute } from "vue-router";
 import { useModalStoreRefs, useModalStore } from "./stores/useModalStore";
 import { useCloserModal } from "./composables/useCloserModal";
 import Preloader from "./components/Preloader.vue";
+import ModalSale from "./components/modals/ModalSale.vue";
 
-// Управление модальными окнами
+// @ts-ignore
+import snow from "./components/promo/snow.vue";
+
 const { openModal } = useModalStore();
 const { modals } = useModalStoreRefs();
 
@@ -96,7 +103,7 @@ const resetInactivityTimer = () => {
     // Проверяем, нет ли активных модальных окон
     inactivityTimer = setTimeout(() => {
       openModal("form");
-    }, 60000); // 60 секунд бездействия
+    }, 120000); // 60 секунд бездействия
   }
 };
 
@@ -179,20 +186,42 @@ onUnmounted(() => {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.slide-left-enter-active,
-.slide-left-leave-active {
-  transition: transform 0.5s ease, opacity 0.3s ease;
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.slide-left-enter-from,
-.slide-left-leave-to {
-  transform: translateX(10rem);
+.slide-right-enter-from,
+.slide-right-leave-to {
+  transform: translateX(-5rem);
   opacity: 0;
 }
 
-.slide-left-enter-to,
-.slide-left-leave-from {
+.slide-right-enter-to,
+.slide-right-leave-from {
   transform: translateX(0);
   opacity: 1;
+}
+
+.year-cap {
+  position: relative;
+  &:after {
+    position: absolute;
+    top: -0.5rem;
+    left: -3.3rem;
+    width: 8rem;
+    height: 8rem;
+    content: "";
+    background-image: url("./assets/new-year/cap_5.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}
+
+.sky {
+  height: 100%;
+  color: #fff;
+  display: block;
 }
 </style>

@@ -4,20 +4,19 @@
       <div class="hero__row">
         <div class="hero__col hero__col--info">
           <div class="hero__info">
-            <h1 class="hero__title" v-html="home.acf.hero_title"></h1>
+            <h1 class="hero__title year-cap" v-html="home.acf.hero_title"></h1>
             <div class="hero__descr" v-html="home.acf.hero_txt"></div>
             <div class="hero__btn_w">
-              <a
-                class="hero__link btn_base"
-                href="#"
+              <btn
+                name="Получить консультацию"
+                size="large"
                 @click.prevent="openModal('form', 'call')"
-                >Получить консультацию</a
-              ><a
-                class="hero__link btn_base"
-                href="#"
+              />
+              <btn
+                name="Отправить проект на просчет"
+                size="large"
                 @click.prevent="openModal('form', 'price')"
-                >Отправить проект на просчет</a
-              >
+              />
             </div>
           </div>
         </div>
@@ -29,6 +28,7 @@
       </div>
     </div>
   </section>
+  <PromoSlider />
   <QuizForm />
 
   <section class="section system" id="about">
@@ -72,11 +72,13 @@
               опалубкой, полости заполняются полистиролбетоном, который делает
               конструкцию монолитной и теплой
             </div>
-            <a
-              class="btn_base_s system__info_about_btn"
-              @click.prevent="openModal('form')"
-              >Получить консультацию</a
-            >
+            <div style="display: inline-flex">
+              <btn
+                @click.prevent="openModal('form')"
+                name="Получить консультацию"
+                :caps="5"
+              />
+            </div>
           </div>
           <div class="system__info_about system__info_about--green">
             <div class="system__info_about_title">МСБК</div>
@@ -92,6 +94,7 @@
   <section class="section adv">
     <div class="section_in adv__in">
       <h2 class="adv__title">
+        <cap :num="5" />
         <strong>ПРЕИМУЩЕСТВА ТЕХНОЛОГИИ </strong> «МСБК»
       </h2>
       <div class="adv__info_row">
@@ -195,9 +198,11 @@
     </div>
   </section>
   <Projects />
+  <PromoBanner />
   <section class="section imagine">
     <div class="section_in imagine__in">
       <h2 class="imagine__title">
+        <cap :num="5" />
         <strong>Представьте, как уже завтра</strong> <br />
         вы просыпаетесь в доме вашей мечты
       </h2>
@@ -206,7 +211,7 @@
           <div class="imagine__img_w">
             <img
               class="imagine__img"
-              src="https://2klstk.ru/wp-content/themes/comfort/assets/images/imagine/0.jpg"
+              src="http://2klstk.ru/wp-content/uploads/2024/11/scale_1200.png"
             />
           </div>
           <div class="imagine__info">
@@ -223,7 +228,7 @@
           <div class="imagine__img_w">
             <img
               class="imagine__img"
-              src="https://2klstk.ru/wp-content/themes/comfort/assets/images/imagine/1.jpg"
+              src="http://2klstk.ru/wp-content/uploads/2024/11/winterhome-1500x1125-1.png"
             />
           </div>
           <div class="imagine__info">
@@ -240,7 +245,7 @@
           <div class="imagine__img_w">
             <img
               class="imagine__img"
-              src="https://2klstk.ru/wp-content/themes/comfort/assets/images/imagine/2.jpg"
+              src="http://2klstk.ru/wp-content/uploads/2024/11/006cd37c-2dab-528f-a973-6fcf164e4a9d.png"
             />
           </div>
           <div class="imagine__info">
@@ -262,7 +267,9 @@
   />
   <section class="section step js-step-slider-w">
     <div class="section_in step__in">
-      <h2 class="step__title">Как мы <strong> работаем</strong></h2>
+      <h2 class="step__title">
+        <cap :num="5" />Как мы <strong> работаем</strong>
+      </h2>
       <div class="step__list_w">
         <Swiper
           :slides-per-view="4"
@@ -316,6 +323,7 @@
   <section class="section stage js-sys-slider-w" id="steps">
     <div class="section_in stage__in">
       <h2 class="stage__title">
+        <cap :num="5" />
         <strong>Посмотрите 4 этапа,</strong> как будет строиться ваш идеальный
         дом
       </h2>
@@ -411,6 +419,7 @@
         <div class="excursion__col excursion__col--info">
           <div class="excursion__info_in">
             <h2 class="excursion__title">
+              <cap :num="5" />
               Приглашаем на <strong>бесплатную экскурсию</strong> по строящимся
               объектам
             </h2>
@@ -447,6 +456,7 @@
   <section class="section step js-step-slider-w">
     <div class="section_in step__in">
       <h2 class="step__title">
+        <cap :num="5" />
         Что о нас говорят <strong data-v-b4e148ca="">довольные клиенты</strong>
       </h2>
       <div class="step__list js-step-slider js-step-slider--review">
@@ -523,6 +533,7 @@
   <section class="section step js-step-slider-w step--stage-mod">
     <div class="section_in step__in">
       <h2 class="step__title">
+        <cap :num="5" />
         Чтобы быть спокойным и уверенным в качественном доме -<strong
           >вам нужен надежный подрядчик</strong
         >
@@ -631,9 +642,13 @@
           <div class="contact__day">Без выходных 9:00-18:00</div>
           <a class="contact__phone" href="tel:+79282755456">+7 928 275 54 56</a>
           <div class="contact__btn_w">
-            <a class="btn_base_s contact__contact" @click="openModal('form')"
-              >Заказать звонок</a
-            >
+            <btn
+              style="justify-content: center"
+              name="Заказать звонок"
+              size="large"
+              :caps="5"
+              @click="openModal('form')"
+            />
           </div>
           <h3 class="contact__subtitle">Отвечаем мгновенно</h3>
           <ul class="contact__social_list">
@@ -656,12 +671,15 @@
             ><a href="mailto:komfort@gmail.com">komfort@gmail.com</a>
           </div>
         </div>
-        <div class="contact__col contact__col--img">
-          <div class="contact__img_w">
-            <img
-              class="contact__img"
-              src="https://2klstk.ru/wp-content/uploads/2024/09/px7dirxpmww1up4pve20j9ksa5so17h4.jpg"
-            />
+        <div class="contacts-col">
+          <h2 class="contact__title">Наши акции</h2>
+          <div class="contact__col--img sales-list" @click="openModal('sale')">
+            <div class="contact__img_w">
+              <img
+                class="contact__img"
+                src="http://2klstk.ru/wp-content/uploads/2024/11/000.png"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -670,9 +688,13 @@
 </template>
 
 <script setup lang="ts">
+import cap from "@/components/ui/cap.vue";
+import PromoBanner from "@/components/promo/PromoBanner.vue";
 import { onMounted, ref } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import btn from "@/components/ui/btn.vue";
+import PromoSlider from "@/components/blocks/PromoSlider.vue";
 import QuizForm from "@/components/QuizForm.vue";
 import Projects from "@/components/home/Projects.vue";
 import SystemsSlider from "@/components/home/SystemsSlider.vue";
@@ -714,8 +736,8 @@ onMounted(async () => {
   sections.forEach((section) => {
     gsap.from(section, {
       opacity: 0,
-      y: 100,
-      duration: 1.5,
+      y: 50,
+      duration: 0.7,
       ease: "power2.out",
       scrollTrigger: {
         trigger: section,
@@ -736,6 +758,38 @@ onMounted(async () => {
   .step__card_title {
     &:before {
       content: attr(data-num);
+    }
+  }
+}
+
+.contact__col--img {
+  // max-width: 45rem;
+  display: flex;
+  align-items: flex-start;
+  img {
+    border-radius: 2rem;
+    width: 100%;
+    // height: 100%;
+    object-fit: contain;
+  }
+}
+
+.contact__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  gap: 6rem;
+}
+
+.sales-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  gap: 1rem;
+
+  div {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: translateY(-0.5rem);
     }
   }
 }

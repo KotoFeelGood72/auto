@@ -6,6 +6,7 @@ interface ModalsState {
   calc: boolean;
   form: boolean;
   burger: boolean;
+  sale: boolean;
 }
 
 export const useModalStore = defineStore("modal", {
@@ -15,6 +16,7 @@ export const useModalStore = defineStore("modal", {
       calc: false,
       form: false,
       burger: false,
+      sale: false,
     },
     modalData: "",
   }),
