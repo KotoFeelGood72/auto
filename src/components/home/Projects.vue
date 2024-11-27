@@ -42,6 +42,15 @@
                 <div class="card__price">
                   Стоимость <strong>{{ item.acf.price }}</strong>
                 </div>
+                <div class="btn-project">
+                  <btn
+                    style="display: inline-flex"
+                    name="Подробнее"
+                    size="medium"
+                    @click.stop="opeModalProject(item.id)"
+                    :caps="5"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -185,5 +194,9 @@ const getIcon = (icon: string) => {
       transform: translateY(-0.5rem);
     }
   }
+}
+
+.btn-project {
+  padding: 3rem 1rem 2rem 3rem;
 }
 </style>

@@ -29,15 +29,20 @@
               <span class="timer_label">Секунд</span>
             </div>
           </div>
-          <btn name="Зафиксировать цену" theme="blue" size="large" :caps="5" />
+          <btn
+            name="Зафиксировать цену"
+            theme="blue"
+            size="large"
+            :caps="5"
+            @click="openModal('sale')"
+          />
         </div>
         <div class="banner_img">
           <img src="http://2klstk.ru/wp-content/uploads/2024/11/i.webp" />
         </div>
         <div class="sale-img">
           <img
-            src="http://2klstk.ru/wp-content/uploads/2024/11/06.png"
-            alt=""
+            src="http://2klstk.ru/wp-content/uploads/2024/11/house-model-1.png"
           />
         </div>
       </div>
@@ -48,7 +53,9 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
 import btn from "../ui/btn.vue";
+import { useModalStore } from "@/stores/useModalStore";
 
+const { openModal } = useModalStore();
 const days = ref(0);
 const hours = ref(0);
 const minutes = ref(0);
@@ -194,13 +201,16 @@ onUnmounted(() => {
 .sale-img {
   position: absolute;
   right: -10%;
-  max-width: 80%;
+  max-width: 70%;
   @include flex-center;
   z-index: 0;
   img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+
+    mask-image: linear-gradient(to bottom, $blue 50%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, $blue 50%, transparent 100%);
   }
 }
 </style>

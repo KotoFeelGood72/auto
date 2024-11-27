@@ -40,7 +40,7 @@
             <div class="system__img_w">
               <img
                 class="system__img"
-                src="https://2klstk.ru/wp-content/uploads/2024/09/dom7.jpg"
+                src="http://2klstk.ru/wp-content/uploads/2024/11/1_post_2020_logo-scaled-1.jpg"
               />
             </div>
           </div>
@@ -50,13 +50,13 @@
             <div class="system__info_img_w">
               <img
                 class="system__info_img"
-                src="https://2klstk.ru/wp-content/uploads/2024/09/dom2.jpg"
+                src="http://2klstk.ru/wp-content/uploads/2024/11/e4a09014a4376b4f05d51bb1613e3890.jpg"
               />
             </div>
             <div class="system__info_img_w">
               <img
                 class="system__info_img"
-                src="https://2klstk.ru/wp-content/uploads/2024/09/dom1-e1727159517224.jpg"
+                src="http://2klstk.ru/wp-content/uploads/2024/11/33de5e035ebde7e9541827594a3790c3.jpg"
               />
             </div>
           </div>
@@ -138,7 +138,7 @@
         <div class="adv__img_w">
           <img
             class="adv__img"
-            src="https://2klstk.ru/wp-content/uploads/2024/09/filesz500-res-wizualizacje-zx114-zx114_view1_jpg.jpg"
+            src="http://2klstk.ru/wp-content/uploads/2024/11/f0d4b15779f4d028d7ebd3524f2564e5.jpg"
           />
         </div>
       </div>
