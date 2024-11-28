@@ -365,6 +365,8 @@ const removeFile = () => {
   .popup__in {
     position: relative;
     max-width: 60rem;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: url("https://cdn.culture.ru/images/9b030018-a669-554e-9d78-bcae7fe58435");
     color: $white;
     &:before {
