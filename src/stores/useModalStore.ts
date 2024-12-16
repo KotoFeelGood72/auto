@@ -1,59 +1,47 @@
 import { defineStore, storeToRefs } from "pinia";
 import { useRouter, useRoute } from "vue-router";
-
-interface ModalsState {
-  project: boolean;
-  calc: boolean;
-  form: boolean;
-  burger: boolean;
+interface Modals {
   sale: boolean;
+  trade: boolean;
+  happy: boolean;
+  credit: boolean;
+  call: boolean;
+  car: boolean;
+  burger: boolean;
 }
 
 export const useModalStore = defineStore("modal", {
-  state: (): { modals: ModalsState; modalData: string } => ({
+  state: (): { modals: Modals; modalData: {} } => ({
     modals: {
-      project: false,
-      calc: false,
-      form: false,
-      burger: false,
       sale: false,
+      trade: false,
+      happy: false,
+      credit: false,
+      call: false,
+      car: false,
+      burger: false,
     },
-    modalData: "",
+    modalData: {},
   }),
   actions: {
-    openModal(modalName: keyof ModalsState, data?: string) {
+    openModal(modalName: keyof Modals, data?: any) {
       this.modals[modalName] = true;
       if (data) {
-        this.modalData = data; // Сохраняем переданные данные
+        this.modalData = data;
       }
     },
-    closeModal(modalName: keyof ModalsState) {
-      const router = useRouter();
-      const route = useRoute();
+    closeModal(modalName: keyof Modals) {
+      // const router = useRouter();
+      // const route = useRoute();
 
       this.modals[modalName] = false;
-      this.modalData = ""; // Очищаем данные при закрытии
-
-      // Проверяем, что route и query существуют
-      if (modalName === "project" && route && route.query.project) {
-        const { project, ...otherQueryParams } = route.query;
-        router.replace({ query: { ...otherQueryParams } });
-      }
+      this.modalData = {};
     },
     closeAllModals() {
-      const router = useRouter();
-      const route = useRoute();
-
       Object.keys(this.modals).forEach((modalName) => {
-        this.modals[modalName as keyof ModalsState] = false;
+        this.modals[modalName as keyof Modals] = false;
       });
-      this.modalData = ""; // Очищаем данные всех модальных окон
-
-      // Проверяем, что route и query существуют
-      if (route && route.query.project) {
-        const { project, ...otherQueryParams } = route.query;
-        router.replace({ query: { ...otherQueryParams } });
-      }
+      this.modalData = {};
     },
   },
 });

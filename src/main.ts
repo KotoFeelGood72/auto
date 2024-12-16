@@ -1,8 +1,7 @@
-import "./assets/css/app.css";
-
+import "@/assets/scss/style.scss";
 import { createApp } from "vue";
 import { createPinia } from "pinia";
-import Icons from "@/components/Icons.vue";
+import Icons from "@/components/ui/Icons.vue";
 import App from "./App.vue";
 import router from "./router";
 import setupGlobalLoadingMiddleware from "./middleware/setupGlobalLoadingMiddleware";

@@ -28,3 +28,8 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+src/components/blocks/PromoSlider.vue
+src/components/shared/MainHeader.vue
+src/components/ui/HappyTimer.vue
+src/views/HomeView.vue
+src/components/blocks/PromoSlider.vue

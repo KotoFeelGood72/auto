@@ -5,18 +5,7 @@ import vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.VITE_BASE_URL_ASSET || "/",
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: () => "main.js",
-        entryFileNames: "assets/[name].js",
-        chunkFileNames: "assets/[name].js",
-        assetFileNames: "assets/[name].[ext]",
-      },
-    },
-    cssCodeSplit: false,
-  },
+  base: "/",
   plugins: [vue()],
   resolve: {
     alias: {
@@ -46,16 +35,16 @@ export default defineConfig({
   server: {
     port: 5173,
     host: true,
-    strictPort: true,
-    watch: {
-      usePolling: true,
-    },
+    // strictPort: true,
+    // watch: {
+    //   usePolling: true,
+    // },
     proxy: {
-      "/api": {
-        target: "https://2klstk.ru/wp-content/uploads/json",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
-      },
+      // "/api": {
+      //   target: "https://2klstk.ru/wp-content/uploads/json",
+      //   changeOrigin: true,
+      //   rewrite: (path) => path.replace(/^\/api/, ""),
+      // },
     },
   },
 });
