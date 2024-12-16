@@ -1,12 +1,7 @@
 <template>
   <div class="loan-terms">
     <div class="section_in">
-      <heading
-        title="Пользовательское Соглашение"
-        :level="2"
-        :size="40"
-        class="title"
-      />
+      <h1 class="title">Пользовательское Соглашение</h1>
       <div class="content">
         <div class="block-term">
           <p>
@@ -20,7 +15,7 @@
             соглашения. Если Вы не согласны с условиями данного соглашения, не
             используйте сайт https://autocarmsk.ru/!
           </p>
-          <heading title="Предмет соглашения" :level="2" :size="24" />
+          <h2>Предмет соглашения</h2>
           <p>
             Администрация предоставляет пользователю право на размещение на
             сайте следующей информации:
@@ -40,7 +35,7 @@
             </li>
             <li>Использовать информацию сайта в личных некоммерческих целях</li>
           </ul>
-          <heading title="Администрация имеет право:" :level="2" :size="24" />
+          <h2>Администрация имеет право:</h2>
           <ul>
             <li>
               По своему усмотрению и необходимости создавать, изменять, отменять
@@ -52,7 +47,7 @@
             </li>
             <li>Отказывать в регистрации без объяснения причин</li>
           </ul>
-          <heading title="Пользователь обязуется:" :level="2" :size="24" />
+          <h2>Пользователь обязуется:</h2>
           <ul>
             <li>Обеспечить достоверность предоставляемой информации</li>
             <li>
@@ -90,7 +85,7 @@
               и его Сервисами
             </li>
           </ul>
-          <heading title="Администрация обязуется:" :level="2" :size="24" />
+          <h2>Администрация обязуется:</h2>
           <p>
             Поддерживать работоспособность сайта за исключением случаев, когда
             это невозможно по независящим от Администрации причинам.
@@ -116,7 +111,7 @@
               а также бесперебойную работу информационного ресурса
             </li>
           </ul>
-          <heading title="Условия действия Соглашения" :level="2" :size="24" />
+          <h2>Условия действия Соглашения</h2>
           <p>
             Данное Соглашение вступает в силу при любом использовании данного
             сайта. Соглашение перестает действовать при появлении его новой
@@ -131,7 +126,25 @@
 </template>
 
 <script setup lang="ts">
-import heading from "@/components/heading.vue";
+import { useHead } from "@unhead/vue";
+import { onMounted } from "vue";
+const updateSeo = () => {
+  const title = `Пользовательское соглашение`;
+  const description = `Купить новые автомобили - Ознакомьтесь с нашим ассортиментом и выберите идеальный автомобиль. Удобные условия покупки, кредит и тест-драйв.`;
+
+  useHead({
+    title,
+    meta: [
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+    ],
+  });
+};
+onMounted(() => {
+  updateSeo();
+});
 </script>
 
 <style scoped lang="scss">
@@ -156,5 +169,26 @@ import heading from "@/components/heading.vue";
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 120%;
+  font-family: "Gilroy";
+  font-weight: 600;
+  @include bp($point_2) {
+    font-size: 2.2rem;
+    line-height: 130%;
+  }
+}
+h2 {
+  font-size: 2.4rem;
+  line-height: 130%;
+  font-family: "Gilroy";
+  font-weight: 500;
+  @include bp($point_2) {
+    font-size: 1.8rem;
+    line-height: 130%;
+  }
 }
 </style>

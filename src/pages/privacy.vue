@@ -1,12 +1,7 @@
 <template>
   <div class="loan-terms">
     <div class="section_in">
-      <heading
-        title="Политика конфиденциальности"
-        :level="2"
-        :size="40"
-        class="title"
-      />
+      <h1 class="title">Политика конфиденциальности</h1>
       <div class="content">
         <div class="block-term">
           <p>
@@ -18,7 +13,7 @@
           </p>
         </div>
         <div class="block-term">
-          <heading title="1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ" :level="2" :size="22" />
+          <h2>1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</h2>
           <p>
             1.1. В настоящей Политике конфиденциальности используются следующие
             термины:
@@ -71,7 +66,7 @@
           </ul>
         </div>
         <div class="block-term">
-          <heading title="2. ОБЩИЕ ПОЛОЖЕНИЯ" :level="2" :size="22" />
+          <h2>2. ОБЩИЕ ПОЛОЖЕНИЯ</h2>
           <p>
             2.1. Использование Пользователем сайта означает согласие с настоящей
             Политикой конфиденциальности и условиями обработки персональных
@@ -93,11 +88,7 @@
           </p>
         </div>
         <div class="block-term">
-          <heading
-            title="3. ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ"
-            :level="2"
-            :size="22"
-          />
+          <h2>3. ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ</h2>
           <p>
             3.1. Настоящая Политика конфиденциальности устанавливает
             обязательства Администрации сайта по умышленному неразглашению
@@ -153,11 +144,7 @@
           </p>
         </div>
         <div class="block-term">
-          <heading
-            title="4. ЦЕЛИ СБОРА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ ПОЛЬЗОВАТЕЛЯ"
-            :level="2"
-            :size="22"
-          />
+          <h2>4. ЦЕЛИ СБОРА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ ПОЛЬЗОВАТЕЛЯ</h2>
           <p>
             4.1. Персональные данные Пользователя Администрация сайта может
             использовать в целях:
@@ -216,11 +203,7 @@
           </ul>
         </div>
         <div class="block-term">
-          <heading
-            title="5. СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ"
-            :level="2"
-            :size="22"
-          />
+          <h2>5. СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ</h2>
           <p>
             5.1. Обработка персональных данных Пользователя осуществляется без
             ограничения срока, любым законным способом, в том числе в
@@ -241,7 +224,7 @@
           </p>
         </div>
         <div class="block-term">
-          <heading title="6. ОБЯЗАТЕЛЬСТВА СТОРОН" :level="2" :size="22" />
+          <h2>6. ОБЯЗАТЕЛЬСТВА СТОРОН</h2>
           <p>6.1. Пользователь обязуется:</p>
           <ul>
             <li>
@@ -277,7 +260,7 @@
           </ul>
         </div>
         <div class="block-term">
-          <heading title="7. ОТВЕТСТВЕННОСТЬ СТОРОН" :level="2" :size="22" />
+          <h2>7. ОТВЕТСТВЕННОСТЬ СТОРОН</h2>
           <p>
             7.1. Администрация сайта несёт ответственность за умышленное
             разглашение Персональных данных Пользователя в соответствии с
@@ -311,7 +294,7 @@
           </p>
         </div>
         <div class="block-term">
-          <heading title="8. РАЗРЕШЕНИЕ СПОРОВ" :level="2" :size="22" />
+          <h2>8. РАЗРЕШЕНИЕ СПОРОВ</h2>
           <p>
             8.1. До обращения в суд с иском по спорам, возникающим из отношений
             между Пользователем сайта и Администрацией сайта, обязательным
@@ -334,7 +317,7 @@
           </p>
         </div>
         <div class="block-term">
-          <heading title="9. ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ" :level="2" :size="22" />
+          <h2>9. ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ</h2>
           <p>
             9.1. Администрация сайта вправе вносить изменения в настоящую
             Политику конфиденциальности без согласия Пользователя.
@@ -350,7 +333,25 @@
   </div>
 </template>
 <script setup>
-import heading from "@/components/heading.vue";
+import { onMounted } from "vue";
+import { useHead } from "@unhead/vue";
+const updateSeo = () => {
+  const title = `Политика конфиденциальности`;
+  const description = `Купить новые автомобили - Ознакомьтесь с нашим ассортиментом и выберите идеальный автомобиль. Удобные условия покупки, кредит и тест-драйв.`;
+
+  useHead({
+    title,
+    meta: [
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+    ],
+  });
+};
+onMounted(() => {
+  updateSeo();
+});
 </script>
 
 <style scoped lang="scss">
@@ -380,5 +381,26 @@ import heading from "@/components/heading.vue";
   flex-direction: column;
   gap: 1.5rem;
   padding-left: 2rem;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 120%;
+  font-family: "Gilroy";
+  font-weight: 600;
+  @include bp($point_2) {
+    font-size: 2.2rem;
+    line-height: 130%;
+  }
+}
+h2 {
+  font-size: 2.4rem;
+  line-height: 130%;
+  font-family: "Gilroy";
+  font-weight: 500;
+  @include bp($point_2) {
+    font-size: 1.8rem;
+    line-height: 130%;
+  }
 }
 </style>

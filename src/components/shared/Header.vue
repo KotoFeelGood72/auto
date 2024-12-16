@@ -10,7 +10,7 @@
         </div>
         <div class="col">
           <div class="contact">
-            <a href="+7 (499) 289-87-21" class="phone">
+            <a href="tel:+74992898721" class="phone">
               <div class="phone-icon">
                 <Icons icon="uil:phone" :size="20" />
               </div>

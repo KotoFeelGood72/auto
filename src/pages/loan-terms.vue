@@ -1,12 +1,7 @@
 <template>
   <div class="loan-terms">
     <div class="section_in">
-      <heading
-        title="Условия кредитования"
-        :level="2"
-        :size="40"
-        class="title"
-      />
+      <h1 class="title">Условия кредитования</h1>
       <div class="content">
         <div class="block-term">
           <p>
@@ -96,7 +91,25 @@
 </template>
 
 <script setup>
-import heading from "@/components/heading.vue";
+import { onMounted } from "vue";
+import { useHead } from "@unhead/vue";
+const updateSeo = () => {
+  const title = `Условия кредитования`;
+  const description = `Купить новые автомобили - Ознакомьтесь с нашим ассортиментом и выберите идеальный автомобиль. Удобные условия покупки, кредит и тест-драйв.`;
+
+  useHead({
+    title,
+    meta: [
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+    ],
+  });
+};
+onMounted(() => {
+  updateSeo();
+});
 </script>
 
 <style scoped lang="scss">
@@ -120,5 +133,26 @@ import heading from "@/components/heading.vue";
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 120%;
+  font-family: "Gilroy";
+  font-weight: 600;
+  @include bp($point_2) {
+    font-size: 2.2rem;
+    line-height: 130%;
+  }
+}
+h2 {
+  font-size: 2.4rem;
+  line-height: 130%;
+  font-family: "Gilroy";
+  font-weight: 500;
+  @include bp($point_2) {
+    font-size: 1.8rem;
+    line-height: 130%;
+  }
 }
 </style>

@@ -34,7 +34,7 @@ const props = defineProps<{
 const route = useRoute();
 const gridContainer = ref<HTMLElement | null>(null);
 
-const isCar = computed(() => route.params.brand || "");
+const isCar = computed(() => route.params.brandSlug || "");
 
 // Прокрутка к активному элементу
 const scrollToActiveElement = async () => {
@@ -58,7 +58,6 @@ const scrollToActiveElement = async () => {
   }
 };
 
-// Следим за изменением данных и `isCar`
 watch(
   () => props.models,
   (newModels) => {

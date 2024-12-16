@@ -29,6 +29,7 @@ import ModelsGrid from "../components/blocks/ModelsGrid.vue";
 import Action from "../components/blocks/Action.vue";
 import Trade from "../components/blocks/Trade.vue";
 import { useCars } from "@/composables/useCars";
+import { useHead } from "@unhead/vue";
 const { useGetAll, popularCars, promotionalCars, brands } = useCars();
 
 const adv = [
@@ -58,8 +59,24 @@ const credits = [
   { title: "90%", txt: "Одобрение <br/>по кредиту" },
 ];
 
+const updateSeo = () => {
+  const title = `Купить новые автомобили`;
+  const description = `Ознакомьтесь с нашим ассортиментом и выберите идеальный автомобиль. Удобные условия покупки, кредит и тест-драйв.`;
+
+  useHead({
+    title,
+    meta: [
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+    ],
+  });
+};
+
 onMounted(() => {
   useGetAll(40);
+  updateSeo();
 });
 </script>
 
