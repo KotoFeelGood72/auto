@@ -82,7 +82,8 @@ export function useFormSubmit() {
   };
 
   const sendToCRM = async (data: Record<string, any>) => {
-    const crmProxyUrl = "/api/crm";
+    // const crmProxyUrl = "/api/crm";
+    const crmProxyUrl = import.meta.env.VITE_API_CRM_URL;
 
     const apiKey = "ed2f550d045b3d3a54d2662fe6d5e677"; // Ваш API-ключ
 
