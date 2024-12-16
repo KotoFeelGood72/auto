@@ -1,9 +1,9 @@
 {
-  "title": "Faw X80 в Краснодаре",
+  "title": "Faw X80 в Москве",
   "brand": "Faw",
   "model": "X80",
   "saleBlock": "Выгода 603 200 ₽",
-  "city": "Краснодаре",
+  "city": "Москве",
   "image": "/api/cars/faw/x80/main.jpg",
   "slug": "/cars/faw/x80/",
   "priceOld": "1 508 000",
@@ -169,42 +169,42 @@
     {
       "fullImage": "/api/cars/faw/x80/gallery/gallery-1.jpg",
       "thumbnail": "https://klassavto.ru/assets/img/loader.svg",
-      "alt": "Faw X80 в Краснодаре - фото №1"
+      "alt": "Faw X80 в Москве - фото №1"
     },
     {
       "fullImage": "/api/cars/faw/x80/gallery/gallery-2.jpg",
       "thumbnail": "https://klassavto.ru/assets/img/loader.svg",
-      "alt": "Faw X80 в Краснодаре - фото №2"
+      "alt": "Faw X80 в Москве - фото №2"
     },
     {
       "fullImage": "/api/cars/faw/x80/gallery/gallery-3.jpg",
       "thumbnail": "https://klassavto.ru/assets/img/loader.svg",
-      "alt": "Faw X80 в Краснодаре - фото №3"
+      "alt": "Faw X80 в Москве - фото №3"
     },
     {
       "fullImage": "/api/cars/faw/x80/gallery/gallery-4.jpg",
       "thumbnail": "https://klassavto.ru/assets/img/loader.svg",
-      "alt": "Faw X80 в Краснодаре - фото №4"
+      "alt": "Faw X80 в Москве - фото №4"
     },
     {
       "fullImage": "/api/cars/faw/x80/gallery/gallery-5.jpg",
       "thumbnail": "https://klassavto.ru/assets/img/loader.svg",
-      "alt": "Faw X80 в Краснодаре - фото №5"
+      "alt": "Faw X80 в Москве - фото №5"
     },
     {
       "fullImage": "/api/cars/faw/x80/gallery/gallery-6.jpg",
       "thumbnail": "https://klassavto.ru/assets/img/loader.svg",
-      "alt": "Faw X80 в Краснодаре - фото №6"
+      "alt": "Faw X80 в Москве - фото №6"
     },
     {
       "fullImage": "/api/cars/faw/x80/gallery/gallery-7.jpg",
       "thumbnail": "https://klassavto.ru/assets/img/loader.svg",
-      "alt": "Faw X80 в Краснодаре - фото №7"
+      "alt": "Faw X80 в Москве - фото №7"
     },
     {
       "fullImage": "/api/cars/faw/x80/gallery/gallery-8.jpg",
       "thumbnail": "https://klassavto.ru/assets/img/loader.svg",
-      "alt": "Faw X80 в Краснодаре - фото №8"
+      "alt": "Faw X80 в Москве - фото №8"
     }
   ]
 }
