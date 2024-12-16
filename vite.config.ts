@@ -35,9 +35,10 @@ export default defineConfig({
     // },
     proxy: {
       "/api/crm": {
-        target: "http://crm.renault-s.ru",
-        changeOrigin: true,
+        target: "http://crm.renault-s.ru", // Целевой сервер
+        changeOrigin: true, // Меняет заголовок Origin
         rewrite: (path) => path.replace(/^\/api\/crm/, "/expo/api/deal/add"),
+        secure: false, // Отключает проверку SSL (если это необходимо)
       },
     },
   },
