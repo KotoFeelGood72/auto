@@ -62,6 +62,8 @@ export function useFormSubmit() {
 
       isSuccess.value = true;
 
+      ym(98477147, "reachGoal", "form");
+
       if (showToast) {
         toast.success("Данные успешно отправлены!");
       }

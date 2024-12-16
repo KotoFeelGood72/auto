@@ -12,7 +12,7 @@
             :class="{ disabled: currentPage === 1 }"
             @click="changePage(currentPage - 1)"
           >
-            <Icon name="bytesize:chevron-left" :size="16" />
+            <Icons icon="bytesize:chevron-left" :size="16" />
           </div>
           <ul class="pagination-list">
             <li
@@ -29,7 +29,7 @@
             :class="{ disabled: currentPage === totalPages }"
             @click="changePage(currentPage + 1)"
           >
-            <Icon name="bytesize:chevron-right" :size="16" />
+            <Icons icon="bytesize:chevron-right" :size="16" />
           </div>
         </div>
       </div>
@@ -42,7 +42,8 @@ import AutoCard from "@/components/card/AutoCard.vue";
 import ModelsGrid from "@/components/blocks/ModelsGrid.vue";
 import { useRoute, useRouter } from "vue-router";
 import { useCars } from "@/composables/useCars";
-import { onMounted, computed } from "vue";
+import { onMounted, computed, watch } from "vue";
+import { useHead } from "@unhead/vue";
 // import { useSeo } from "~/composables/useSeo";
 
 const {
@@ -60,33 +61,21 @@ const {
 
 const route = useRoute();
 const router = useRouter();
-
-// Применяем фильтр из URL при загрузке страницы
 onMounted(() => {
   useGetAll().then(() => {
     const brandFromUrl = route.params.brandSlug as string | null;
+    updateSeo();
     if (brandFromUrl) {
       filterByBrand(brandFromUrl);
     }
     const pageFromUrl = parseInt(route.query.page as string) || 1;
-    setCurrentPage(pageFromUrl); // Устанавливаем текущую страницу из URL
+    setCurrentPage(pageFromUrl);
   });
-
-  // useSeo({
-  //   title:
-  //     route.params.brand.toString() ||
-  //     "Автокар - Новые автомобили Geely в Москве",
-  //   description:
-  //     "Откройте для себя лучшие автомобили" +
-  //     route.params.brand.toString() +
-  //     " в автосалоне Автокар. Удобные условия покупки, кредит, тест-драйв в Москве.",
-  // });
 });
 
-// Изменяем текущую страницу и обновляем URL
 const changePage = (page: number) => {
-  setCurrentPage(page); // Устанавливаем новую текущую страницу
-  router.push({ query: { ...route.query, page: page.toString() } }); // Обновляем URL
+  setCurrentPage(page);
+  router.push({ query: { ...route.query, page: page.toString() } });
 };
 
 const totalPages = computed(() => {
@@ -115,6 +104,38 @@ const visiblePages = computed(() => {
 
   return pages;
 });
+
+const updateSeo = () => {
+  const brandName: any = selectedBrand?.value || "Все автомобили";
+  const pageNumber =
+    currentPage.value > 1 ? ` | Страница ${currentPage.value}` : "";
+
+  const title = `${brandName} - Купить новые автомобили${pageNumber}`;
+  const description = `Ознакомьтесь с нашим ассортиментом ${brandName.toLowerCase()} и выберите идеальный автомобиль. Удобные условия покупки, кредит и тест-драйв.`;
+
+  useHead({
+    title,
+    meta: [
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+    ],
+  });
+};
+
+watch(
+  () => route.params.brandSlug,
+  (newBrandSlug) => {
+    if (newBrandSlug) {
+      filterByBrand(newBrandSlug as string);
+    } else {
+      filterByBrand(null);
+    }
+    setCurrentPage(1);
+    updateSeo();
+  }
+);
 </script>
 
 <style scoped lang="scss">

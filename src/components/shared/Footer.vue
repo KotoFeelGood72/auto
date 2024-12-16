@@ -10,7 +10,9 @@
               v-for="(item, i) in info"
               :key="'info-item-' + i"
             >
-              <div class="item-icon"><Icon :icon="item.icon" :size="20" /></div>
+              <div class="item-icon">
+                <Icons :icon="item.icon" :size="20" />
+              </div>
               <p class="item-txt" v-if="item.txt">{{ item.txt }}</p>
               <a class="item-link" :href="'tel:' + item.link">{{
                 item.link

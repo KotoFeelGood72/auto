@@ -166,6 +166,7 @@ import { useModalStore } from "@/stores/useModalStore";
 import { useCars } from "@/composables/useCars";
 import { useRoute } from "vue-router";
 import { ref, computed, onMounted, onUnmounted, watch } from "vue";
+import { useHead } from "@unhead/vue";
 // import { useSeo } from "~/composables/useSeo";
 
 const isRowTopScrolledOut = ref(false);
@@ -188,6 +189,36 @@ const credits = [
   { title: "90%", txt: "Одобрение <br/>по кредиту" },
 ];
 
+const updateSeo = () => {
+  if (!singleCar.value) return;
+
+  const title = `${singleCar.value.title} - Купить автомобиль в Москве`;
+  const description = `Купить ${
+    singleCar.value.title
+  } с выгодными условиями, кредит от 7%. Цвет: ${
+    singleCar.value.colors[0]?.name || "не указан"
+  }, модификация: ${
+    singleCar.value.modifications[0]?.modification || "не указана"
+  }.`;
+  const keywords = `${singleCar.value.title}, купить автомобиль, автокредит, TRADE-IN, Москва`;
+
+  useHead({
+    title,
+    meta: [
+      { name: "description", content: description },
+      { name: "keywords", content: keywords },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      {
+        property: "og:image",
+        content: singleCar.value.image || "/default-image.jpg",
+      },
+      { property: "og:type", content: "article" },
+      { property: "og:url", content: window.location.href },
+    ],
+  });
+};
+
 onMounted(async () => {
   const slug = "/cars/" + route.params.brandSlug + "/" + route.params.modelSlug;
   await useGetCarBySlug(slug);
@@ -209,6 +240,8 @@ onMounted(async () => {
   );
 
   observer.observe(rowTop);
+
+  updateSeo();
 
   // useSeo({
   //   title:
@@ -258,9 +291,11 @@ onMounted(async () => {
 });
 
 watch(
-  () => route.params.model,
+  () => route.params.modelSlug,
   async (newSlug) => {
-    await useGetCarBySlug(newSlug.toString());
+    const slug = "/cars/" + route.params.brandSlug + "/" + newSlug;
+    await useGetCarBySlug(slug);
+    updateSeo(); // Обновляем SEO данные
   }
 );
 </script>

@@ -9,7 +9,7 @@
       <ul>
         <li v-for="(item, i) in list" :key="'form-list-item-' + i">
           <div class="list-icon">
-            <Icon name="ep:check" :size="20" />
+            <Icons icon="ep:check" :size="20" />
           </div>
           <div v-html="item"></div>
         </li>

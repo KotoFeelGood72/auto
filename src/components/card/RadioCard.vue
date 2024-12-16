@@ -1,17 +1,7 @@
 <template>
   <div class="card-check">
-    <!-- <input
-      type="radio"
-      :id="card.id"
-      :name="card.name"
-      :value="card"
-      v-model="selectedValue"
-    /> -->
     <label :for="card.id">
       <div class="card">
-        <!-- <div class="icon">
-          <Icon name="ep:check" :size="16" />
-        </div> -->
         <heading :title="card.title" :level="5" :size="24" />
         <heading :title="'от ' + card.price + ' ₽'" :level="4" :size="20" />
         <p class="text">

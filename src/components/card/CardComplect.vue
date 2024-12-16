@@ -1,18 +1,7 @@
 <template>
   <div class="card-check">
     <div>
-      <!-- <input
-        type="radio"
-        :id="data.id"
-        :name="data.name"
-        :value="data.id"
-        v-model="selectedValue"
-      /> -->
-
       <label :for="data.id">
-        <!-- <div class="icon">
-          <Icon name="ep:check" :size="16" />
-        </div> -->
         <div class="col">
           <heading :title="data.title" :level="5" :size="24" class="title" />
           <heading
@@ -43,7 +32,7 @@
 
 <script setup lang="ts">
 import heading from "../heading.vue";
-const props = defineProps<{
+defineProps<{
   data: {
     id: string;
     name: string;
@@ -56,28 +45,10 @@ const props = defineProps<{
 }>();
 
 const emit = defineEmits(["update:modelValue"]);
-
-// const selectedValue = computed({
-//   get: () => props.modelValue,
-//   set: (value: string) => emit("update:modelValue", value),
-// });
 </script>
 
 <style lang="scss" scoped>
 .card-check {
-  // input {
-  //   display: none;
-  //   &:checked + label {
-  //     background-color: #f3f3f3;
-  //     .icon {
-  //       span {
-  //         opacity: 1;
-  //         visibility: visible;
-  //       }
-  //     }
-  //   }
-  // }
-
   label {
     background-color: #f3f3f3;
     cursor: pointer;

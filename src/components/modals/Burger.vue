@@ -18,7 +18,7 @@
       <div class="contact">
         <a href="+7 (499) 289-87-21" class="phone">
           <div class="phone-icon">
-            <Icon name="uil:phone" :size="20" />
+            <Icons icon="uil:phone" :size="20" />
           </div>
           <heading title="+7 (499) 289-87-21" :level="2" :size="24" />
         </a>

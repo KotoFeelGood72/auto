@@ -30,6 +30,7 @@ const totalPages = computed(() => {
 // Фильтрация по бренду
 const filterByBrand = (brand: any) => {
   selectedBrand.value = brand;
+  console.log(selectedBrand);
   if (brand) {
     filteredCars.value = cars.value.filter((car: any) => car.brand === brand);
   } else {

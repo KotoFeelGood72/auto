@@ -7,7 +7,7 @@
         class="w-full flex justify-between items-center px-4 py-3 border border-light rounded-lg shadow-sm bg-white hover:bg-gray-50 focus:outline-none focus:ring focus:primary"
       >
         <span>{{ selectedLabel || placeholder }}</span>
-        <Icon name="bi:chevron-down" :class="{ 'rotate-180': isOpen }" />
+        <Icons icon="bi:chevron-down" :class="{ 'rotate-180': isOpen }" />
       </button>
     </div>
 
