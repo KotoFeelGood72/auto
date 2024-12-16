@@ -194,8 +194,10 @@ nav {
 }
 
 :deep(.btn.large) {
-  padding: 0.3rem 0 !important;
-  border: none;
+  @include bp($point_2) {
+    padding: 0.3rem 0 !important;
+    border: none;
+  }
 }
 
 .mobile-timework {

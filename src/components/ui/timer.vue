@@ -24,7 +24,17 @@ const endDate = ref<number | null>(null);
 const interval = ref<number | null>(null);
 const now = ref<number>(Date.now());
 
-// Функция для вычисления оставшегося времени
+// Функция для получения даты следующего понедельника
+const getNextMonday = (): number => {
+  const now = new Date();
+  const day = now.getDay(); // Текущий день недели (0 - воскресенье)
+  const diff = day === 1 ? 7 : day === 0 ? 1 : 8 - day; // Сколько дней до следующего понедельника
+  now.setDate(now.getDate() + diff);
+  now.setHours(0, 0, 0, 0); // Сбрасываем время до 00:00
+  return now.getTime();
+};
+
+// Таймер
 const time = computed(() => {
   if (!endDate.value) return { дней: 0, часов: 0, минут: 0, секунд: 0 };
 
@@ -50,24 +60,17 @@ const formatDigits = (value: number) => {
 };
 
 onMounted(() => {
-  // Устанавливаем дату окончания на 31 декабря 2024, 23:59:59
-  const newYearDate = new Date("2024-12-31T23:59:59").getTime();
-  endDate.value = newYearDate;
-
-  // Сохраняем дату в локальное хранилище, если нужно, иначе можно убрать localStorage
-  localStorage.setItem("timerEnd", JSON.stringify(newYearDate));
+  endDate.value = getNextMonday();
 
   interval.value = window.setInterval(() => {
     now.value = Date.now();
-    if (endDate.value && endDate.value - now.value <= 0) {
-      clearInterval(interval.value!);
-      localStorage.removeItem("timerEnd");
-      endDate.value = null;
+
+    if (endDate.value && now.value >= endDate.value) {
+      endDate.value = getNextMonday();
     }
   }, 1000);
 });
 
-// Очищаем интервал при уничтожении компонента
 onUnmounted(() => {
   if (interval.value) clearInterval(interval.value);
 });
