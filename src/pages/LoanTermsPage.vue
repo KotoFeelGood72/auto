@@ -90,7 +90,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted } from "vue";
 import { useHead } from "@unhead/vue";
 const updateSeo = () => {
