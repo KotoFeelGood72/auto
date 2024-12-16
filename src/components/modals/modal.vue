@@ -13,6 +13,7 @@ import ModalSale from "./ModalSale.vue";
 import ModalHappy from "./ModalHappy.vue";
 import ModalTradein from "./ModalTradein.vue";
 import ClassicModal from "./ClassicModal.vue";
+// @ts-ignore
 import ModalCar from "./ModalCar.vue";
 import Burger from "./Burger.vue";
 
