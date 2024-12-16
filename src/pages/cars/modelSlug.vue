@@ -159,7 +159,7 @@ import btn from "@/components/ui/btn.vue";
 import Gallery from "@/components/shared/Gallery.vue";
 import GalleryCar from "@/components/ui/GalleryCar.vue";
 import Programs from "@/components/shared/Programs.vue";
-import heading from "@/components/ui/heading.vue";
+import heading from "@/components/heading.vue";
 import Calc from "@/components/shared/Calc.vue";
 import ModeCard from "@/components/card/ModeCard.vue";
 import { useModalStore } from "@/stores/useModalStore";

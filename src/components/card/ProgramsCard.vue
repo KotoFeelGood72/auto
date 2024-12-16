@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import btn from "../ui/btn.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 import { useModalStore } from "@/stores/useModalStore";
 
 const { openModal } = useModalStore();

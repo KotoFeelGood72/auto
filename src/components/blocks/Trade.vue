@@ -61,7 +61,7 @@
 </template>
 
 <script setup lang="ts">
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 import Form from "../shared/Form.vue";
 defineProps<{
   topservices: any;

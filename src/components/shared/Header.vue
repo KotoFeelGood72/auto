@@ -64,7 +64,7 @@
 <script setup lang="ts">
 import btn from "../ui/btn.vue";
 import Logo from "../ui/Logo.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 import { useModalStore } from "@/stores/useModalStore";
 import { onMounted, ref, onUnmounted } from "vue";
 

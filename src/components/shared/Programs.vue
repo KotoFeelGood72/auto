@@ -37,7 +37,7 @@
 
 <script setup lang="ts">
 import ProgramsCard from "../card/ProgramsCard.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 
 const programs = [
   { title: "Семейный автомобиль", txt: "Госпрограмма" },

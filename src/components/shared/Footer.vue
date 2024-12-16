@@ -85,7 +85,7 @@
 
 <script setup lang="ts">
 import Btn from "../ui/btn.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 import { useModalStore } from "@/stores/useModalStore";
 import { ref } from "vue";
 

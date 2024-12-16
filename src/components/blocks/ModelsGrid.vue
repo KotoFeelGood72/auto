@@ -25,7 +25,7 @@
 import { ref, computed, watch, nextTick, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import ModelsCard from "../card/ModelsCard.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 
 const props = defineProps<{
   models: any[]; // Предполагаем, что `models` — это массив строк

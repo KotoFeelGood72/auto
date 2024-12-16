@@ -131,7 +131,7 @@
 </template>
 
 <script setup lang="ts">
-import heading from "@/components/ui/heading.vue";
+import heading from "@/components/heading.vue";
 </script>
 
 <style scoped lang="scss">

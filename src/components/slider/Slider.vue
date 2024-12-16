@@ -54,7 +54,7 @@
 import AutoCard from "../card/AutoCard.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination } from "swiper/modules";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 import "swiper/swiper-bundle.css";
 
 defineProps<{

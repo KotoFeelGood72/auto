@@ -40,7 +40,7 @@
 import Logo from "../ui/Logo.vue";
 import { useModalStore } from "@/stores/useModalStore";
 import btn from "../ui/btn.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 import closeBtn from "../ui/buttons/close-btn.vue";
 
 const { openModal } = useModalStore();

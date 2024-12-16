@@ -48,7 +48,7 @@ import { ref } from "vue";
 import Select from "../ui/Select.vue";
 import range from "../ui/range.vue";
 import Form from "./Form.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 import CarDetails from "./CarDetails.vue";
 import { computed } from "vue";
 
