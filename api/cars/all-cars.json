@@ -1184,7 +1184,7 @@
     "brand": "Москвич",
     "image": "/api/cars/moskvich/3/main.jpg",
     "saleBlock": "Выгода 676 000 ₽",
-    "slug": "/cars//3/",
+    "slug": "/cars/moskvich/3/",
     "priceOld": "1 690 000",
     "priceNew": "1 014 000",
     "monthlyPayment": "7 697"
@@ -1194,7 +1194,7 @@
     "brand": "Москвич",
     "image": "/api/cars/moskvich/3e/main.jpg",
     "saleBlock": "Выгода 1 640 000 ₽",
-    "slug": "/cars//3/",
+    "slug": "/cars/moskvich/3e/",
     "priceOld": "4 100 000",
     "priceNew": "2 460 000",
     "monthlyPayment": "18 672"
@@ -1204,7 +1204,7 @@
     "brand": "Москвич",
     "image": "/api/cars/moskvich/6/main.jpg",
     "saleBlock": "Выгода 880 000 ₽",
-    "slug": "/cars//6/",
+    "slug": "/cars/moskvich/6/",
     "priceOld": "2 200 000",
     "priceNew": "1 320 000",
     "monthlyPayment": "10 019"
