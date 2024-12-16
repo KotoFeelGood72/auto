@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import btn from "./buttons/btn.vue";
+import btn from "../ui/btn.vue";
 
 const isCookieAccepted = ref(true);
 
