@@ -349,8 +349,7 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
+<script setup>
 import heading from "../components/ui/heading.vue";
 </script>
 
