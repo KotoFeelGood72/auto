@@ -46,7 +46,11 @@ const services = [
   },
   { icon: "casco", title: "Каско", txt: "В подарок при покупки в кредит" },
   { icon: "cash", title: "Кешбек 100%", txt: "На 3 платежа по кредиту" },
-  { icon: "card", title: "Топливная карта", txt: "В подарок на 3 полных бака" },
+  {
+    icon: "card",
+    title: "Бонус",
+    txt: "Зимняя резина в подарок",
+  },
 ];
 const topservices = [
   { title: "300 000", txt: "Выгода" },

@@ -2,7 +2,7 @@
   <section class="programs mb-8">
     <div class="section_in">
       <heading
-        title="Государственные программы"
+        title="Государственные программы автокредитования"
         :level="2"
         :size="42"
         class="title"

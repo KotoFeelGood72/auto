@@ -1,10 +1,11 @@
 <template>
   <section class="trade mb-8" id="trade">
     <div class="section_in">
+      <heading title="TRADE - IN по новому!" :level="2" :size="42" />
       <heading
-        title="TRADE - IN по новому!"
+        title="Выгодный обмен авто в Москве"
         :level="2"
-        :size="42"
+        :size="24"
         class="title"
       />
       <div class="row">
@@ -48,6 +49,7 @@
           class="row-item"
         >
           <div class="item-icon">
+            <img :src="`/assets/img/${item.icon}.svg`" alt="" />
             <Icons :name="'f:' + item.icon" :size="35" />
           </div>
           <div>
@@ -183,5 +185,6 @@ defineProps<{
   @include flex-center;
   border: 0.1rem solid $primary;
   border-radius: 1rem;
+  padding: 1rem;
 }
 </style>
