@@ -71,7 +71,7 @@ watch(isModalActive, (newValue) => {
   }
 });
 
-const isIdRoutePage = computed(() => route.name === "cars-brand-model");
+const isIdRoutePage = computed(() => route.name === "model-slug");
 </script>
 
 <style scoped lang="scss">

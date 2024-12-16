@@ -40,11 +40,11 @@ export default defineConfig({
     //   usePolling: true,
     // },
     proxy: {
-      // "/api": {
-      //   target: "https://2klstk.ru/wp-content/uploads/json",
-      //   changeOrigin: true,
-      //   rewrite: (path) => path.replace(/^\/api/, ""),
-      // },
+      "/api/crm": {
+        target: "http://crm.renault-s.ru",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/crm/, "/expo/api/deal/add"),
+      },
     },
   },
 });

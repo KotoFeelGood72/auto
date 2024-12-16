@@ -74,7 +74,48 @@ const resetError = () => {
   isError.value = false; // Сброс ошибки
 };
 
+// const handleSubmit = async () => {
+//   if (!form.value.name || form.value.name.length < 2) {
+//     isError.value = true;
+//     return;
+//   }
+
+//   const phoneDigits = form.value.phone.replace(/\D/g, ""); // Удаляем все нецифровые символы
+//   if (phoneDigits.length !== 11 || !phoneDigits.startsWith("7")) {
+//     isError.value = true;
+//     return;
+//   }
+
+//   // Формируем объект данных для отправки
+//   const data = {
+//     api_key: "ed2f550d045b3d3a54d2662fe6d5e677",
+//     deal_type: props.dealType,
+//     deal_name: form.value.name,
+//     deal_reklama: "Автокар",
+//     deal_phone_mobile: form.value.phone,
+//     deal_status: 82,
+//     deal_desc: `Имя: ${form.value.name}, Телефон: ${form.value.phone}`,
+//     ...props.additionalData,
+//   };
+
+//   isLoading.value = true;
+
+//   try {
+//     await sendToTelegram(data);
+//     await sendToCRM(data);
+//     isSuccess.value = true;
+//     resetForm();
+//   } catch (error) {
+//     isError.value = true;
+//     console.error("Ошибка отправки:", errorMessage.value || error);
+//   } finally {
+//     isLoading.value = false;
+//   }
+// };
+
 const handleSubmit = async () => {
+  isError.value = false; // Сброс ошибки перед проверкой
+
   if (!form.value.name || form.value.name.length < 2) {
     isError.value = true;
     return;
@@ -105,6 +146,7 @@ const handleSubmit = async () => {
     await sendToCRM(data);
     isSuccess.value = true;
     resetForm();
+    isError.value = false; // Сброс ошибки после успешной отправки
   } catch (error) {
     isError.value = true;
     console.error("Ошибка отправки:", errorMessage.value || error);
