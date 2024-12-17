@@ -25,7 +25,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => import("../pages/index.vue"),
+      component: () => import("../pages/Cars.vue"),
     },
     {
       path: "/privacy/",
