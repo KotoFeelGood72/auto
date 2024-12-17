@@ -28,17 +28,17 @@ const router = createRouter({
       component: () => import("../pages/index.vue"),
     },
     {
-      path: "/privacy",
+      path: "/privacy/",
       name: "privacy",
       component: () => import("../pages/PrivacyPage.vue"),
     },
     {
-      path: "/loan-terms",
+      path: "/loan-terms/",
       name: "loan-terms",
       component: () => import("../pages/LoanTermsPage.vue"),
     },
     {
-      path: "/about-user-agree",
+      path: "/about-user-agree/",
       name: "about-user-agree",
       component: () => import("../pages/AboutUserAgree.vue"),
     },
