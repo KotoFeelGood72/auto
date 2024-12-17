@@ -126,6 +126,7 @@
 </template>
 
 <script setup lang="ts">
+// @ts-ignore
 import { useHead } from "@unhead/vue";
 import { onMounted } from "vue";
 const updateSeo = () => {
