@@ -25,7 +25,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => import("../pages/Cars.vue"),
+      component: () => import("../pages/index.vue"),
     },
     {
       path: "/privacy/",
@@ -45,7 +45,7 @@ const router = createRouter({
     {
       path: "/cars/",
       name: "cars",
-      component: () => import("../pages/Cars.vue"),
+      component: () => import("../pages/cars/CarsPage.vue"),
     },
     {
       path: "/cars/:brandSlug/",
