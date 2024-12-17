@@ -50,7 +50,6 @@
         >
           <div class="item-icon">
             <img :src="`/assets/img/${item.icon}.svg`" alt="" />
-            <Icons :name="'f:' + item.icon" :size="35" />
           </div>
           <div>
             <p class="item-title">{{ item.title }}</p>

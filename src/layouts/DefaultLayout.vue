@@ -5,9 +5,8 @@
     <slot />
     <Map />
     <Footer />
-    <!-- Условие для отображения TradeFly -->
     <transition name="fade">
-      <TradeFly v-if="isTradeFlyVisible && route.name === 'index'" />
+      <TradeFly v-if="isTradeFlyVisible && route.name === 'home'" />
     </transition>
     <modal />
     <transition name="fade-bg">
