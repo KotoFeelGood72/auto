@@ -48,12 +48,12 @@ const router = createRouter({
       component: () => import("../pages/cars/index.vue"),
     },
     {
-      path: "/cars/:brandSlug",
+      path: "/cars/:brandSlug/",
       name: "brand-slug",
       component: () => import("../pages/cars/brandSlug.vue"),
     },
     {
-      path: "/cars/:brandSlug/:modelSlug",
+      path: "/cars/:brandSlug/:modelSlug/",
       name: "model-slug",
       component: () => import("../pages/cars/modelSlug.vue"),
     },
