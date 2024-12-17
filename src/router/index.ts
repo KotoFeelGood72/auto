@@ -1,17 +1,26 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL_ASSET),
-  scrollBehavior(to: any, from: any, savedPosition: any) {
-    if (to.path === from.path && to.fullPath !== from.fullPath) {
-      return null;
+  history: createWebHistory(import.meta.env.VITE_BASE_URL),
+  scrollBehavior(to, from, savedPosition) {
+    // Если переход на якорь (hash), прокручиваем с учётом хедера
+    if (to.hash) {
+      return {
+        el: to.hash,
+        top: 100, // Высота хедера для отступа
+        behavior: "smooth", // Плавная прокрутка
+      };
     }
+
+    // Если сохранена позиция (например, при нажатии "назад/вперёд"), восстанавливаем её
     if (savedPosition) {
       return savedPosition;
-    } else {
-      return { top: 0 };
     }
+
+    // По умолчанию всегда прокручиваем к верху страницы
+    return { top: 0, behavior: "smooth" };
   },
+
   routes: [
     {
       path: "/",

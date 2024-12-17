@@ -76,7 +76,7 @@ const { openModal } = useModalStore();
 const nav = [
   { name: "Авто в наличии", link: "/cars" },
   { name: "Акции", link: "/cars" },
-  { name: "Отзывы", link: "/" },
+  // { name: "Отзывы", link: "/" },
   { name: "Контакты", link: "/#contacts" },
 ];
 const other = [
@@ -201,13 +201,13 @@ nav {
 }
 
 .mobile-timework {
-  @include bp($point_2, $direction: min) {
-    display: none;
-  }
   font-size: 1.2rem;
   margin-top: -0.1rem;
   display: block;
   font-weight: 600;
+  @include bp($point_2, $direction: min) {
+    display: none;
+  }
 }
 
 .mobile-w {

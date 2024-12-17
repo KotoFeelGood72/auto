@@ -48,7 +48,7 @@ const { openModal } = useModalStore();
 const nav = [
   { name: "Авто в наличии", link: "/cars" },
   { name: "Акции", link: "/" },
-  { name: "Отзывы", link: "/" },
+  // { name: "Отзывы", link: "/" },
   { name: "Автокредит", link: "/#credit" },
   { name: "Trade-In", link: "/#trade" },
   { name: "Контакты", link: "/#contacts" },

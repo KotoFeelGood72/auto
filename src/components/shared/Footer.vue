@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="section_in">
       <div class="row">
         <heading title="Контакты" :level="2" :size="42" class="title" />
