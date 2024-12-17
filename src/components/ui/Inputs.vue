@@ -9,12 +9,13 @@
       :maxlength="maxLength"
       @input="applyMask"
     />
-    <span v-if="error" class="input-message">{{ message }}</span>
+    <!-- <span v-if="error" class="input-message">{{ message }}</span> -->
   </div>
 </template>
 
-<script setup lang="ts">
-import { ref, computed, defineProps, defineEmits } from "vue";
+<script lang="ts" setup>
+import { useToast } from "vue-toastification";
+import { ref, computed, defineProps, defineEmits, watch } from "vue";
 
 const props = withDefaults(
   defineProps<{
@@ -37,6 +38,7 @@ const props = withDefaults(
   }
 );
 
+const toast = useToast();
 const emit = defineEmits(["update:modelValue"]);
 
 const localValue = computed({
@@ -44,12 +46,12 @@ const localValue = computed({
   set: (newValue) => emit("update:modelValue", newValue),
 });
 
+// Маска ввода и валидация
 const applyMask = (event: Event) => {
   const inputElement = event.target as HTMLInputElement;
   let value = inputElement.value;
 
   if (props.phone) {
-    // Маска для телефона
     value = value.replace(/\D/g, "");
     if (value.startsWith("8")) {
       value = "7" + value.slice(1);
@@ -65,13 +67,21 @@ const applyMask = (event: Event) => {
     if (value.length >= 10) formattedValue += `-${value.slice(9, 11)}`;
     localValue.value = formattedValue;
   } else if (props.type === "text") {
-    // Ограничение на русские буквы
     value = value.replace(/[^А-Яа-яЁё\s]/g, ""); // Только русские буквы и пробелы
     localValue.value = value;
   }
 };
-</script>
 
+// Watcher для ошибок
+watch(
+  () => props.error,
+  (newError) => {
+    if (newError) {
+      toast.error(props.message || "Ошибка ввода данных");
+    }
+  }
+);
+</script>
 <style scoped lang="scss">
 .default {
   input {
@@ -107,15 +117,15 @@ input {
 
   &.error {
     border: 0.1rem solid $red;
-    color: $red;
+    color: $red !important;
     &::-webkit-input-placeholder {
-      color: $red;
+      color: $red !important;
     }
   }
 }
 
-.input-message {
-  color: $red;
-  font-size: 1.2rem;
-}
+// .input-message {
+//   color: $red;
+//   font-size: 1.2rem;
+// }
 </style>
