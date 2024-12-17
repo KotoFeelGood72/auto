@@ -46,7 +46,7 @@ import closeBtn from "../ui/buttons/close-btn.vue";
 const { openModal } = useModalStore();
 
 const nav = [
-  { name: "Авто в наличии", link: "/cars" },
+  { name: "Авто в наличии", link: "/cars/" },
   { name: "Акции", link: "/" },
   // { name: "Отзывы", link: "/" },
   { name: "Автокредит", link: "/#credit" },
