@@ -43,7 +43,7 @@ const router = createRouter({
       component: () => import("../pages/AboutUserAgree.vue"),
     },
     {
-      path: "/cars",
+      path: "/cars/",
       name: "cars",
       component: () => import("../pages/cars/index.vue"),
     },
