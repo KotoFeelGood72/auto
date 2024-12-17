@@ -150,6 +150,7 @@ const handleSubmit = async () => {
 
     :deep(.input-wrapper) {
       flex-grow: 1;
+      max-width: 49%;
     }
   }
 }
