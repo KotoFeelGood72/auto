@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.VITE_BASE_URL),
+  history: createWebHistory(),
   scrollBehavior(to, from, savedPosition) {
     // Если переход на якорь (hash), прокручиваем с учётом хедера
     if (to.hash) {
