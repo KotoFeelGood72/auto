@@ -101,8 +101,8 @@ const footerLinks = ref<any>([
 ]);
 
 const info = [
-  { txt: "Ежедневно с 8:00 до 21:00", icon: "svg-spinners:pulse-3" },
-  { txt: "г. Москва, 33км МКАД, 6с6", icon: "et:map-pin" },
+  { txt: "Ежедневно с 8:00 до 20:00", icon: "svg-spinners:pulse-3" },
+  { txt: "Краснобогатырская улица, 2с22, Москва, 107564 ", icon: "et:map-pin" },
   { link: "+7 (499) 289-87-21", icon: "prime:phone" },
 ];
 </script>

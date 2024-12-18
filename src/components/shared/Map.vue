@@ -23,8 +23,8 @@ onMounted(() => {
     const ymaps = window.ymaps;
     ymaps.ready(() => {
       const map = new ymaps.Map("map", {
-        center: [55.751574, 37.573856],
-        zoom: 10,
+        center: [55.815392, 37.686581],
+        zoom: 14,
       });
 
       // Отключение скролла
@@ -47,7 +47,7 @@ onMounted(() => {
             Краснобогатырская улица, 2с22, Москва, 107564
           </p>
           <p style="text-align: left; font-size: 1.4rem; font-family: 'Gilroy'; margin-bottom: 1rem;">
-            Ежедневно с 8:00 до 21:00
+            Ежедневно с 8:00 до 20:00
           </p>
           <button id="orderCallButton"  style="cursor: pointer; padding: .8rem 2rem; background: #0039A6; color: white; border-radius: .5rem;">
             Заказать звонок
@@ -81,12 +81,12 @@ onMounted(() => {
 
       // Кастомная метка с балуном
       const placemark = new ymaps.Placemark(
-        [55.751574, 37.573856],
+        [55.815392, 37.686581],
         {},
         {
           iconLayout: "default#image",
           iconImageHref: "/assets/img/marker.svg",
-          iconImageSize: [60, 60],
+          iconImageSize: [40, 40],
           iconImageOffset: [-20, -20],
           balloonContentLayout: BalloonContentLayout, // Указываем кастомный Layout
         }
