@@ -30,38 +30,39 @@ import Action from "../components/blocks/Action.vue";
 import Trade from "../components/blocks/Trade.vue";
 import { useCars } from "@/composables/useCars";
 import { useHead } from "@unhead/vue";
+import { adv, services, topservices, credits } from "@/data";
 const { useGetAll, popularCars, promotionalCars, brands } = useCars();
 
-const adv = [
-  "Выгода до 20%<br/> на все модели",
-  "Без первоначального<br/> взноса",
-  "ТО или доп. оборудование<br/> в подарок",
-];
+// const adv = [
+//   "Выгода до 20%<br/> на все модели",
+//   "Без первоначального<br/> взноса",
+//   "ТО или доп. оборудование<br/> в подарок",
+// ];
 
-const services = [
-  {
-    icon: "car",
-    title: "Кэшбек на ТО",
-    txt: "Кешбек при покупке в кредит",
-  },
-  { icon: "casco", title: "Каско", txt: "В подарок при покупки в кредит" },
-  { icon: "cash", title: "Кешбек 100%", txt: "На 3 платежа по кредиту" },
-  {
-    icon: "card",
-    title: "Бонус",
-    txt: "Зимняя резина в подарок",
-  },
-];
-const topservices = [
-  { title: "300 000", txt: "Выгода" },
-  { title: "КАСКО", txt: "В подарок" },
-  { title: "БЕСПЛАТНО", txt: "Оценка" },
-];
-const credits = [
-  { title: "от 7%", txt: "Ставка по <br/>кредиту" },
-  { title: "1 час", txt: "Рассмотрение <br/>заявки" },
-  { title: "90%", txt: "Одобрение <br/>по кредиту" },
-];
+// const services = [
+//   {
+//     icon: "car",
+//     title: "Кэшбек на ТО",
+//     txt: "Кешбек при покупке в кредит",
+//   },
+//   { icon: "casco", title: "Каско", txt: "В подарок при покупки в кредит" },
+//   { icon: "cash", title: "Кешбек 100%", txt: "На 3 платежа по кредиту" },
+//   {
+//     icon: "card",
+//     title: "Бонус",
+//     txt: "Зимняя резина в подарок",
+//   },
+// ];
+// const topservices = [
+//   { title: "300 000", txt: "Выгода" },
+//   { title: "КАСКО", txt: "В подарок" },
+//   { title: "БЕСПЛАТНО", txt: "Оценка" },
+// ];
+// const credits = [
+//   { title: "от 7%", txt: "Ставка по <br/>кредиту" },
+//   { title: "1 час", txt: "Рассмотрение <br/>заявки" },
+//   { title: "90%", txt: "Одобрение <br/>по кредиту" },
+// ];
 
 const updateSeo = () => {
   const title = `Купить новые автомобили`;

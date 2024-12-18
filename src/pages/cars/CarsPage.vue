@@ -13,6 +13,14 @@
         <div ref="scrollTrigger" class="scroll-trigger"></div>
       </div>
     </div>
+    <Slider
+      title="Спецпредложения на покупку нового авто"
+      :cars="promotionalCars"
+      id="cars-pages"
+    />
+    <Programs />
+    <Trade :services="services" :topservices="topservices" />
+    <Credit :credits="credits" />
   </div>
 </template>
 
@@ -22,8 +30,18 @@ import ModelsGrid from "@/components/blocks/ModelsGrid.vue";
 import { useCars } from "@/composables/useCars";
 import { onMounted, onUnmounted, ref, watch } from "vue";
 import { useHead } from "@unhead/vue";
-
-const { useGetAll, filteredCars, brands, isLoading, loadMoreCars } = useCars();
+import { adv, services, topservices, credits } from "@/data";
+import Slider from "@/components/slider/Slider.vue";
+import Programs from "@/components/shared/Programs.vue";
+import Credit from "@/components/shared/Credit.vue";
+const {
+  useGetAll,
+  filteredCars,
+  brands,
+  isLoading,
+  loadMoreCars,
+  promotionalCars,
+} = useCars();
 
 const scrollTrigger = ref<HTMLElement | null>(null); // Реф для триггера
 let observer: IntersectionObserver | null = null;

@@ -13,6 +13,14 @@
         <div ref="scrollTrigger" class="scroll-trigger"></div>
       </div>
     </div>
+    <Slider
+      title="Спецпредложения на покупку нового авто"
+      :cars="promotionalCars"
+      id="cars-pages"
+    />
+    <Programs />
+    <Trade :services="services" :topservices="topservices" />
+    <Credit :credits="credits" />
   </div>
 </template>
 
@@ -23,7 +31,10 @@ import { useCars } from "@/composables/useCars";
 import { onMounted, onUnmounted, ref, watch } from "vue";
 import { useHead } from "@unhead/vue";
 import { useRoute } from "vue-router";
-
+import { adv, services, topservices, credits } from "@/data";
+import Slider from "@/components/slider/Slider.vue";
+import Programs from "@/components/shared/Programs.vue";
+import Credit from "@/components/shared/Credit.vue";
 const route = useRoute();
 const {
   useGetAll,
@@ -33,6 +44,7 @@ const {
   filterByBrand,
   isLoading,
   loadMoreCars,
+  promotionalCars,
 } = useCars();
 
 const scrollTrigger = ref<HTMLElement | null>(null); // Реф для триггера
