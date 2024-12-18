@@ -4,7 +4,7 @@
       <div class="row">
         <heading title="КУПИТЬ АВТО В МОСКВЕ" :size="40" class="title" />
         <heading
-          title="Выгода до 20% на все модели в наличии"
+          title="Выгода до 40% на все модели в наличии"
           :level="2"
           :size="36"
           color="gradient"
@@ -35,9 +35,9 @@ const { openModal } = useModalStore();
 
 <style scoped lang="scss">
 .hero {
-  background-image: url("@/assets/img/hero.jpg");
+  background-image: url("/assets/img/changan.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: top 70% center;
   background-repeat: no-repeat;
   color: $white;
   position: relative;

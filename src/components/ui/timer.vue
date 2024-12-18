@@ -102,8 +102,8 @@ onUnmounted(() => {
   @include flex-start;
   background: linear-gradient(
     to right,
-    rgba(255, 255, 255, 0.27) 50%,
-    #ffffff80 50%
+    rgba(49, 48, 48, 0.76) 50%,
+    #4747479f 50%
   );
   width: 11rem;
   height: 6.8rem;
