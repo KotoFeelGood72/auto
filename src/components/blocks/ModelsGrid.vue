@@ -102,13 +102,6 @@ onMounted(() => {
   }
 }
 
-// .model-item:first-child {
-//   margin-left: 2rem;
-// }
-// .model-item:last-child {
-//   margin-left: 2rem;
-// }
-
 .models {
   .section_in {
     @include bp($point_2) {

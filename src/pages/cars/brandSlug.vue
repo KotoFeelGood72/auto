@@ -4,34 +4,13 @@
       <ModelsGrid :models="brands" />
       <div class="section_in">
         <div class="grid">
-          <AutoCard v-for="item in paginatedCars" :key="item.id" :card="item" />
+          <AutoCard v-for="item in filteredCars" :key="item.id" :card="item" />
         </div>
-        <div class="pagination" v-if="totalPages > 1">
-          <div
-            class="nav-btn"
-            :class="{ disabled: currentPage === 1 }"
-            @click="changePage(currentPage - 1)"
-          >
-            <Icons icon="bytesize:chevron-left" :size="16" />
-          </div>
-          <ul class="pagination-list">
-            <li
-              v-for="page in visiblePages"
-              :key="page"
-              :class="{ active: page === currentPage }"
-              @click="changePage(page)"
-            >
-              {{ page }}
-            </li>
-          </ul>
-          <div
-            class="nav-btn"
-            :class="{ disabled: currentPage === totalPages }"
-            @click="changePage(currentPage + 1)"
-          >
-            <Icons icon="bytesize:chevron-right" :size="16" />
-          </div>
+        <div class="loading" v-if="isLoading">
+          <Icons icon="svg-spinners:ring-resize" :size="18" />
+          <p>Загрузка...</p>
         </div>
+        <div ref="scrollTrigger" class="scroll-trigger"></div>
       </div>
     </div>
   </div>
@@ -40,77 +19,54 @@
 <script setup lang="ts">
 import AutoCard from "@/components/card/AutoCard.vue";
 import ModelsGrid from "@/components/blocks/ModelsGrid.vue";
-import { useRoute, useRouter } from "vue-router";
 import { useCars } from "@/composables/useCars";
-import { onMounted, computed, watch } from "vue";
+import { onMounted, onUnmounted, ref, watch } from "vue";
 import { useHead } from "@unhead/vue";
-// import { useSeo } from "~/composables/useSeo";
-
-const {
-  useGetAll,
-  paginatedCars,
-  brands,
-  cars,
-  filteredCars,
-  selectedBrand,
-  filterByBrand,
-  currentPage,
-  itemsPerPage,
-  setCurrentPage,
-} = useCars();
+import { useRoute } from "vue-router";
 
 const route = useRoute();
-const router = useRouter();
-onMounted(() => {
-  useGetAll().then(() => {
-    const brandFromUrl = route.params.brandSlug as string | null;
-    updateSeo();
-    if (brandFromUrl) {
-      filterByBrand(brandFromUrl);
-    }
-    const pageFromUrl = parseInt(route.query.page as string) || 1;
-    setCurrentPage(pageFromUrl);
+const {
+  useGetAll,
+  filteredCars,
+  brands,
+  selectedBrand,
+  filterByBrand,
+  isLoading,
+  loadMoreCars,
+} = useCars();
+
+const scrollTrigger = ref<HTMLElement | null>(null); // Реф для триггера
+let observer: IntersectionObserver | null = null;
+
+onMounted(async () => {
+  await useGetAll();
+  updateSeo();
+  filterByBrand(route.params.brandSlug as any);
+  // Инициализация Intersection Observer
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !isLoading.value) {
+        console.log("Trigger visible - loading more cars...");
+        loadMoreCars();
+      }
+    });
   });
+
+  // Наблюдаем за триггером
+  if (scrollTrigger.value) {
+    observer.observe(scrollTrigger.value);
+  }
 });
 
-const changePage = (page: number) => {
-  setCurrentPage(page);
-  router.push({ query: { ...route.query, page: page.toString() } });
-};
-
-const totalPages = computed(() => {
-  const totalItems = selectedBrand
-    ? filteredCars.value.length
-    : cars.value.length;
-  return Math.ceil(totalItems / itemsPerPage.value);
-});
-
-const visiblePages = computed(() => {
-  const pages = [];
-  const total = totalPages.value;
-  const current = currentPage.value;
-  const maxVisible = 5;
-
-  let start = Math.max(1, current - Math.floor(maxVisible / 2));
-  let end = Math.min(total, start + maxVisible - 1);
-
-  if (end - start + 1 < maxVisible) {
-    start = Math.max(1, end - maxVisible + 1);
+onUnmounted(() => {
+  if (observer && scrollTrigger.value) {
+    observer.unobserve(scrollTrigger.value);
   }
-
-  for (let i = start; i <= end; i++) {
-    pages.push(i);
-  }
-
-  return pages;
 });
 
 const updateSeo = () => {
   const brandName: any = selectedBrand?.value || "Все автомобили";
-  const pageNumber =
-    currentPage.value > 1 ? ` | Страница ${currentPage.value}` : "";
-
-  const title = `${brandName} - Купить новые автомобили${pageNumber}`;
+  const title = `${brandName} - Купить новые автомобили ${brandName.toLowerCase()}`;
   const description = `Ознакомьтесь с нашим ассортиментом ${brandName.toLowerCase()} и выберите идеальный автомобиль. Удобные условия покупки, кредит и тест-драйв.`;
 
   useHead({
@@ -124,6 +80,15 @@ const updateSeo = () => {
   });
 };
 
+// watch(
+//   () => selectedBrand.value,
+//   (newBrandSlug) => {
+//     console.log(selectedBrand);
+//     filterByBrand(newBrandSlug as string);
+//     updateSeo();
+//   }
+// );
+
 watch(
   () => route.params.brandSlug,
   (newBrandSlug) => {
@@ -132,7 +97,6 @@ watch(
     } else {
       filterByBrand(null);
     }
-    setCurrentPage(1);
     updateSeo();
   }
 );
