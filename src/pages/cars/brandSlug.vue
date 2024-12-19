@@ -194,4 +194,10 @@ watch(
     cursor: not-allowed;
   }
 }
+
+.loading {
+  @include flex-center;
+  gap: 1rem;
+  font-size: 1.8rem;
+}
 </style>

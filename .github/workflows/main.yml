@@ -36,5 +36,5 @@ jobs:
           lftp -c "
           set ssl:verify-certificate no;
           open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER;
-          mirror -R ./dist/ /www/autocarmsk.ru/; 
+          mirror -R --delete ./dist /www/autocarmsk.ru/wp-content/themes/auto-car-msk/vue/;
           quit"
