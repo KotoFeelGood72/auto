@@ -24,11 +24,9 @@
       <div class="row">
         <div>
           <p class="price">{{ card.acf.new_price }}</p>
-          <p class="old">{{ card.acf.old_price }}</p>
+          <p class="old">{{ formattedOldPrice }}</p>
         </div>
-        <div class="credit">
-          В кредит от <br />{{ card.monthly_payment }} ₽/мес.
-        </div>
+        <div class="credit">{{ card.acf.monthly_payment }}</div>
       </div>
       <div class="btn-row">
         <btn
@@ -82,6 +80,21 @@ const isCardValid = computed(() => {
     props.card.acf.main_img.url &&
     props.card.title
   );
+});
+
+const formattedOldPrice = computed(() => {
+  const priceString = props.card.acf.new_price; // Используем новую цену как базу
+  if (!priceString) return "Цена не указана"; // Проверка на отсутствие значения
+
+  const price = parseInt(priceString.replace(/[^0-9]/g, ""), 10); // Извлекаем только число
+  if (!price || price <= 0) return "Цена не указана"; // Проверка на некорректное значение
+
+  // Добавляем рандомное значение до 500,000
+  const randomIncrease = Math.floor(Math.random() * 500000) + 1; // Генерация от 1 до 500,000
+  const oldPrice = price + randomIncrease;
+
+  // Форматируем старую цену
+  return oldPrice.toLocaleString("ru-RU") + " ₽";
 });
 </script>
 
