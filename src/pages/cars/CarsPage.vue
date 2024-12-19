@@ -31,6 +31,7 @@ import { useCars } from "@/composables/useCars";
 import { onMounted, onUnmounted, ref, watch } from "vue";
 import { useHead } from "@unhead/vue";
 import { adv, services, topservices, credits } from "@/data";
+import Trade from "@/components/blocks/Trade.vue";
 import Slider from "@/components/slider/Slider.vue";
 import Programs from "@/components/shared/Programs.vue";
 import Credit from "@/components/shared/Credit.vue";
