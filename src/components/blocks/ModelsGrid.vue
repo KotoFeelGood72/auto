@@ -11,7 +11,7 @@
         <div
           v-for="(item, i) in models"
           :key="'models-item-' + i"
-          :data-brand="item"
+          :data-brand="item.terms?.brand[0]"
           class="model-item"
         >
           <ModelsCard :card="item" />
@@ -89,8 +89,8 @@ onMounted(() => {
 }
 
 .grid {
-  @include flex-start;
-  gap: 2.1rem;
+  @include flex-space;
+  gap: 1.5rem;
   flex-wrap: wrap;
 
   @include bp($point_2) {

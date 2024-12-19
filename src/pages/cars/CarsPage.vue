@@ -34,19 +34,22 @@ import { adv, services, topservices, credits } from "@/data";
 import Slider from "@/components/slider/Slider.vue";
 import Programs from "@/components/shared/Programs.vue";
 import Credit from "@/components/shared/Credit.vue";
+import { brands } from "@/data/brands";
 const {
   useGetAll,
   filteredCars,
-  brands,
+  // taxs,
   isLoading,
   loadMoreCars,
   promotionalCars,
+  // useBrands,
 } = useCars();
 
 const scrollTrigger = ref<HTMLElement | null>(null); // Реф для триггера
 let observer: IntersectionObserver | null = null;
 
 onMounted(async () => {
+  // await useBrands();
   await useGetAll();
   updateSeo();
   observer = new IntersectionObserver((entries) => {

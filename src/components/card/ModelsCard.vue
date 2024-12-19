@@ -1,10 +1,10 @@
 <template>
-  <RouterLink :to="'/cars/' + card">
+  <RouterLink v-if="card" :to="'/cars/' + card.slug">
     <div class="card">
       <div class="img">
-        <img :src="`/assets/img/brands/${card}.svg`" class="" />
+        <img :src="card.url" class="" />
       </div>
-      <p class="title">{{ card }}</p>
+      <p class="title">{{ card.title }}</p>
     </div>
   </RouterLink>
 </template>
@@ -19,8 +19,9 @@ defineProps<{
 <style scoped lang="scss">
 .card {
   width: 9.7rem;
-  height: 8.7rem;
+  height: 6.7rem;
   border: 0.1rem solid #c8c8c9;
+  background-color: $white;
   @include flex-center;
   flex-direction: column;
   padding: 1.5rem;
@@ -53,8 +54,9 @@ a {
 
 .img {
   width: 4rem;
-  height: 4rem;
+  height: auto;
   @include flex-center;
+  object-fit: contain;
 
   @include bp($point_2) {
     flex-grow: 1;

@@ -31,7 +31,8 @@ import Trade from "../components/blocks/Trade.vue";
 import { useCars } from "@/composables/useCars";
 import { useHead } from "@unhead/vue";
 import { adv, services, topservices, credits } from "@/data";
-const { useGetAll, popularCars, promotionalCars, brands } = useCars();
+import { brands } from "@/data/brands";
+const { useGetAll, popularCars, promotionalCars } = useCars();
 
 // const adv = [
 //   "Выгода до 20%<br/> на все модели",
@@ -81,6 +82,7 @@ const updateSeo = () => {
 
 onMounted(() => {
   useGetAll(40);
+  // useBrands();
   updateSeo();
 });
 </script>

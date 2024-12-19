@@ -45,16 +45,16 @@ export default defineConfig(({ mode }) => {
       port: 5173,
       host: true,
       proxy: {
-        "/api": {
-          target: apiUrl, // Использование переменной окружения
+        "/api/wp": {
+          target: "https://autocarmsk.ru/wp-content/uploads/json",
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, ""),
+          rewrite: (path) => path.replace(/^\/api\/wp/, ""),
         },
         "/api/crm": {
-          target: "http://crm.renault-s.ru", // Целевой сервер
-          changeOrigin: true, // Меняет заголовок Origin
+          target: "http://crm.renault-s.ru",
+          changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api\/crm/, "/expo/api/deal/add"),
-          secure: false, // Отключает проверку SSL (если это необходимо)
+          secure: false,
         },
       },
     },

@@ -35,13 +35,16 @@ import { adv, services, topservices, credits } from "@/data";
 import Slider from "@/components/slider/Slider.vue";
 import Programs from "@/components/shared/Programs.vue";
 import Credit from "@/components/shared/Credit.vue";
+import Trade from "@/components/blocks/Trade.vue";
+import { brands } from "@/data/brands";
 const route = useRoute();
 const {
   useGetAll,
   filteredCars,
-  brands,
+  // taxs,
   selectedBrand,
   filterByBrand,
+  // useBrands,
   isLoading,
   loadMoreCars,
   promotionalCars,
@@ -53,6 +56,7 @@ let observer: IntersectionObserver | null = null;
 onMounted(async () => {
   await useGetAll();
   updateSeo();
+  // useBrands();
   filterByBrand(route.params.brandSlug as any);
   // Инициализация Intersection Observer
   observer = new IntersectionObserver((entries) => {
@@ -78,8 +82,8 @@ onUnmounted(() => {
 
 const updateSeo = () => {
   const brandName: any = selectedBrand?.value || "Все автомобили";
-  const title = `${brandName} - Купить новые автомобили ${brandName.toLowerCase()}`;
-  const description = `Ознакомьтесь с нашим ассортиментом ${brandName.toLowerCase()} и выберите идеальный автомобиль. Удобные условия покупки, кредит и тест-драйв.`;
+  const title = `${brandName} - Купить новые автомобили ${brandName}`;
+  const description = `Ознакомьтесь с нашим ассортиментом ${brandName} и выберите идеальный автомобиль. Удобные условия покупки, кредит и тест-драйв.`;
 
   useHead({
     title,
