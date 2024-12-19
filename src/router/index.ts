@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-
+import setupGlobalLoadingMiddleware from "@/middleware/setupGlobalLoadingMiddleware";
 const router = createRouter({
   history: createWebHistory(),
   scrollBehavior(to, from, savedPosition) {
@@ -59,5 +59,6 @@ const router = createRouter({
     },
   ],
 });
+setupGlobalLoadingMiddleware(router);
 
 export default router;
