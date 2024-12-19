@@ -18,7 +18,7 @@
       <div class="contact">
         <a href="+7 (499) 289-87-21" class="phone">
           <div class="phone-icon">
-            <Icon name="f:phone" :size="20" />
+            <Icons icon="uil:phone" :size="20" />
           </div>
           <heading title="+7 (499) 289-87-21" :level="2" :size="24" />
         </a>
@@ -40,15 +40,15 @@
 import Logo from "../ui/Logo.vue";
 import { useModalStore } from "@/stores/useModalStore";
 import btn from "../ui/btn.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 import closeBtn from "../ui/buttons/close-btn.vue";
 
 const { openModal } = useModalStore();
 
 const nav = [
-  { name: "Авто в наличии", link: "/cars" },
+  { name: "Авто в наличии", link: "/cars/" },
   { name: "Акции", link: "/" },
-  { name: "Отзывы", link: "/" },
+  // { name: "Отзывы", link: "/" },
   { name: "Автокредит", link: "/#credit" },
   { name: "Trade-In", link: "/#trade" },
   { name: "Контакты", link: "/#contacts" },

@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="section_in">
       <div class="row">
         <heading title="Контакты" :level="2" :size="42" class="title" />
@@ -10,7 +10,9 @@
               v-for="(item, i) in info"
               :key="'info-item-' + i"
             >
-              <div class="item-icon"><Icon :name="item.icon" :size="20" /></div>
+              <div class="item-icon">
+                <Icons :icon="item.icon" :size="20" />
+              </div>
               <p class="item-txt" v-if="item.txt">{{ item.txt }}</p>
               <a class="item-link" :href="'tel:' + item.link">{{
                 item.link
@@ -29,9 +31,11 @@
       </div>
       <div class="footer-bottom">
         <div class="footer-bottom__left">
-          <div class="img">
-            <img src="@/assets/img/logo-footer.svg" alt="АВТОКАР" />
-          </div>
+          <RouterLink to="/">
+            <div class="img">
+              <img src="@/assets/img/logo-footer.svg" alt="АВТОКАР" />
+            </div>
+          </RouterLink>
         </div>
         <nav class="nav-col">
           <RouterLink
@@ -69,12 +73,13 @@
           весь срок действия кредитного договора, а также покупки доп.
           оборудования. Все подробности предоставления кредитной программы и
           полные условия уточняйте у менеджеров. Срок проведения акции с
-          01.11.2024 по 08.12.2024. Подробности акции, стоимость автомобилей
-          уточняйте у менеджеров отдела продаж или по телефону: +7 861 201 84 27
-          Реквизиты организации: ООО "АВАНГАРД", ИНН: 2312329147, ОГРН:
-          1242300044722 Кредитор: АО «Тинькофф Банк», лицензия ЦБ РФ № 2673 от
-          11.04.2022 Страховой партнер: АО «АльфаСтрахование» (лицензия ОС №
-          2239-03 от 13.11.2017 г.)
+          01.12.2024 по 31.12.2024. Подробности акции, стоимость автомобилей
+          уточняйте у менеджеров отдела продаж или по телефону: +7 (499)
+          289-87-21 <br /><br />Реквизиты организации: ОБЩЕСТВО С ОГРАНИЧЕННОЙ
+          ОТВЕТСТВЕННОСТЬЮ "ГОРЛОГИСТИКА" ИНН 9718176617, ОГРН 1217700345455,
+          КПП 771801001 от 23 июля 2021 г. Кредитор: АО «Тинькофф Банк»,
+          лицензия ЦБ РФ № 2673 от 11.04.2022 Страховой партнер: АО
+          «АльфаСтрахование» (лицензия ОС № 2239-03 от 13.11.2017 г.)
         </p>
       </div>
     </div>
@@ -83,7 +88,7 @@
 
 <script setup lang="ts">
 import Btn from "../ui/btn.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 import { useModalStore } from "@/stores/useModalStore";
 import { ref } from "vue";
 
@@ -96,8 +101,8 @@ const footerLinks = ref<any>([
 ]);
 
 const info = [
-  { txt: "Ежедневно с 8:00 до 21:00", icon: "svg-spinners:pulse-3" },
-  { txt: "г. Москва, 33км МКАД, 6с6", icon: "et:map-pin" },
+  { txt: "Ежедневно с 8:00 до 20:00", icon: "svg-spinners:pulse-3" },
+  { txt: "Краснобогатырская улица, 2с22, Москва, 107564 ", icon: "et:map-pin" },
   { link: "+7 (499) 289-87-21", icon: "prime:phone" },
 ];
 </script>

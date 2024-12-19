@@ -10,7 +10,7 @@
         </div>
         <div class="col">
           <div class="contact">
-            <a href="+7 (499) 289-87-21" class="phone">
+            <a href="tel:+74992898721" class="phone">
               <div class="phone-icon">
                 <Icons icon="uil:phone" :size="20" />
               </div>
@@ -18,14 +18,17 @@
             </a>
             <span class="timework">Без выходных с 08 до 20ч</span>
           </div>
-          <btn
-            name="Заказать звонок"
-            size="large"
-            styles="secondary"
-            color="dark"
-            @click="openModal('call')"
-            class="header_btn"
-          />
+          <div class="mobile-w">
+            <btn
+              name="Заказать звонок"
+              size="large"
+              styles="secondary"
+              color="dark"
+              @click="openModal('call')"
+              class="header_btn"
+            />
+            <span class="mobile-timework">Без выходных с 08 до 20ч</span>
+          </div>
           <div class="burger" @click="openModal('burger')">
             <Icons icon="iconamoon:menu-burger-horizontal-light" :size="40" />
           </div>
@@ -64,16 +67,16 @@
 <script setup lang="ts">
 import btn from "../ui/btn.vue";
 import Logo from "../ui/Logo.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 import { useModalStore } from "@/stores/useModalStore";
 import { onMounted, ref, onUnmounted } from "vue";
 
 const { openModal } = useModalStore();
 
 const nav = [
-  { name: "Авто в наличии", link: "/cars" },
-  { name: "Акции", link: "/cars" },
-  { name: "Отзывы", link: "/" },
+  { name: "Авто в наличии", link: "/cars/" },
+  { name: "Акции", link: "/cars/" },
+  // { name: "Отзывы", link: "/" },
   { name: "Контакты", link: "/#contacts" },
 ];
 const other = [
@@ -84,7 +87,7 @@ const other = [
 const isSticky = ref(false);
 
 const handleScroll = () => {
-  isSticky.value = window.scrollY > 50; // Если прокрутка больше 50px, добавляем класс
+  isSticky.value = window.scrollY > 50;
 };
 
 onMounted(() => {
@@ -187,6 +190,31 @@ nav {
       top: 0;
       left: 0;
     }
+  }
+}
+
+:deep(.btn.large) {
+  @include bp($point_2) {
+    padding: 0.3rem 0 !important;
+    border: none;
+  }
+}
+
+.mobile-timework {
+  font-size: 1.2rem;
+  margin-top: -0.1rem;
+  display: block;
+  font-weight: 600;
+  @include bp($point_2, $direction: min) {
+    display: none;
+  }
+}
+
+.mobile-w {
+  @include bp($point_2) {
+    @include flex-end;
+    flex-direction: column;
+    align-items: flex-end;
   }
 }
 </style>

@@ -30,35 +30,29 @@ import ModelsGrid from "@/components/blocks/ModelsGrid.vue";
 import { useCars } from "@/composables/useCars";
 import { onMounted, onUnmounted, ref, watch } from "vue";
 import { useHead } from "@unhead/vue";
-import { useRoute } from "vue-router";
 import { adv, services, topservices, credits } from "@/data";
+import Trade from "@/components/blocks/Trade.vue";
 import Slider from "@/components/slider/Slider.vue";
 import Programs from "@/components/shared/Programs.vue";
 import Credit from "@/components/shared/Credit.vue";
-import Trade from "@/components/blocks/Trade.vue";
 import { brands } from "@/data/brands";
-const route = useRoute();
 const {
   useGetAll,
   filteredCars,
   // taxs,
-  selectedBrand,
-  filterByBrand,
-  // useBrands,
   isLoading,
   loadMoreCars,
   promotionalCars,
+  // useBrands,
 } = useCars();
 
 const scrollTrigger = ref<HTMLElement | null>(null); // Реф для триггера
 let observer: IntersectionObserver | null = null;
 
 onMounted(async () => {
+  // await useBrands();
   await useGetAll();
   updateSeo();
-  // useBrands();
-  filterByBrand(route.params.brandSlug as any);
-  // Инициализация Intersection Observer
   observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting && !isLoading.value) {
@@ -81,9 +75,8 @@ onUnmounted(() => {
 });
 
 const updateSeo = () => {
-  const brandName: any = selectedBrand?.value || "Все автомобили";
-  const title = `${brandName} - Купить новые автомобили ${brandName}`;
-  const description = `Ознакомьтесь с нашим ассортиментом ${brandName} и выберите идеальный автомобиль. Удобные условия покупки, кредит и тест-драйв.`;
+  const title = `Купить новые автомобили`;
+  const description = `Ознакомьтесь с нашим ассортиментом и выберите идеальный автомобиль. Удобные условия покупки, кредит и тест-драйв.`;
 
   useHead({
     title,
@@ -95,32 +88,12 @@ const updateSeo = () => {
     ],
   });
 };
-
-// watch(
-//   () => selectedBrand.value,
-//   (newBrandSlug) => {
-//     console.log(selectedBrand);
-//     filterByBrand(newBrandSlug as string);
-//     updateSeo();
-//   }
-// );
-
-watch(
-  () => route.params.brandSlug,
-  (newBrandSlug) => {
-    if (newBrandSlug) {
-      filterByBrand(newBrandSlug as string);
-    } else {
-      filterByBrand(null);
-    }
-    updateSeo();
-  }
-);
 </script>
 
 <style scoped lang="scss">
 .shop-grid {
   padding: 6rem 0;
+  position: relative;
   @include bp($point_2) {
     padding-top: 4rem;
   }

@@ -1,36 +1,56 @@
 <template>
-  <RouterLink :to="card.slug" class="card" v-if="isCardValid">
-    <div class="hot">{{ card.saleBlock }}</div>
+  <!-- <RouterLink
+    :to="`/cars/${card?.terms?.brand[0].toLowerCase()}/${card.slug}`"
+    class="card"
+    v-if="isCardValid"
+  > -->
+  <div
+    class="card"
+    v-if="isCardValid"
+    @click.prevent="
+      openModal('car', {
+        img: card.acf.main_img.url,
+        title: 'Спецпредложение по кредиту',
+        name: card.title,
+      })
+    "
+  >
+    <div class="hot">{{ card.acf.sale ? card.acf.sale : "100 000 ₽" }}</div>
     <div class="img">
-      <img :src="card.image" :alt="card.title" />
+      <img :src="card.acf.main_img.url" :alt="card.title" />
     </div>
     <div class="content">
       <heading :title="card.title" :size="24" class="title" />
       <div class="row">
         <div>
-          <p class="price">от {{ card.priceNew }} ₽</p>
-          <p class="old">от {{ card.priceOld }} ₽</p>
+          <p class="price">{{ card.acf.new_price }}</p>
+          <p class="old">{{ formattedOldPrice }}</p>
         </div>
-        <div class="credit">
-          В кредит от <br />{{ card.monthlyPayment }} ₽/мес.
-        </div>
+        <div class="credit">{{ card.acf.monthly_payment }}</div>
       </div>
       <div class="btn-row">
         <btn
-          name="Подробнее"
+          name="TRADE-IN"
           size="normal"
           styles="secondary"
           color="blue"
           class="first-btn"
+          @click.stop="
+            openModal('car', {
+              img: card.acf.main_img.url,
+              title: 'Спецпредложение по TRADE-IN',
+              name: card.title,
+            })
+          "
         />
         <btn
           name="Купить в кредит"
           size="normal"
           styles="primary"
           color="blue"
-          @click.prevent="
+          @click.stop="
             openModal('car', {
-              img: card.image,
+              img: card.acf.main_img.url,
               title: 'Спецпредложение по кредиту',
               name: card.title,
             })
@@ -38,12 +58,12 @@
         />
       </div>
     </div>
-  </RouterLink>
+  </div>
 </template>
 
 <script setup lang="ts">
 import btn from "../ui/btn.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 import { computed } from "vue";
 import { useModalStore } from "@/stores/useModalStore";
 
@@ -57,9 +77,24 @@ const isCardValid = computed(() => {
     props.card &&
     Object.keys(props.card).length > 0 &&
     props.card.slug &&
-    props.card.image &&
+    props.card.acf.main_img.url &&
     props.card.title
   );
+});
+
+const formattedOldPrice = computed(() => {
+  const priceString = props.card.acf.new_price; // Используем новую цену как базу
+  if (!priceString) return "Цена не указана"; // Проверка на отсутствие значения
+
+  const price = parseInt(priceString.replace(/[^0-9]/g, ""), 10); // Извлекаем только число
+  if (!price || price <= 0) return "Цена не указана"; // Проверка на некорректное значение
+
+  // Добавляем рандомное значение до 500,000
+  const randomIncrease = Math.floor(Math.random() * 500000) + 1; // Генерация от 1 до 500,000
+  const oldPrice = price + randomIncrease;
+
+  // Форматируем старую цену
+  return oldPrice.toLocaleString("ru-RU") + " ₽";
 });
 </script>
 
@@ -70,6 +105,7 @@ const isCardValid = computed(() => {
   flex-direction: column;
   border-radius: 1rem;
   position: relative;
+  cursor: pointer;
 }
 
 .hot {
@@ -93,6 +129,7 @@ const isCardValid = computed(() => {
 
 .content {
   padding: 1.5rem;
+  width: 100%;
   @include bp($point_2) {
     display: flex;
     flex-direction: column;
@@ -101,7 +138,13 @@ const isCardValid = computed(() => {
   }
   .title {
     margin-bottom: 2rem;
-    min-height: 6.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-height: 2rem;
+    max-height: 3rem;
     @include bp($point_2) {
       min-height: auto;
       margin-bottom: 1rem;
@@ -165,6 +208,11 @@ const isCardValid = computed(() => {
 
 .img {
   padding: 4rem 0 2rem 0;
+  height: 22rem;
+  max-width: 30rem;
+  // img {
+  //   height: auto !important;
+  // }
   @include bp($point_2) {
     width: 100%;
     height: 100%;

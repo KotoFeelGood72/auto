@@ -62,6 +62,8 @@ export function useFormSubmit() {
 
       isSuccess.value = true;
 
+      ym(99219899, "reachGoal", "form");
+
       if (showToast) {
         toast.success("Данные успешно отправлены!");
       }
@@ -80,7 +82,7 @@ export function useFormSubmit() {
   };
 
   const sendToCRM = async (data: Record<string, any>) => {
-    const crmProxyUrl = "/api/crm";
+    const crmProxyUrl = "https://autocarmsk.ru/proxy.php";
 
     const apiKey = "ed2f550d045b3d3a54d2662fe6d5e677"; // Ваш API-ключ
 

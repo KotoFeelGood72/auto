@@ -2,7 +2,7 @@
   <section class="programs mb-8">
     <div class="section_in">
       <heading
-        title="Государственные программы"
+        title="Государственные программы автокредитования"
         :level="2"
         :size="42"
         class="title"
@@ -37,7 +37,7 @@
 
 <script setup lang="ts">
 import ProgramsCard from "../card/ProgramsCard.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 
 const programs = [
   { title: "Семейный автомобиль", txt: "Госпрограмма" },
@@ -49,7 +49,7 @@ const services = [
   { title: "Автокредит <br/>от 7%" },
   { title: "Компенсация <br/>проезда" },
   { title: "5 лет гарантии или<br/> 150 000 пробега" },
-  { title: "20% Кешбека на 3<br/> ТО в подарок" },
+  { title: "20% Кешбека на <br/> ТО в подарок" },
 ];
 </script>
 

@@ -18,7 +18,7 @@
 
 <script setup>
 import Form from "../shared/Form.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 import closeBtn from "../ui/buttons/close-btn.vue";
 import { useModalStoreRefs } from "@/stores/useModalStore";
 

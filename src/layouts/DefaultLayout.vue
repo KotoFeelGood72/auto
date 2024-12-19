@@ -5,13 +5,15 @@
     <slot />
     <Map />
     <Footer />
-    <!-- Условие для отображения TradeFly -->
     <transition name="fade">
-      <TradeFly v-if="isTradeFlyVisible && route.name === 'index'" />
+      <TradeFly v-if="isTradeFlyVisible && route.name === 'home'" />
     </transition>
     <modal />
     <transition name="fade-bg">
       <div class="bg" v-if="isModalActive" @click="closeAllModals"></div>
+    </transition>
+    <transition name="fade">
+      <loader v-if="isLoading" />
     </transition>
   </div>
 </template>
@@ -26,7 +28,10 @@ import modal from "../components/modals/modal.vue";
 import SaleBanner from "../components/shared/SaleBanner.vue";
 import Header from "@/components/shared/Header.vue";
 import Footer from "@/components/shared/Footer.vue";
+import loader from "@/components/ui/loader.vue";
+import { useLoading } from "@/composables/useLoading";
 
+const { isLoading } = useLoading();
 const { closeAllModals } = useModalStore();
 const { modals } = useModalStoreRefs();
 const route = useRoute();
@@ -71,7 +76,7 @@ watch(isModalActive, (newValue) => {
   }
 });
 
-const isIdRoutePage = computed(() => route.name === "cars-brand-model");
+const isIdRoutePage = computed(() => route.name === "model-slug");
 </script>
 
 <style scoped lang="scss">

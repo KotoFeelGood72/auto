@@ -1,28 +1,20 @@
-// middleware/setupGlobalLoadingMiddleware.ts
-import { useLoadingStore } from "@/stores/useLoadingStore";
-import { getActivePinia } from "pinia";
+import { useLoading } from "@/composables/useLoading";
 
 export default function setupGlobalLoadingMiddleware(router: any) {
-  router.beforeEach((to: any, from: any, next: any) => {
-    const pinia = getActivePinia();
-    const { setLoading } = useLoadingStore(pinia);
+  const { setLoading } = useLoading();
 
-    // Включаем прелоадер, только если изменился сам маршрут, а не query параметры
+  router.beforeEach(async (to: any, from: any, next: any) => {
     if (to.path !== from.path) {
-      setLoading(true);
+      setLoading(true); // Устанавливаем состояние загрузки
+      await new Promise((resolve) => setTimeout(resolve, 600)); // Ждем 600 мс
     }
-    next();
+    next(); // Продолжаем переход
   });
 
-  router.afterEach((to: any, from: any) => {
-    const pinia = getActivePinia();
-    const { setLoading } = useLoadingStore(pinia);
-
-    // Отключаем прелоадер, если изменился маршрут (но не query параметры)
+  router.afterEach(async (to: any, from: any) => {
     if (to.path !== from.path) {
-      setTimeout(() => {
-        setLoading(false);
-      }, 500);
+      await new Promise((resolve) => setTimeout(resolve, 600));
+      setLoading(false);
     }
   });
 }

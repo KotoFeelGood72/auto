@@ -75,6 +75,8 @@ const resetError = () => {
 };
 
 const handleSubmit = async () => {
+  isError.value = false; // Сброс ошибки перед проверкой
+
   if (!form.value.name || form.value.name.length < 2) {
     isError.value = true;
     return;
@@ -105,6 +107,7 @@ const handleSubmit = async () => {
     await sendToCRM(data);
     isSuccess.value = true;
     resetForm();
+    isError.value = false; // Сброс ошибки после успешной отправки
   } catch (error) {
     isError.value = true;
     console.error("Ошибка отправки:", errorMessage.value || error);
@@ -150,6 +153,8 @@ const handleSubmit = async () => {
     }
   }
 }
+
+
 
 .black {
   color: $black;

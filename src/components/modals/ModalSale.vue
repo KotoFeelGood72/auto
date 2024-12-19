@@ -9,7 +9,7 @@
       <ul>
         <li v-for="(item, i) in list" :key="'form-list-item-' + i">
           <div class="list-icon">
-            <Icon name="ep:check" :size="20" />
+            <Icons icon="ep:check" :size="20" />
           </div>
           <div v-html="item"></div>
         </li>
@@ -22,7 +22,7 @@
 <script setup lang="ts">
 import Form from "../shared/Form.vue";
 import closeBtn from "../ui/buttons/close-btn.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 
 const list = [
   "<span>Без</span> первоначального взноса",

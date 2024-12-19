@@ -29,77 +29,61 @@ import ModelsGrid from "../components/blocks/ModelsGrid.vue";
 import Action from "../components/blocks/Action.vue";
 import Trade from "../components/blocks/Trade.vue";
 import { useCars } from "@/composables/useCars";
-const { useGetAll, popularCars, promotionalCars, brands } = useCars();
+import { useHead } from "@unhead/vue";
+import { adv, services, topservices, credits } from "@/data";
+import { brands } from "@/data/brands";
+const { useGetAll, popularCars, promotionalCars } = useCars();
 
-const adv = [
-  "Выгода до 20%<br/> на все модели",
-  "Без первоначального<br/> взноса",
-  "ТО или доп. оборудование<br/> в подарок",
-];
+// const adv = [
+//   "Выгода до 20%<br/> на все модели",
+//   "Без первоначального<br/> взноса",
+//   "ТО или доп. оборудование<br/> в подарок",
+// ];
 
-const services = [
-  {
-    icon: "car",
-    title: "Кэшбек на ТО",
-    txt: "Кешбек при покупке в кредит",
-  },
-  { icon: "casco", title: "Каско", txt: "В подарок при покупки в кредит" },
-  { icon: "cash", title: "Кешбек 100%", txt: "На 3 платежа по кредиту" },
-  { icon: "card", title: "Топливная карта", txt: "В подарок на 3 полных бака" },
-];
-const topservices = [
-  { title: "300 000", txt: "Выгода" },
-  { title: "КАСКО", txt: "В подарок" },
-  { title: "БЕСПЛАТНО", txt: "Оценка" },
-];
-const credits = [
-  { title: "от 7%", txt: "Ставка по <br/>кредиту" },
-  { title: "1 час", txt: "Рассмотрение <br/>заявки" },
-  { title: "90%", txt: "Одобрение <br/>по кредиту" },
-];
+// const services = [
+//   {
+//     icon: "car",
+//     title: "Кэшбек на ТО",
+//     txt: "Кешбек при покупке в кредит",
+//   },
+//   { icon: "casco", title: "Каско", txt: "В подарок при покупки в кредит" },
+//   { icon: "cash", title: "Кешбек 100%", txt: "На 3 платежа по кредиту" },
+//   {
+//     icon: "card",
+//     title: "Бонус",
+//     txt: "Зимняя резина в подарок",
+//   },
+// ];
+// const topservices = [
+//   { title: "300 000", txt: "Выгода" },
+//   { title: "КАСКО", txt: "В подарок" },
+//   { title: "БЕСПЛАТНО", txt: "Оценка" },
+// ];
+// const credits = [
+//   { title: "от 7%", txt: "Ставка по <br/>кредиту" },
+//   { title: "1 час", txt: "Рассмотрение <br/>заявки" },
+//   { title: "90%", txt: "Одобрение <br/>по кредиту" },
+// ];
+
+const updateSeo = () => {
+  const title = `Купить новые автомобили`;
+  const description = `Ознакомьтесь с нашим ассортиментом и выберите идеальный автомобиль. Удобные условия покупки, кредит и тест-драйв.`;
+
+  useHead({
+    title,
+    meta: [
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+    ],
+  });
+};
 
 onMounted(() => {
   useGetAll(40);
-
-  // useSeo({
-  //   title:
-  //     singleCar?.value?.title || "Автокар - Новые автомобили Geely в Москве",
-  //   description:
-  //     "Откройте для себя лучшие автомобили" +
-  //     singleCar.value.model +
-  //     " в автосалоне Автокар. Удобные условия покупки, кредит, тест-драйв в Москве.",
-  //   keywords:
-  //     singleCar.value.model +
-  //     "," +
-  //     "автосалон, Москва, новые автомобили, купить " +
-  //     singleCar.value.model,
-  //   image:
-  //     singleCar.value.image || "https://autocarmsk.ru/assets/img/geely.jpg",
-  //   url: "https://autocarmsk.ru" + formattedSlug.value,
-  //   type: "article",
-  //   schema: {
-  //     "@context": "https://schema.org",
-  //     "@type": "Product",
-  //     name: singleCar.value.model + " - " + singleCar.value.brand || "",
-  //     image:
-  //       singleCar.value.image || "https://autocarmsk.ru/assets/img/geely.jpg",
-  //     description:
-  //       singleCar?.value?.title +
-  //       " — современный кроссовер с продвинутыми функциями и высоким уровнем комфорта.",
-  //     brand: {
-  //       "@type": singleCar.value.brand,
-  //       name: singleCar.value.model,
-  //     },
-  //     offers: {
-  //       "@type": "Offer",
-  //       priceCurrency: "RUB",
-  //       price: singleCar.value.priceNew || "Цена не указана",
-  //       itemCondition: "https://schema.org/NewCondition",
-  //       availability: "https://schema.org/InStock",
-  //       url: "https://autocarmsk.ru" + formattedSlug.value,
-  //     },
-  //   },
-  // });
+  // useBrands();
+  updateSeo();
 });
 </script>
 

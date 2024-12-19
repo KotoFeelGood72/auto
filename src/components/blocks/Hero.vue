@@ -4,7 +4,7 @@
       <div class="row">
         <heading title="КУПИТЬ АВТО В МОСКВЕ" :size="40" class="title" />
         <heading
-          title="Выгода до 20% на все модели в наличии с 1 по 31 декабря"
+          title="Выгода до 40% на все модели в наличии"
           :level="2"
           :size="36"
           color="gradient"
@@ -27,7 +27,7 @@
 <script setup lang="ts">
 import { useModalStore } from "@/stores/useModalStore";
 import Btn from "../ui/btn.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 import timer from "../ui/timer.vue";
 
 const { openModal } = useModalStore();
@@ -35,9 +35,9 @@ const { openModal } = useModalStore();
 
 <style scoped lang="scss">
 .hero {
-  background-image: url("@/assets/img/hero.jpg");
+  background-image: url("/assets/img/changan.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: top 70% center;
   background-repeat: no-repeat;
   color: $white;
   position: relative;

@@ -11,7 +11,7 @@
         <div
           v-for="(item, i) in models"
           :key="'models-item-' + i"
-          :data-brand="item"
+          :data-brand="item.terms?.brand[0]"
           class="model-item"
         >
           <ModelsCard :card="item" />
@@ -25,7 +25,7 @@
 import { ref, computed, watch, nextTick, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import ModelsCard from "../card/ModelsCard.vue";
-import heading from "../ui/heading.vue";
+import heading from "../heading.vue";
 
 const props = defineProps<{
   models: any[]; // Предполагаем, что `models` — это массив строк
@@ -34,7 +34,7 @@ const props = defineProps<{
 const route = useRoute();
 const gridContainer = ref<HTMLElement | null>(null);
 
-const isCar = computed(() => route.params.brand || "");
+const isCar = computed(() => route.params.brandSlug || "");
 
 // Прокрутка к активному элементу
 const scrollToActiveElement = async () => {
@@ -58,7 +58,6 @@ const scrollToActiveElement = async () => {
   }
 };
 
-// Следим за изменением данных и `isCar`
 watch(
   () => props.models,
   (newModels) => {
@@ -90,8 +89,8 @@ onMounted(() => {
 }
 
 .grid {
-  @include flex-start;
-  gap: 2.1rem;
+  @include flex-space;
+  gap: 1.5rem;
   flex-wrap: wrap;
 
   @include bp($point_2) {
@@ -102,13 +101,6 @@ onMounted(() => {
     padding: 0 2rem 1.5rem 2rem;
   }
 }
-
-// .model-item:first-child {
-//   margin-left: 2rem;
-// }
-// .model-item:last-child {
-//   margin-left: 2rem;
-// }
 
 .models {
   .section_in {

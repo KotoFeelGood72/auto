@@ -1,17 +1,26 @@
 import { createRouter, createWebHistory } from "vue-router";
-
+import setupGlobalLoadingMiddleware from "@/middleware/setupGlobalLoadingMiddleware";
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL_ASSET),
-  scrollBehavior(to: any, from: any, savedPosition: any) {
-    if (to.path === from.path && to.fullPath !== from.fullPath) {
-      return null;
+  history: createWebHistory(),
+  scrollBehavior(to, from, savedPosition) {
+    // Если переход на якорь (hash), прокручиваем с учётом хедера
+    if (to.hash) {
+      return {
+        el: to.hash,
+        top: 100, // Высота хедера для отступа
+        behavior: "smooth", // Плавная прокрутка
+      };
     }
+
+    // Если сохранена позиция (например, при нажатии "назад/вперёд"), восстанавливаем её
     if (savedPosition) {
       return savedPosition;
-    } else {
-      return { top: 0 };
     }
+
+    // По умолчанию всегда прокручиваем к верху страницы
+    return { top: 0, behavior: "smooth" };
   },
+
   routes: [
     {
       path: "/",
@@ -19,36 +28,37 @@ const router = createRouter({
       component: () => import("../pages/index.vue"),
     },
     {
-      path: "/privacy",
+      path: "/privacy/",
       name: "privacy",
-      component: () => import("../pages/privacy.vue"),
+      component: () => import("../pages/PrivacyPage.vue"),
     },
     {
-      path: "/loan-terms",
+      path: "/loan-terms/",
       name: "loan-terms",
-      component: () => import("../pages/loan-terms.vue"),
+      component: () => import("../pages/LoanTermsPage.vue"),
     },
     {
-      path: "/about-user-agree",
+      path: "/about-user-agree/",
       name: "about-user-agree",
-      component: () => import("../pages/about-user-agree.vue"),
+      component: () => import("../pages/AboutUserAgree.vue"),
     },
     {
-      path: "/cars",
+      path: "/cars/",
       name: "cars",
-      component: () => import("../pages/cars/index.vue"),
+      component: () => import("../pages/cars/CarsPage.vue"),
     },
     {
-      path: "/cars/:brandSlug",
+      path: "/cars/:brandSlug/",
       name: "brand-slug",
       component: () => import("../pages/cars/brandSlug.vue"),
     },
     {
-      path: "/cars/:brandSlug/:modelSlug",
+      path: "/cars/:brandSlug/:modelSlug/",
       name: "model-slug",
       component: () => import("../pages/cars/modelSlug.vue"),
     },
   ],
 });
+setupGlobalLoadingMiddleware(router);
 
 export default router;
