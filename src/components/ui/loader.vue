@@ -26,12 +26,22 @@ import Logo from "./Logo.vue";
   z-index: 9999;
 }
 
+.center {
+  @include flex-center;
+  flex-direction: column;
+}
+
 .loader-icon {
   color: $primary;
   @include flex-center;
   margin-top: 3rem;
   position: relative;
   z-index: 2;
+  @include bp($point_2) {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 1rem;
+  }
 }
 
 .loader-logo {
