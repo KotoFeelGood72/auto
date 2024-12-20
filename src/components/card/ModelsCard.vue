@@ -4,7 +4,7 @@
       <div class="img">
         <img :src="card.url" class="" />
       </div>
-      <p class="title">{{ card.title }}</p>
+      <p class="title">{{ card.name }}</p>
     </div>
   </RouterLink>
 </template>
@@ -18,15 +18,16 @@ defineProps<{
 
 <style scoped lang="scss">
 .card {
-  width: 9.7rem;
-  height: 6.7rem;
+  min-width: 9.7rem;
+  height: 8.7rem;
   border: 0.1rem solid #c8c8c9;
   background-color: $white;
-  @include flex-center;
+  @include flex-space;
   flex-direction: column;
   padding: 1.5rem;
   border-radius: 1rem;
   font-size: 1.4rem;
+  gap: 0.5rem;
   @include bp($point_2) {
     @include flex-start;
     width: auto;
@@ -53,8 +54,9 @@ a {
 }
 
 .img {
-  width: 4rem;
-  height: auto;
+  max-width: 5rem;
+  width: 100%;
+  max-height: 3rem;
   @include flex-center;
   object-fit: contain;
 

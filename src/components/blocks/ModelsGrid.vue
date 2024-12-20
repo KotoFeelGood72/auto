@@ -88,9 +88,13 @@ onMounted(() => {
   }
 }
 
+.model-item {
+  flex-grow: 1;
+}
+
 .grid {
   @include flex-space;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
 
   @include bp($point_2) {
