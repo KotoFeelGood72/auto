@@ -98,7 +98,7 @@ const initScrollListener = () => {
 // Получение всех автомобилей
 export const useGetAll = async (popularCount: any = 5, promoCount: any = 5) => {
   try {
-    const response = await api.get(`/auto/all-auto.json`);
+    const response = await api.get(`auto/all-auto.json`);
     cars.value = response.data;
 
     // Формируем список уникальных брендов
