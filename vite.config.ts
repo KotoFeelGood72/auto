@@ -42,21 +42,22 @@ export default defineConfig(({ mode }) => {
     },
 
     server: {
-      port: 5173,
-      host: true,
-      proxy: {
-        "/api/wp": {
-          target: "https://autocarmsk.ru/wp-content/uploads/json",
-          changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api\/wp/, ""),
-        },
-        "/api/crm": {
-          target: "http://crm.renault-s.ru",
-          changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api\/crm/, "/expo/api/deal/add"),
-          secure: false,
-        },
-      },
+      proxy: isProduction
+        ? undefined
+        : {
+            "/api/wp": {
+              target: "https://autocarmsk.ru/wp-content/uploads/json",
+              changeOrigin: true,
+              rewrite: (path) => path.replace(/^\/api\/wp/, ""),
+            },
+            "/api/crm": {
+              target: "http://crm.renault-s.ru",
+              changeOrigin: true,
+              rewrite: (path) =>
+                path.replace(/^\/api\/crm/, "/expo/api/deal/add"),
+              secure: false,
+            },
+          },
     },
   };
 });
