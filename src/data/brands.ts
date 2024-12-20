@@ -3,7 +3,7 @@ export const brands = [
     id: 39,
     name: "BAIC",
     slug: "baic",
-    src: "https://autocarmsk.ru/wp-content/uploads/2024/12/BAIC.png",
+    src: "/assets/img/brands/BAIC.svg",
   },
   {
     id: 43,

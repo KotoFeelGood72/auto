@@ -100,11 +100,6 @@ export const useGetAll = async (popularCount: any = 5, promoCount: any = 5) => {
   try {
     const response = await api.get(`auto/all-auto.json`);
     cars.value = response.data;
-
-    // Формируем список уникальных брендов
-    // brands = Array.from(new Set(cars.value.map((car: any) => car.brand)));
-
-    // Устанавливаем начальные данные
     filteredCars.value = cars.value.slice(0, itemsPerPage.value); // Начальная порция
     allItemsLoaded.value = cars.value.length <= itemsPerPage.value;
 
