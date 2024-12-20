@@ -66,7 +66,7 @@ const { useGetAll, popularCars, promotionalCars } = useCars();
 // ];
 
 const updateSeo = () => {
-  const title = `Купить новые автомобили`;
+  const title = `Купить новый Автомобиль в Москве | Автокредит`;
   const description = `Ознакомьтесь с нашим ассортиментом и выберите идеальный автомобиль. Удобные условия покупки, кредит и тест-драйв.`;
 
   useHead({

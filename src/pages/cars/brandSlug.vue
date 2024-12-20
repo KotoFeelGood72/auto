@@ -82,7 +82,7 @@ onUnmounted(() => {
 
 const updateSeo = () => {
   const brandName: any = selectedBrand?.value || "Все автомобили";
-  const title = `${brandName} - Купить новые автомобили ${brandName}`;
+  const title = `${brandName} - Купить новый Автомобиль в Москве | Автокредит ${brandName}`;
   const description = `Ознакомьтесь с нашим ассортиментом ${brandName} и выберите идеальный автомобиль. Удобные условия покупки, кредит и тест-драйв.`;
 
   useHead({
