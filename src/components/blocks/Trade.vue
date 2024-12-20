@@ -39,7 +39,7 @@
           <Form :row="true" :deal-type="85" />
         </div>
         <div class="img">
-          <img src="@/assets/img/tradein.jpg" alt="Трейд ин" />
+          <img src="/assets/img/tradein.jpg" alt="Трейд ин" />
         </div>
       </div>
       <ul class="row-services" id="credit">

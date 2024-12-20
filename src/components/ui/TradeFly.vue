@@ -1,6 +1,6 @@
 <template>
   <div @click="openModal('trade')" class="fly">
-    <img src="@/assets/img/trade.png" />
+    <img src="/assets/img/trade.png" />
   </div>
 </template>
 

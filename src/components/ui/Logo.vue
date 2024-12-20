@@ -2,7 +2,7 @@
   <RouterLink to="/">
     <div class="logo">
       <div class="logo-img">
-        <img src="@/assets/img/logo.svg" alt="Автокар" />
+        <img src="/assets/img/logo.svg" alt="Автокар" />
       </div>
       <div class="logo-txt">
         <span>Автосалон</span>

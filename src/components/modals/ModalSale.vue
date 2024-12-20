@@ -2,7 +2,7 @@
   <div class="sale">
     <closeBtn />
     <div class="col-img">
-      <img src="@/assets/img/special-car.png" />
+      <img src="/assets/img/special-car.png" />
     </div>
     <div class="col-action">
       <heading title="Заявка на спецпредложение" :size="40" class="title" />
@@ -35,7 +35,7 @@ const list = [
 .sale {
   pointer-events: all;
   max-width: 142rem;
-  background-image: url("@/assets/img/sale.jpg");
+  background-image: url("/assets/img/sale.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

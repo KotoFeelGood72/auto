@@ -12,7 +12,7 @@
       </RouterLink>
     </nav>
     <div class="stars">
-      <img src="@/assets/img/stars.svg" alt="Яндекс рейтинг" />
+      <img src="/assets/img/stars.svg" alt="Яндекс рейтинг" />
     </div>
     <div class="col">
       <div class="contact">

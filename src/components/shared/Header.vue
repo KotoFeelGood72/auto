@@ -5,7 +5,7 @@
         <div class="col">
           <Logo />
           <div class="stars">
-            <img src="@/assets/img/stars.svg" alt="Яндекс рейтинг" />
+            <img src="/assets/img/stars.svg" alt="Яндекс рейтинг" />
           </div>
         </div>
         <div class="col">
