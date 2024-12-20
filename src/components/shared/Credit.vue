@@ -41,7 +41,7 @@ defineProps<{
 
 <style scoped lang="scss">
 .row {
-  background-image: url("/assets/img/credit.png");
+  background-image: url("@/assets/img/credit.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
