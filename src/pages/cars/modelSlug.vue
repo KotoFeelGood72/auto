@@ -219,8 +219,7 @@ const updateSeo = () => {
 };
 
 onMounted(async () => {
-  const slug = route.params.brandSlug + "/" + route.params.modelSlug;
-  await useGetCarBySlug(slug);
+  await useGetCarBySlug(route.params.modelSlug);
 
   const rowTop = document.querySelector(".row-top");
 
@@ -292,8 +291,7 @@ onMounted(async () => {
 watch(
   () => route.params.modelSlug,
   async (newSlug) => {
-    const slug = "/cars/" + route.params.brandSlug + "/" + newSlug;
-    await useGetCarBySlug(slug);
+    await useGetCarBySlug(newSlug);
     updateSeo(); // Обновляем SEO данные
   }
 );
