@@ -54,7 +54,7 @@ const scrollTrigger = ref<HTMLElement | null>(null); // Реф для тригг
 let observer: IntersectionObserver | null = null;
 
 onMounted(async () => {
-  await useGetAll();
+  // await useGetAll();
   updateSeo();
   // useBrands();
   filterByBrand(route.params.brandSlug as any);
@@ -109,10 +109,9 @@ watch(
   () => route.params.brandSlug,
   (newBrandSlug) => {
     if (newBrandSlug) {
-      console.log(newBrandSlug, "GHood");
-      // filterByBrand(newBrandSlug as string);
+      filterByBrand(newBrandSlug as string);
     } else {
-      filterByBrand(null);
+      filterByBrand("baic");
     }
     updateSeo();
   }
