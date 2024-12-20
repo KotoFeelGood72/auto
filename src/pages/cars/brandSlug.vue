@@ -57,7 +57,6 @@ onMounted(async () => {
   await useGetAll();
   updateSeo();
   // useBrands();
-  console.log(selectedBrand);
   filterByBrand(route.params.brandSlug as any);
   // Инициализация Intersection Observer
   observer = new IntersectionObserver((entries) => {
