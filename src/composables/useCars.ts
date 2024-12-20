@@ -118,7 +118,7 @@ export const useGetAll = async (popularCount: any = 5, promoCount: any = 5) => {
 
 export const useGetCarBySlug = async (slug: any) => {
   try {
-    const response = await axios.get(`/api${slug}/index.json`);
+    const response = await api.get(`/auto/${slug}.json`);
     singleCar.value = response.data;
   } catch (error) {
     console.error("Ошибка загрузки машины по слагу:", error);

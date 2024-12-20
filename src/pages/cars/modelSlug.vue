@@ -167,7 +167,6 @@ import { useCars } from "@/composables/useCars";
 import { useRoute } from "vue-router";
 import { ref, computed, onMounted, onUnmounted, watch } from "vue";
 import { useHead } from "@unhead/vue";
-// import { useSeo } from "~/composables/useSeo";
 
 const isRowTopScrolledOut = ref(false);
 
@@ -220,7 +219,7 @@ const updateSeo = () => {
 };
 
 onMounted(async () => {
-  const slug = "/cars/" + route.params.brandSlug + "/" + route.params.modelSlug;
+  const slug = route.params.brandSlug + "/" + route.params.modelSlug;
   await useGetCarBySlug(slug);
 
   const rowTop = document.querySelector(".row-top");

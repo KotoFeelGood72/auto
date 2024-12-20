@@ -1,64 +1,62 @@
 <template>
-  <!-- <RouterLink
+  <RouterLink
     :to="`/cars/${card?.terms?.brand[0].toLowerCase()}/${card.slug}`"
     class="card"
     v-if="isCardValid"
-  > -->
-  <div
-    class="card"
-    v-if="isCardValid"
-    @click.prevent="
-      openModal('car', {
-        img: card.acf.main_img.url,
-        title: 'Спецпредложение по кредиту',
-        name: card.title,
-      })
-    "
   >
-    <div class="hot">{{ card.acf.sale ? card.acf.sale : "100 000 ₽" }}</div>
-    <div class="img">
-      <img :src="card.acf.main_img.url" :alt="card.title" />
-    </div>
-    <div class="content">
-      <heading :title="card.title" :size="24" class="title" />
-      <div class="row">
-        <div>
-          <p class="price">{{ card.acf.new_price }}</p>
-          <p class="old">{{ formattedOldPrice }}</p>
+    <div class="card" v-if="isCardValid">
+      <!-- @click.prevent="
+        openModal('car', {
+          img: card.acf.main_img.url,
+          title: 'Спецпредложение по кредиту',
+          name: card.title,
+        })
+      " -->
+      <div class="hot">{{ card.acf.sale ? card.acf.sale : "100 000 ₽" }}</div>
+      <div class="img">
+        <img :src="card.acf.main_img.url" :alt="card.title" />
+      </div>
+      <div class="content">
+        <heading :title="card.title" :size="24" class="title" />
+        <div class="row">
+          <div>
+            <p class="price">{{ card.acf.new_price }}</p>
+            <p class="old">{{ formattedOldPrice }}</p>
+          </div>
+          <div class="credit">{{ card.acf.monthly_payment }}</div>
         </div>
-        <div class="credit">{{ card.acf.monthly_payment }}</div>
-      </div>
-      <div class="btn-row">
-        <btn
-          name="TRADE-IN"
-          size="normal"
-          styles="secondary"
-          color="blue"
-          class="first-btn"
-          @click.stop="
-            openModal('car', {
-              img: card.acf.main_img.url,
-              title: 'Спецпредложение по TRADE-IN',
-              name: card.title,
-            })
-          "
-        />
-        <btn
-          name="Купить в кредит"
-          size="normal"
-          styles="primary"
-          color="blue"
-          @click.stop="
-            openModal('car', {
-              img: card.acf.main_img.url,
-              title: 'Спецпредложение по кредиту',
-              name: card.title,
-            })
-          "
-        />
+        <div class="btn-row">
+          <btn
+            name="TRADE-IN"
+            size="normal"
+            styles="secondary"
+            color="blue"
+            class="first-btn"
+            @click.stop="
+              openModal('car', {
+                img: card.acf.main_img.url,
+                title: 'Спецпредложение по TRADE-IN',
+                name: card.title,
+              })
+            "
+          />
+          <btn
+            name="Купить в кредит"
+            size="normal"
+            styles="primary"
+            color="blue"
+            @click.stop="
+              openModal('car', {
+                img: card.acf.main_img.url,
+                title: 'Спецпредложение по кредиту',
+                name: card.title,
+              })
+            "
+          />
+        </div>
       </div>
     </div>
-  </div>
+  </RouterLink>
 </template>
 
 <script setup lang="ts">
