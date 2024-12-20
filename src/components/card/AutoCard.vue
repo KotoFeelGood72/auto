@@ -4,14 +4,17 @@
     class="card"
     v-if="isCardValid"
   > -->
-  <div class="card" v-if="isCardValid">
-    <!-- @click.prevent="
-        openModal('car', {
-          img: card.acf.main_img.url,
-          title: 'Спецпредложение по кредиту',
-          name: card.title,
-        })
-      " -->
+  <div
+    class="card"
+    v-if="isCardValid"
+    @click.prevent="
+      openModal('car', {
+        img: card.acf.main_img.url,
+        title: 'Спецпредложение по кредиту',
+        name: card.title,
+      })
+    "
+  >
     <div class="hot">{{ card.acf.sale ? card.acf.sale : "100 000 ₽" }}</div>
     <div class="img">
       <img :src="card.acf.main_img.url" :alt="card.title" />
