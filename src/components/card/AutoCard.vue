@@ -145,7 +145,7 @@ const formattedOldPrice = computed(() => {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     line-height: 2rem;
-    max-height: 3rem;
+    max-height: 3.6rem;
     @include bp($point_2) {
       min-height: auto;
       margin-bottom: 1rem;
