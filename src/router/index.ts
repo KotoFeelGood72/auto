@@ -1,9 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import setupGlobalLoadingMiddleware from "@/middleware/setupGlobalLoadingMiddleware";
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL_ASSET),
   scrollBehavior(to, from, savedPosition) {
-    // Если переход на якорь (hash), прокручиваем с учётом хедера
     if (to.hash) {
       return {
         el: to.hash,
