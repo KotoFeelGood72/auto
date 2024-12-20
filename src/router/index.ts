@@ -42,17 +42,17 @@ const router = createRouter({
       component: () => import("../pages/AboutUserAgree.vue"),
     },
     {
-      path: "/cars/",
-      name: "cars",
+      path: "/auto/",
+      name: "auto",
       component: () => import("../pages/cars/CarsPage.vue"),
     },
     {
-      path: "/cars/:brandSlug/",
+      path: "/auto/:brandSlug/",
       name: "brand-slug",
       component: () => import("../pages/cars/brandSlug.vue"),
     },
     {
-      path: "/cars/:brandSlug/:modelSlug/",
+      path: "/auto/:brandSlug/:modelSlug/",
       name: "model-slug",
       component: () => import("../pages/cars/modelSlug.vue"),
     },

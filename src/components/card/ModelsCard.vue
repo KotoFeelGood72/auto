@@ -1,5 +1,5 @@
 <template>
-  <RouterLink v-if="card" :to="'/cars/' + card.slug">
+  <RouterLink v-if="card" :to="'/auto/' + card.slug">
     <div class="card">
       <div class="img">
         <img :src="card.src" class="" />

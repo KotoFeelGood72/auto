@@ -74,8 +74,8 @@ import { onMounted, ref, onUnmounted } from "vue";
 const { openModal } = useModalStore();
 
 const nav = [
-  { name: "Авто в наличии", link: "/cars/" },
-  { name: "Акции", link: "/cars/" },
+  { name: "Авто в наличии", link: "/auto/" },
+  { name: "Акции", link: "/auto/" },
   // { name: "Отзывы", link: "/" },
   { name: "Контакты", link: "/#contacts" },
 ];

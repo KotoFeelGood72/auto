@@ -1,6 +1,6 @@
 <template>
   <!-- <RouterLink
-    :to="`/cars/${card?.terms?.brand[0].toLowerCase()}/${card.slug}`"
+    :to="`/auto/${card?.terms?.brand[0].toLowerCase()}/${card.slug}`"
     class="card"
     v-if="isCardValid"
   > -->
