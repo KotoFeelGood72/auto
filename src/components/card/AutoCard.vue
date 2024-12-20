@@ -114,6 +114,7 @@ function decodeHtml(html: any) {
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  background-color: $white;
   &:hover {
     box-shadow: 0 0 1rem 0 #0000001c;
   }
