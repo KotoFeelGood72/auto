@@ -3,7 +3,7 @@
     <div class="section_in">
       <div class="row">
         <div class="img">
-          <img src="/assets/img/forms.png" alt="Обратная связь" />
+          <img src="@/assets/img/forms.png" alt="Обратная связь" />
         </div>
         <div class="forms">
           <div class="form-head">

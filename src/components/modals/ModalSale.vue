@@ -2,7 +2,7 @@
   <div class="sale">
     <closeBtn />
     <div class="col-img">
-      <img src="/assets/img/special-car.png" />
+      <img src="@/assets/img/special-car.png" />
     </div>
     <div class="col-action">
       <heading title="Заявка на спецпредложение" :size="40" class="title" />

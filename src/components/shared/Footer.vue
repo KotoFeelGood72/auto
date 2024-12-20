@@ -33,7 +33,7 @@
         <div class="footer-bottom__left">
           <RouterLink to="/">
             <div class="img">
-              <img src="/assets/img/logo-footer.svg" alt="АВТОКАР" />
+              <img src="@/assets/img/logo-footer.svg" alt="АВТОКАР" />
             </div>
           </RouterLink>
         </div>

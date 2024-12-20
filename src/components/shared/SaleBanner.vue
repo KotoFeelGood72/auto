@@ -21,7 +21,7 @@ const { openModal } = useModalStore();
 
 <style scoped lang="scss">
 .banner {
-  background: url("/assets/img/sale-top.jpg");
+  background: url("@/assets/img/sale-top.jpg");
   background-position: center center;
   background-size: cover;
   padding: 2.5rem 0;
