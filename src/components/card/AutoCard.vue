@@ -20,7 +20,7 @@
       <img :src="card.acf.main_img.url" :alt="card.title" />
     </div>
     <div class="content">
-      <heading :title="card.title" :size="24" class="title" />
+      <heading :title="decodeHtml(card.title)" :size="24" class="title" />
       <div class="row">
         <div>
           <p class="price">{{ card.acf.new_price }}</p>
@@ -97,6 +97,12 @@ const formattedOldPrice = computed(() => {
   // Форматируем старую цену
   return oldPrice.toLocaleString("ru-RU") + " ₽";
 });
+
+function decodeHtml(html: any) {
+  const txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
+}
 </script>
 
 <style scoped lang="scss">
@@ -144,7 +150,7 @@ const formattedOldPrice = computed(() => {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
-    line-height: 2rem;
+    line-height: 2.4rem;
     max-height: 3.6rem;
     @include bp($point_2) {
       min-height: auto;
