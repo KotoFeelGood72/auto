@@ -96,26 +96,26 @@ const updateSeo = () => {
   });
 };
 
-// watch(
-//   () => selectedBrand.value,
-//   (newBrandSlug) => {
-//     console.log(selectedBrand);
-//     filterByBrand(newBrandSlug as string);
-//     updateSeo();
-//   }
-// );
-
 watch(
-  () => route.params.brandSlug,
+  () => selectedBrand.value,
   (newBrandSlug) => {
-    if (newBrandSlug) {
-      filterByBrand(newBrandSlug as string);
-    } else {
-      filterByBrand(null);
-    }
+    console.log(selectedBrand);
+    filterByBrand(newBrandSlug as string);
     updateSeo();
   }
 );
+
+// watch(
+//   () => route.params.brandSlug,
+//   (newBrandSlug) => {
+//     if (newBrandSlug) {
+//       filterByBrand(newBrandSlug as string);
+//     } else {
+//       filterByBrand(null);
+//     }
+//     updateSeo();
+//   }
+// );
 </script>
 
 <style scoped lang="scss">
