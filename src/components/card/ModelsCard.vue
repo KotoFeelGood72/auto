@@ -2,7 +2,7 @@
   <RouterLink v-if="card" :to="'/cars/' + card.slug">
     <div class="card">
       <div class="img">
-        <img :src="card.url" class="" />
+        <img :src="card.src" class="" />
       </div>
       <p class="title">{{ card.name }}</p>
     </div>

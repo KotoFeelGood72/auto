@@ -24,6 +24,8 @@ const filterByBrand = async (brand: any) => {
 
   selectedBrand.value = brand;
 
+  console.log(selectedBrand.value);
+
   if (brand) {
     const filtered = cars.value.filter((car: any) =>
       car.terms?.brand[0].toLowerCase().includes(brand.toLowerCase())

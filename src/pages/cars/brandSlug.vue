@@ -109,7 +109,8 @@ watch(
   () => route.params.brandSlug,
   (newBrandSlug) => {
     if (newBrandSlug) {
-      filterByBrand(newBrandSlug as string);
+      console.log(newBrandSlug, "GHood");
+      // filterByBrand(newBrandSlug as string);
     } else {
       filterByBrand(null);
     }
