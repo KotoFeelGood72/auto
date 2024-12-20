@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
 
   const isProduction = mode === "production"; // Определяем режим
   return {
-    // base: isProduction ? "/wp-content/themes/auto-car-msk/vue/dist/" : "/", // Указываем base только для деплоя
+    base: isProduction ? "/wp-content/themes/auto-car-msk/vue/dist/" : "/", // Указываем base только для деплоя
     build: isProduction
       ? {
           rollupOptions: {
@@ -42,22 +42,21 @@ export default defineConfig(({ mode }) => {
     },
 
     server: {
-      proxy: isProduction
-        ? undefined
-        : {
-            "/api/wp": {
-              target: "https://autocarmsk.ru/wp-content/uploads/json",
-              changeOrigin: true,
-              rewrite: (path) => path.replace(/^\/api\/wp/, ""),
-            },
-            "/api/crm": {
-              target: "http://crm.renault-s.ru",
-              changeOrigin: true,
-              rewrite: (path) =>
-                path.replace(/^\/api\/crm/, "/expo/api/deal/add"),
-              secure: false,
-            },
-          },
+      port: 5173,
+      host: true,
+      proxy: {
+        "/api/wp": {
+          target: apiUrl,
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api\/wp/, ""),
+        },
+        "/api/crm": {
+          target: "http://crm.renault-s.ru",
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api\/crm/, "/expo/api/deal/add"),
+          secure: false,
+        },
+      },
     },
   };
 });
