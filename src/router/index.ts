@@ -51,11 +51,11 @@ const router = createRouter({
       name: "brand-slug",
       component: () => import("../pages/cars/brandSlug.vue"),
     },
-    {
-      path: "/auto/:brandSlug/:modelSlug/",
-      name: "model-slug",
-      component: () => import("../pages/cars/modelSlug.vue"),
-    },
+    // {
+    //   path: "/auto/:brandSlug/:modelSlug/",
+    //   name: "model-slug",
+    //   component: () => import("../pages/cars/modelSlug.vue"),
+    // },
   ],
 });
 setupGlobalLoadingMiddleware(router);
