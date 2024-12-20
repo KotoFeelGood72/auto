@@ -4,7 +4,7 @@ import vue from "@vitejs/plugin-vue";
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
-  const apiUrl = env.VITE_API_BASE_URL;
+  const apiUrl = env.VITE_BASE_URL;
 
   const isProduction = mode === "production"; // Определяем режим
   return {
@@ -45,10 +45,10 @@ export default defineConfig(({ mode }) => {
       port: 5173,
       host: true,
       proxy: {
-        "/api/wp": {
+        "/wp/": {
           target: apiUrl,
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api\/wp/, ""),
+          rewrite: (path) => path.replace(/^\/wp/, ""),
         },
         "/api/crm": {
           target: "http://crm.renault-s.ru",
