@@ -113,6 +113,10 @@ function decodeHtml(html: any) {
   border-radius: 1rem;
   position: relative;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 1rem 0 #0000001c;
+  }
 }
 
 .hot {
