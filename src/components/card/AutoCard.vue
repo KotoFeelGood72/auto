@@ -15,7 +15,7 @@
       })
     "
   >
-    <div class="hot">{{ card.acf.sale ? card.acf.sale : "100 000 ₽" }}</div>
+    <div class="hot">{{ card.acf.sale ? card.acf.sale : "- 40%" }}</div>
     <div class="img">
       <img :src="card.acf.main_img.url" :alt="card.title" />
     </div>
