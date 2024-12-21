@@ -55,15 +55,23 @@ const loadMoreCars = () => {
     // Если выбран бренд, подгружаем только машины этого бренда
     if (selectedBrand.value) {
       additionalCars = cars.value
-        .filter((car: any) => car.brand === selectedBrand.value)
+        .filter((car: any) =>
+          car.terms?.brand[0]
+            .toLowerCase()
+            .includes(selectedBrand.value.toLowerCase())
+        )
         .slice(start, end);
     } else {
       additionalCars = cars.value.slice(start, end); // Все автомобили
     }
 
-    // Проверка, есть ли еще машины для подгрузки
+    // Добавляем оставшиеся машины, если они есть
     if (additionalCars.length > 0) {
       filteredCars.value.push(...additionalCars);
+      // Проверяем, если добавлено меньше, чем itemsPerPage
+      if (additionalCars.length < itemsPerPage.value) {
+        allItemsLoaded.value = true; // Все данные загружены
+      }
     } else {
       allItemsLoaded.value = true; // Все данные загружены
     }
