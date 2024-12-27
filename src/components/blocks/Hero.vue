@@ -4,7 +4,7 @@
       <div class="row">
         <heading title="КУПИТЬ АВТО В МОСКВЕ" :size="40" class="title" />
         <heading
-          title="Выгода до 40% на все модели в наличии"
+          title="Выгода до -40% на все модели в наличии"
           :level="2"
           :size="36"
           color="gradient"
