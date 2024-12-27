@@ -12,6 +12,8 @@
         img: card.acf.main_img.url,
         title: 'Спецпредложение по кредиту',
         name: card.title,
+        deal_mark: card?.terms?.brand[0].toLowerCase(),
+        deal_model: card.title,
       })
     "
   >
@@ -40,6 +42,8 @@
               img: card.acf.main_img.url,
               title: 'Спецпредложение по TRADE-IN',
               name: card.title,
+              deal_mark: card?.terms?.brand[0].toLowerCase(),
+              deal_model: card.title,
             })
           "
         />
@@ -53,6 +57,8 @@
               img: card.acf.main_img.url,
               title: 'Спецпредложение по кредиту',
               name: card.title,
+              deal_mark: card?.terms?.brand[0].toLowerCase(),
+              deal_model: card.title,
             })
           "
         />

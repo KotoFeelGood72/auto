@@ -12,7 +12,14 @@
     <div class="modal-img">
       <img :src="modalData?.img" />
     </div>
-    <Form :deal-type="80" :row="true" />
+    <Form
+      :deal-type="80"
+      :row="true"
+      :additionalData="{
+        deal_mark: modalData.deal_mark || 'Не указано',
+        deal_model: modalData.deal_model || 'Не указано',
+      }"
+    />
   </div>
 </template>
 
