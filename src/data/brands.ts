@@ -1,4 +1,5 @@
-export const brands = [
+import {ref} from 'vue'
+export const brands = ref<any>([
   {
     id: 39,
     name: "BAIC",
@@ -293,4 +294,5 @@ export const brands = [
     slug: "zotye",
     src: "https://autocarmsk.ru/wp-content/uploads/2024/12/Zotye.png",
   },
-];
+]
+);
