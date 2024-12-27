@@ -3,7 +3,7 @@
     <closeBtn />
     <heading :title="modalData.title" :level="2" :size="30" class="title" />
     <heading
-      :title="modalData.name"
+      :title="decodeHtml(modalData.name)"
       :level="2"
       :size="24"
       class="subtitle"
@@ -30,6 +30,12 @@ import closeBtn from "../ui/buttons/close-btn.vue";
 import { useModalStoreRefs } from "@/stores/useModalStore";
 
 const { modalData } = useModalStoreRefs();
+
+function decodeHtml(html) {
+  const txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
+}
 </script>
 
 <style scoped lang="scss">
