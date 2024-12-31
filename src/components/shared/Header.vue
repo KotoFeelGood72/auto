@@ -4,9 +4,9 @@
       <div class="row top-row">
         <div class="col">
           <Logo />
-          <div class="stars">
+          <!-- <div class="stars">
             <img src="@/assets/img/stars.svg" alt="Яндекс рейтинг" />
-          </div>
+          </div> -->
         </div>
         <div class="col">
           <div class="contact">

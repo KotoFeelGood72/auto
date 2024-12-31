@@ -11,9 +11,9 @@
         {{ item.name }}
       </RouterLink>
     </nav>
-    <div class="stars">
+    <!-- <div class="stars">
       <img src="@/assets/img/stars.svg" alt="Яндекс рейтинг" />
-    </div>
+    </div> -->
     <div class="col">
       <div class="contact">
         <a href="+7 (499) 289-87-21" class="phone">
