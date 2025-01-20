@@ -19,7 +19,7 @@ export const services = [
   },
 ];
 export const topservices = [
-  { title: "300 000", txt: "Выгода" },
+  { title: "300 000 ₽", txt: "Выгода" },
   { title: "КАСКО", txt: "В подарок" },
   { title: "БЕСПЛАТНО", txt: "Оценка" },
 ];
