@@ -20,7 +20,7 @@
     />
     <Programs />
     <Trade :services="services" :topservices="topservices" />
-    <Credit :credits="credits" />
+    <!-- <Credit :credits="credits" /> -->
   </div>
 </template>
 

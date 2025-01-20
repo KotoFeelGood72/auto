@@ -11,9 +11,9 @@
         {{ item.name }}
       </RouterLink>
     </nav>
-    <div class="stars">
+    <!-- <div class="stars">
       <img src="@/assets/img/stars.svg" alt="Яндекс рейтинг" />
-    </div>
+    </div> -->
     <div class="col">
       <div class="contact">
         <a href="+7 (499) 289-87-21" class="phone">
@@ -49,7 +49,7 @@ const nav = [
   { name: "Авто в наличии", link: "/auto/" },
   { name: "Акции", link: "/" },
   // { name: "Отзывы", link: "/" },
-  { name: "Автокредит", link: "/#credit" },
+  // { name: "Автокредит", link: "/#credit" },
   { name: "Trade-In", link: "/#trade" },
   { name: "Контакты", link: "/#contacts" },
 ];

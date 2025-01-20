@@ -4,9 +4,9 @@
       <div class="row top-row">
         <div class="col">
           <Logo />
-          <div class="stars">
+          <!-- <div class="stars">
             <img src="@/assets/img/stars.svg" alt="Яндекс рейтинг" />
-          </div>
+          </div> -->
         </div>
         <div class="col">
           <div class="contact">
@@ -80,7 +80,7 @@ const nav = [
   { name: "Контакты", link: "/#contacts" },
 ];
 const other = [
-  { name: "Автокредит", link: "/#credit" },
+  // { name: "Автокредит", link: "/#credit" },
   { name: "Trade-In", link: "/#trade" },
 ];
 

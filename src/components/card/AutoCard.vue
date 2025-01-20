@@ -10,14 +10,14 @@
     @click.prevent="
       openModal('car', {
         img: card.acf.main_img.url,
-        title: 'Спецпредложение по кредиту',
+        title: 'Зафиксировать выгоду',
         name: card.title,
         deal_mark: card?.terms?.brand[0].toLowerCase(),
         deal_model: card.title,
       })
     "
   >
-    <div class="hot">{{ card.acf.sale ? card.acf.sale : "- 40%" }}</div>
+    <div class="hot">Выгодно</div>
     <div class="img">
       <img :src="card.acf.main_img.url" :alt="card.title" />
     </div>
@@ -48,14 +48,14 @@
           "
         />
         <btn
-          name="Купить в кредит"
+          name="Оставить заявку"
           size="normal"
           styles="primary"
           color="blue"
           @click.stop="
             openModal('car', {
               img: card.acf.main_img.url,
-              title: 'Спецпредложение по кредиту',
+              title: 'Зафиксировать выгоду',
               name: card.title,
               deal_mark: card?.terms?.brand[0].toLowerCase(),
               deal_model: card.title,

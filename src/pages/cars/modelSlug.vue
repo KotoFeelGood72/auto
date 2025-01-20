@@ -74,7 +74,7 @@
                       })
                     "
                   />
-                  <btn
+                  <!-- <btn
                     size="large"
                     styles="primary"
                     color="white"
@@ -82,7 +82,7 @@
                     name="Рассчитать автокредит от 7%"
                     :full="true"
                     @click="scrollDown"
-                  />
+                  /> -->
                 </div>
               </div>
             </div>
@@ -129,7 +129,7 @@
           <heading title="Галерея" :level="2" :size="42" class="subtitle" />
           <Gallery :images="singleCar.gallery" />
         </div>
-        <Credit :credits="credits" />
+        <!-- <Credit :credits="credits" /> -->
         <Calc :car="singleCar" id="calc-car" />
         <Programs />
       </div>
