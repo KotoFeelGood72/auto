@@ -104,7 +104,7 @@ const footerLinks = ref<any>([
 const info = [
   { txt: "Ежедневно с 8:00 до 20:00", icon: "svg-spinners:pulse-3" },
   {
-    txt: "г. Москва ",
+    txt: "Москва, Богородское ш., ост. Ростокинский проезд ",
     icon: "et:map-pin",
   },
   { link: "+7 (499) 289-87-21", icon: "prime:phone" },
