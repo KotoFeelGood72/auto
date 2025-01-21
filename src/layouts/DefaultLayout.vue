@@ -3,7 +3,7 @@
     <SaleBanner />
     <Header />
     <slot />
-    <Map />
+    <!-- <Map /> -->
     <Footer />
     <transition name="fade">
       <TradeFly v-if="isTradeFlyVisible && route.name === 'home'" />

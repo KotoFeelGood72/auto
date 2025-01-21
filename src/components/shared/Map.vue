@@ -44,7 +44,7 @@ onMounted(() => {
             +7 (499) 289-87-21
           </a>
           <p style="text-align: left; font-size: 1.4rem; font-family: 'Gilroy'; margin-bottom: 1rem;">
-            Краснобогатырская улица, 2с22, Москва, 107564
+            107076, г. Москва, вн.тер.г. Муниципальный округ Сокольники, пер. Колодезный, д. 14, помещение 8/13
           </p>
           <p style="text-align: left; font-size: 1.4rem; font-family: 'Gilroy'; margin-bottom: 1rem;">
             Ежедневно с 8:00 до 20:00
